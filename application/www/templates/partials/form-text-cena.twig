@@ -1,0 +1,17 @@
+<div class="form-input form-text form-cena {{ parametry.class }}">
+  <label class="form-cena-label">
+    <span class="sr-only">{{ parametry.label }}</span>
+    <input
+      class="form-text-input"
+      type="number"
+      min="0"
+      name="{{ nazev }}"
+      value="{{ value }}"
+      {% if parametry.required %}required="required"{% endif %}
+      data-error="{% if parametry.error %}{{ parametry.error }}{% else %}{{ parametry.label }}{% endif %}"
+      >
+    <span class="form-cena-kc">Kč</span>
+  </label>
+  <span class="form-cena-popis">{{ parametry.popis }}</span>
+  <div class="form-help form-cena-help"></div>
+</div>

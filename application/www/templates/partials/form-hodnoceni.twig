@@ -1,0 +1,27 @@
+<div class="form-radio {{ parametry.class }}">
+  <p class="form-title h3">{{ parametry.label }} {% if parametry.required %}<sup>*</sup>{% endif %}</p>
+  {% if parametry.popis %}
+    <p class="form-popis">{{ parametry.popis }}</p>
+  {% endif %}
+
+  <div class="form-hodnoceni">
+    {% for key, hodnota in parametry.hodnoty %}
+      <div class="hodnoceni row {% if loop.last %}last{% endif %}">
+        <span class="col hodnoceni-col hodnoceni-label">{{ hodnota }}:</span>
+        <div class="col hodnoceni-col hodnoceni-hodnoty">
+          <span class="hodnoceni-stitek">málo</span>
+          <div class="hodnoceni-cisla">
+            {% for i in 1..5 %}
+              <label class="form-radio-label">
+                <input class="radio" type="radio" name="{{ nazev }}[{{ key }}]" value="{{ hodnota }} - {{ i }}">
+                <span class="radio-span" aria-hidden="true"></span>
+                <span class="form-radio-label-text">{{ i }}</span>
+              </label>
+            {% endfor %}
+          </div>
+          <span class="hodnoceni-stitek">hodně</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

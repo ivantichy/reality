@@ -1,0 +1,76 @@
+title: Časté dotazy zájemců
+
+otazky_pronajem:
+  - otazka: Jak Aukce bydlení funguje?
+    odpoved: >
+      Vyberete si pronájem svých snů. Zvolíte si termín prohlídky nebo si domluvíte individuální termín a když se vám byt bude líbit, nabídnete výši vratné kauce nebo měsíčního nájmu.
+
+  - otazka: Kdo a jak vybírá vítěze aukce?
+    odpoved: >
+      Aukce doporučí majiteli bydlení TOP3 zájemce vybrané podle nejvyšší nabídky, spolehlivosti a délky pronájmu. Konečný výběr už je pak na něm.
+
+  - otazka: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+    odpoved: >
+      Poplatek za zprostředkování aukce hradí výherce aukce a činí 25 % z 1. nájmu nebo hodnoty vratné kauce. Vyhraje-li tedy Tomáš aukci s nájmem 15 000 Kč, zaplatí portálu Aukce bydlení 3 750 Kč.
+
+  - otazka: Jak Aukce bydlení vznikla a kdo za ní stojí?
+    odpoved: >
+      V našem okolí stále přibývá přátel, kteří by rádi změnili bydlení, ale ty nejzajímavější nabídky jim vždycky utečou. Proto jsme se rozhodli založit tuto novou online službu. Přečtěte si více v <a href="/nas-pribeh">Našem příběhu</a>.
+
+  - otazka: Jak bude vypadat smlouva?
+    odpoved: >
+      Podoba smlouvy záleží na dohodě mezi majitelem a vítězem aukce. Musí však obsahovat vydraženou výši nájmu a délku pronájmu.
+
+  - otazka: Můžu se zúčastnit více aukcí najednou? Co se stane, když vyhraji více aukcí?
+    odpoved: >
+      V případě, že zvítězíte ve více aukcích zároveň, je vaší povinností do 24 hodin od ukončení každé jednotlivé aukce váš trvající zájem buď potvrdit, anebo z ní odstoupit. Pokud ji do této doby nepotvrdíte, váš nárok propadá.
+
+  - otazka: Můžu z aukce odstoupit? Za jakých podmínek?
+    odpoved: >
+      Do 24 hodin před ukončením aukce z ní můžete odstoupit zdarma kdykoliv. V případě, že budete vybrán jako vítěz aukce a rozhodnete se smlouvu o nájmu s majitelem nemovitosti neuzavřít, jste i tak povinen uhradit poplatek za zprostředkování služby, který činí 25 % z prvního nájmu (V případě vítězství ve více aukcích platí pravidla v předchozím dotazu). V případě, že k neuzavření smlouvy máte opodstatněné důvody, kdykoliv nás můžete kontaktovat.
+
+  - otazka: Jaké jsou klíčové faktory, které vedou k výhře aukce? Co mi může pomoct?
+    odpoved: >
+      V případě pronájmu vaše šance stojí na výši nájmu (či vratné kauce), vaší spolehlivosti a délce nájmu. Čím vyšší částku nebo delší dobu pronájmu nabídnete, tím lépe pro vás.
+
+
+otazky_prodej:
+  - otazka: Jak Aukce bydlení funguje?
+    odpoved: >
+      Vyberete si nemovitost svých snů. Zvolíte si termín prohlídky a když se vám nemovitost bude líbit, nabídnete v online aukci částku, kterou za nemovitost chcete zaplatit.
+
+  - otazka: Kdo a jak vybírá vítěze aukce?
+    odpoved: >
+      Aukce doporučí majiteli nemovitosti TOP3 zájemce vybrané podle nejvyšší nabídky. Konečný výběr už je pak na něm.
+
+  - otazka: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+    odpoved: >
+      Za naše služby platí prodejce nemovitosti. Vy tedy platíte pouze vydraženou cenu nemovitosti.
+
+  - otazka: Jak Aukce bydlení vznikla a kdo za ní stojí?
+    odpoved: >
+      V našem okolí stále přibývá přátel, kteří by rádi změnili bydlení, ale ty nejzajímavější nabídky jim vždycky utečou. Proto jsme se rozhodli založit tuto novou online službu. Přečtěte si více v <a href="/nas-pribeh">Našem příběhu</a>.
+
+  - otazka: Jak bude vypadat smlouva?
+    odpoved: >
+      Podoba smlouvy záleží na dohodě mezi majitelem a vítězem aukce.
+
+  - otazka: Můžu se zúčastnit více aukcí najednou? Co se stane, když vyhraji více aukcí?
+    odpoved: >
+      V případě, že zvítězíte ve více aukcích zároveň, je vaší povinností do 24 hodin od ukončení aukci buď potvrdit, anebo z ní odstoupit. Pokud ji do této doby nepotvrdíte, váš nárok propadá.
+
+  - otazka: Můžu z aukce odstoupit? Za jakých podmínek?
+    odpoved: >
+      Do 24 hodin před ukončením aukce z ní můžete odstoupit zdarma kdykoliv. V případě, že budete vybráni jako vítěz aukce a rozhodnete se z nákupu nemovitosti odstoupit, jste i tak povinni uhradit poplatek za zprostředkování služby, který činí 0,5 % z vydražené ceny nemovitosti. V případě, že k neuzavření smlouvy máte opodstatněné důvody, kdykoliv nás můžete kontaktovat.
+
+  - otazka: Jaké jsou klíčové faktory, které vedou k výhře aukce? Co mi může pomoct?
+    odpoved: >
+      V případě nákupu nemovitosti vaše šance stojí na částce, kterou za nemovitost nabídnete, a také na vaší spolehlivosti. Díky aukci ale neustále víte, jak na tom jste.
+
+levy_sloupec:
+  text: Nenašli jste zde<br> odpověď na vaši otázku?
+  tlacitko: Kontaktujte nás
+
+paticka_cta:
+  text: Chci vyzkoušet Aukci bydlení
+  tlacitko: Zobrazit nabídky

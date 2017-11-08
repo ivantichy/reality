@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 3+1, 45 m²
+slug: pronajem-byt-3-1-45-ostrava
+souradnice: 49.8249619, 18.2425872
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Lázeňská 2, Ostrava
+
+jmeno: Matěj Holý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: V nejvyšším patře 3poschoďového panelového domu najdete byt rozdělený na základní pokoje - obývací pokoj, ložnice, kuchyně a koupelna. Byt je prostorný a díky velkým oknům světlý a vzdušný. V obýváku, ložnici a kuchyni je položena plovoucí podlaha. Při pronájmu je možné odkoupit větší nábytek viditelný na fotografiích. Byt se nachází v klidnější oblasti.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 45 m²
+  Dispozice: 3+1
+  Cena: 6 000 Kč
+  Poplatky: 3 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září/říjen 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 6000
+polatky: 5000
+kauce: 6000
+vybrane_terminy:
+  - 28.6.2017 17:00
+  - 5.7.2017 17:00
+  - 12.7.2017 17:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Chodba
+  3: Ložnice
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Radek F.
+  - Zuzana T.
+  - Lukáš T.
+
+zajemci_pocet: 4
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

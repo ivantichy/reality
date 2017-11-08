@@ -1,0 +1,15 @@
+<p>Děkujeme za vaši poptávku po vložení aukce.</p>
+
+<p>Služba Aukce bydlení zatím běží v testovacím provozu. Je nám velmi líto, ale v tuto chvíli proto musíme vaši poptávku zamítnout. Službu testujeme proto, abychom ji mohli připravit na míru vašim potřebám a přáním. Dáme vám vědět hned, jak Aukci bydlení spustíme do ostrého provozu.</p>
+
+<p>Néže najdete shrnutí vámi zadaných údajů. V případě jakýchkoliv otázek se na nás neváhejte obrátit na <a href="mailto:info@aukcebydleni.cz">info@aukcebydleni.cz</a></p>
+
+<ul>
+  {% for udaj in zadane_udaje %}
+    <li>{{ udaj.nazev }}: {{ udaj.hodnota }}</li>
+  {% endfor %}
+</ul>
+
+<p>Děkujeme vám za pochopení,</p>
+
+<p>Tým Aukce bydlení</p>

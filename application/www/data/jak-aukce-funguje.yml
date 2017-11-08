@@ -1,0 +1,69 @@
+title: Jak Aukce bydlení funguje?
+
+levy_sloupec:
+  text: Nenašli jste zde<br> odpověď na vaši otázku?
+  tlacitko: Kontaktujte nás
+
+jak_funguje:
+  - nadpis: Vyberte si bydlení, které si chcete prohlédnout
+    text: |
+      Jednoduše si z nabídky na webu vyberete nemovitosti, které se vám líbí.
+
+  - nadpis: Vyberte si termín prohlídky a model aukce
+    text: |
+      Přes přehledný kalendář si vyberete některý z nabízených termínů prohlídky a model aukce, který by vám vyhovoval.
+
+  - nadpis: Doražte na prohlídku
+    text: |
+      A vše si dobře prohlédněte. Pokud o prohlídku nemáte zájem, můžete v aukci později přihazovat i bez návštěvy nemovitosti.
+
+  - nadpis: Dražte vratnou<br> kauci
+    text: |
+      V tomto modelu dražíte vratnou kauci. Kauce je během vašeho nájmu uschována u AukceBydlení a vrácena Vám zpět po ukončení doby nájmu.
+    nadpis_2: Dražte výši nájmu<br> nebo cenu nemovitosti
+    text_2: |
+      Druhým modelem aukce je možnost dražit výši nájmu (u pronájmu) nebo celkové ceny nemovitosti (u prodeje). Který model aukce si vyberete, je na vás.
+
+  - nadpis: Sledujte, jak jste na tom
+    text: |
+      Aukce probíhá transparentně. Vždy vidíte TOP3 zájemce v aukci a jejich nabídku. Díky tomu víte, jestli máte šanci byt nebo dům získat nebo případně, zda byste chtěli již hledat jinou nemovitost. Vaši nabídku můžete vždy upravit.
+
+  - nadpis: Vyhrajte aukci nebo hledejte dál
+    text: |
+      Už máte klíče v ruce a všechno je fajn? Skvělé! Pokud ne, nevěšte hlavu a vybírejte dál!
+
+cim_se_lisime:
+  nadpis: V čem je aukce bydlení jiná?
+  text_pod_nadpisem: Tato nová služba je určena všem lidem, kteří právě řeší svoje bydlení. Pomocí Aukce bydlení jim chceme dopřát výhodnější, pohodlnější a transparentnější hledání či nabízení nemovitostí.
+  priklad_nadpis: Příklad aukce pronájmu bytu 2+1
+  priklad_text: v Praze s nájmem v hodnotě 18 000 Kč bez poplatků.
+
+tabulka_radek_1: Cena nájmu
+tabulka_radek_2: Řízení prohlídek
+tabulka_radek_3: Poplatek
+tabulka_radek_4: Vím, jakou mám šanci
+
+tabulka:
+  Aukce bydlení:
+    bunka_1: Je na vás
+    bunka_2: Kalendář
+    bunka_3:
+      text_1: 25 % z 1. nájmu
+      toolit_1: V případě aukce pronájmu bydlení zájemce o bydlení zaplatí 25 % z prvního nájmu jako jednorázový poplatek.
+      text_2: 0.5 %
+      toolit_2: V případě aukce prodeje nemovitosti nabízející zaplatí 0,5 % z ceny nemovitosti jako jednorázový poplatek.
+    bunka_4: Ano
+  Bez realitky:
+    bunka_1: 18 000 Kč
+    bunka_2: Chaos
+    bunka_3: Většinou zdarma
+    bunka_4: Ne
+  Realitní agenti:
+    bunka_1: 18 000 Kč
+    bunka_2: Telefony a emaily
+    bunka_3: 18 000 Kč
+    bunka_4: Ne
+
+paticka_cta:
+  text: Chci vyzkoušet Aukci bydlení
+  tlacitko: Zobrazit nabídky

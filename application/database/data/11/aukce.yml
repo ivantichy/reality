@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 3+1, 95 m²
+slug: prodej-byt-praha-2
+souradnice: 50.0704097, 14.4170117
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Praha 2, Pod Slovany 14
+
+jmeno: Zoey Murtingerová
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento částečně vybavený byt najdete v nejvyšším patře 6podlažního činžovního domu na Praze 2. Slunných 95 m² je členěno na prostorný obývací pokoj s navazující plně vybavenou kuchyní, ložnici s manželskou postelí a koupelnu se sprchovým koutem a toaletou. I přes značné kulturní vyžití poskytuje lokalita klid. Výhodou je určitě i MHD do 10 min pěší chůzí od domu.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 95 m²
+  Dispozice: 3+1
+  Cena: 800 000 Kč
+  Poplatky: 4 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Částečně vybavený
+  Podlaží: 6
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 800000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 15.6.2017 15:00
+  - 22.6.2017 18:00
+  - 29.6.2017 18:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Obývací pokoj s klavírem
+  3: Kuchyně
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Viola N.
+  - Radka P.
+  - Ludvík W.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

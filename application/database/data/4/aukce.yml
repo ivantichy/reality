@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 4+kk, 120 m²
+slug: pronajem-4kk-praha-2
+souradnice: 50.0791386, 14.4459256
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Čerchovská 5, Praha 2 - Vinohrady
+
+jmeno: Petr Šedý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento prostorný byt na Praze 2 ve Vinohradech je plně vybavený. Základem je velká místnost – obývák s rozlehlou vybavenou kuchyní. Zbytek bytu tvoří 3 ložnice, vždy s manželskou postelí. Koupelna je novější s vanou. Byt je jen několik kroků od Riegrových sadů, k zastávce metra je to pár minut, centrum města máte také na dosah.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 120 m²
+  Dispozice: 4+kk
+  Cena: 34 000 Kč
+  Poplatky: 4 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Vybavený
+  Podlaží: 6.
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 50 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 34000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 23.6.2017 - 18:00
+  - 27.6.2017 - 08:00
+  - 30.6.2017 - 19:00
+datum_ukonceni: 15.7.2017
+
+
+obrazky:
+  1: Obývací pokoj
+  2: Kuchyň
+  3: Ložnice 1
+  4: Ložnice 2
+  5: Ložnice 3
+
+zajemci:
+  - Ladislav O.
+  - Daniela H.
+  - Jaromír K.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

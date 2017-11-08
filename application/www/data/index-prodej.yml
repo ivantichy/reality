@@ -1,0 +1,65 @@
+claim: Kupte nemovitost v klidu a bez stresu
+claim_2: Díky transparentní online aukci víte, jak na tom jste. Už žádný nátlak makléřů.
+
+aukce_probihajici_nadpis: Probíhající aukce prodeje
+aukce_ukoncene_nadpis: Ukončené aukce prodeje
+
+hlidaci_pes:
+  text: Nenašli jste, co hledáte? Dáme vám vědět, jakmile se objeví něco podle vašich představ.
+  tlacitko: Dejte mi vědět
+
+vyhody:
+  - ikona: domek
+    text: Poctivě a bez realitních agentů
+  - ikona: ruka
+    text: Nízké vyvolávací ceny
+  - ikona: stitek-25
+    text: Vyhrát můžete, i když nebudete nejrychlejší
+  - ikona: panacek
+    text: Vstup do aukce je zcela zdarma
+
+cim_se_lisime:
+  nadpis: V čem je aukce bydlení jiná?
+  text_pod_nadpisem: Tato nová služba je určena všem lidem, kteří právě řeší svoje bydlení. Pomocí Aukce bydlení jim chceme dopřát výhodnější, pohodlnější a transparentnější hledání či nabízení nemovitosti.
+  priklad_nadpis: Příklad aukce prodeje bytu 2+1
+  priklad_text: v Praze při průměrné prodejní ceně 3 500 000 Kč
+
+tabulka_radek_1: Cena nájmu
+tabulka_radek_2: Řízení prohlídek
+tabulka_radek_3: Poplatek
+tabulka_radek_4: Vím, jakou mám šanci
+
+tabulka:
+  Aukce bydlení:
+    bunka_1: Je na vás
+    bunka_2: Kalendář
+    bunka_3:
+      text_1: 0,5 % z ceny
+      toolit_1: V případě aukce prodeje nemovitosti nabízející zaplatí 0,5 % z ceny nemovitosti jako jednorázový poplatek.
+    bunka_4: Ano
+  Bez realitky:
+    bunka_1: 3 500 000 Kč
+    bunka_2: Chaos
+    bunka_3: Většinou zdarma
+    bunka_4: Ne
+  Realitní agenti:
+    bunka_1: 3 500 000 Kč
+    bunka_2: Telefony a emaily
+    bunka_3: 3-5 % z ceny
+    bunka_4: Ne
+
+otazka_1:
+  nadpis: Jak Aukce bydlení funguje?
+  text: Vyberete si nemovitost svých snů. Zvolíte si termín prohlídky a když se vám nemovitost bude líbit, nabídnete částku, kterou za nemovitost chcete zaplatit.
+
+otazka_2:
+  nadpis: Kdo a jak vybírá vítěze aukce?
+  text: Aukce doporučí majiteli nemovitosti TOP3 zájemce, vybrané podle nejvyšší nabídky. Konečný výběr už je pak na majiteli.
+
+otazka_3:
+  nadpis: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+  text: Poplatek za zprostředkování aukce hradí prodávající a činí 0,5 % z výše vydražené ceny nemovitosti. Vyhraje-li tedy Jana aukci bytu v hodnotě 2 000 000 Kč, zaplatí portálu Aukce bydlení 0,5 % z této částky.
+
+otazka_4:
+  nadpis: Jak Aukce bydlení vznikla a kdo za ní stojí?
+  text: V našem okolí stále přibývá přátel, kteří by rádi změnili bydlení, ale ty nejzajímavější nabídky jim vždycky utečou. Proto jsme se rozhodli založit tuto novou online službu. Přečtěte si více v <a href="/nas-pribeh">našem příběhu</a>

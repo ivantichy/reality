@@ -1,0 +1,68 @@
+nadpis: Prodej bytu 2+1, 44 m²
+slug: pronajem-byt-44-brno
+souradnice: 49.1971808, 16.6250464
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Radlas 16, Brno-střed
+
+jmeno: Radislav Drobný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Útulný byt se nachází v přízemí činžovního domu ve středu Brna. Obývací pokoj je propojený v s menší kuchyní. Z chodby se dostanete do ložnice a koupelny se sprchovým koutem. Po domluvě je možné odkoupit nábytek viditelný na fotografiích výše.
+
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 44 m²
+  Dispozice: 2+1
+  Cena: 1200000
+  Poplatky: 2800
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 1
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: možno ihned
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 1200000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 5.7.2017 19:00
+  - 12.7.2017 18:00
+  - 19.7.2017 19:00
+datum_ukonceni: 2.8.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Ložnice
+  3: Ložnice - pohled 2
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Karolína G..
+  - Slavomír T.
+  - David M.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

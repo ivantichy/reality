@@ -1,0 +1,423 @@
+$screen-sloupec-input-min: 1050px;
+$input-background: #fcfcfc;
+.form {
+
+  &-input {
+    display: block;
+    margin-bottom: 25px;
+    /*
+    &.inline {
+      display: flex;
+      .form-label, .form-text-input {
+        flex: 1 0 auto;
+      }
+      .form-label {
+        @mixin flex-basis 30%;
+      }
+      .form-text-input {
+        @mixin flex-basis 70%;
+      }
+    }*/
+  }
+  &-title, &-label{
+    sup {
+      color: #ff0059;
+      top: 0;
+    }
+  }
+  &-label {
+    color: $text1;
+    display: block;
+    padding-bottom: 10px;
+    &.h3 {
+      margin-bottom: 0;
+    }
+  }
+  &-text {
+    margin-bottom: 25px;
+  }
+  &-text-input, &-textarea-input, &-select-input {
+    background-color: $input-background;
+    display: block;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    border-radius: 2px;
+    height: 50px;
+    padding: 10px 22px;
+
+    @media(max-width: $screen-sm-max) {
+      padding: 10px 15px;
+    }
+    &:focus {
+      border: 1px solid $zelena;
+    }
+    .form-error & {
+      /*border-color: red;*/
+    }
+  }
+  &-textarea-input {
+    height: 200px;
+    max-width: 100%;
+  }
+  &-cena {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    &-label, &-popis {
+      @mixin flex-basis 50%;
+    }
+    &-help {
+      @mixin flex-basis 100%;
+    }
+    &-label {
+      position: relative;
+      display: block; /* fix ie10 */
+      .form-text-input {
+        padding-right: 25px;
+      }
+    }
+    &-popis {
+      position: relative;
+      padding-left: 20px;
+    }
+    &-kc {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &-poplaty {
+    .col {
+      @mixin flex-basis 50%;
+    }
+  }
+
+  &-tretina {
+    @media (min-width: $screen-xs-min) {
+      @mixin flex-basis 50%;
+    }
+    @media (min-width: $screen-sm-min) {
+      @mixin flex-basis 33.333%;
+    }
+  }
+}
+
+.form-help {
+  color: red;
+  display: block;
+  @mixin flex-basis 100%;
+}
+
+.form-block {
+  color: $text2;
+  border-bottom: 1px solid $border;
+  margin-bottom: 25px;
+  padding-bottom: 36px;
+}
+
+.form-radio {
+  padding-bottom: 15px;
+  &-label {
+    display: inline-block;
+    padding: 0 15px 5px 30px;
+    margin-bottom: 2px;
+    position: relative;
+    @media(max-width: $screen-xs-max) {
+      display: block;
+    }
+    .form-block-terminy & {
+      display: block;
+      margin: 0 0 14px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-text {
+    color: $text1;
+  }
+}
+
+.form-checkbox {
+  padding-bottom: 15px;
+  &-label {
+    display: inline-block;
+    padding: 0 15px 5px 30px;
+    margin-bottom: 2px;
+    position: relative;
+    @media(max-width: $screen-xs-max) {
+      display: block;
+    }
+  }
+  &-text {
+    color: $text1;
+  }
+}
+
+.form-block-sloupce {
+  .form-checkbox-wrap, .form-radio-wrap {
+    margin-bottom: 10px;
+
+    @media(min-width: $screen-xs-min) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .form-checkbox-label, .form-radio-label {
+    margin-top: 12px;
+    padding-bottom: 12px;
+    display: block;
+    @media(min-width: $screen-xs-min) {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+    @media(min-width: $screen-sloupec-input-min: 1050px;) {
+      flex: 1 1 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+}
+
+
+.form-select {
+  width: 100%;
+  &-input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance:none;
+    &::-ms-expand {
+      display: none;
+    }
+
+  }
+  &-wrap {
+    position: relative;
+    &:after {
+      border-top: 5px solid $text2;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      margin-top: -3px;
+    }
+  }
+}
+
+.form-input-wrap {
+  position: relative;
+  display: block;
+  max-width: 300px;
+  &.date-input {
+    background-color: $input-background;
+    .form-text-input {
+      background-color: transparent;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .icon-kalendar {
+    position: absolute;
+    right: 11px;
+    top: 14px;
+    font-size: 25px;
+    z-index: 1;
+  }
+}
+.form-input-pripona {
+  position: absolute;
+  right: 11px;
+  top: 14px;
+}
+
+.form-hodnoceni {}
+.form-kauce-intro {
+  @media(min-width: $screen-xs-min) {
+
+  }
+}
+
+.form-p-uzky {
+  @media(min-width: $screen-xs-min) {
+    padding-right: 45%;
+    margin-bottom: 0;
+  }
+}
+.form-footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.form-povinny {
+  float: right;
+  font-size: 13px;
+  @media(max-width: $screen-xs-max) {
+    float: none;
+    display: block;
+  }
+}
+.form-aukce-kontakt {
+  padding-bottom: 0;
+}
+.hodnoceni {
+  padding-bottom: 50px;
+  @media(max-width: $screen-xs-max) {
+    display: block;
+  }
+  &.last {
+    padding-bottom: 30px;
+  }
+  &-col {
+    display: flex;
+    align-items: center;
+  }
+  &-label {
+    color: $text1;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 43%;
+    }
+    @media(max-width: $screen-xs-max) {
+      padding-bottom: 5px;
+    }
+  }
+  &-hodnoty {
+    display: flex;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 57%;
+    }
+
+  }
+  &-stitek, &-cisla {
+    flex: 1 1 auto;
+  }
+  &-stitek {
+    @mixin flex-basis 20%;
+  }
+  &-cisla {
+    @mixin flex-basis 80%;
+    display: flex;
+    .form-radio-label {
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .radio-span {
+      position: relative;
+      margin-right: 5px;
+      /* BUG FIX IE buttony nejsou seřazeny */
+      @media(max-width: $screen-xs-max) {
+        margin-right: 2px;
+      }
+    }
+    .form-radio-label-text {
+      float: left;
+    }
+  }
+}
+
+.zprava {
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 15px;
+  &-ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  &-uspech {
+    border-color: $zelena;
+    background-color: #f2fffd;
+  }
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0 !important;
+}
+
+.radio {
+  opacity: 0;
+  position: absolute;
+  &-span {
+    border: 2px solid $border-input;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    float: left;
+    border-radius: 50%;
+    transition: border 200ms;
+    margin: 1px 10px 0 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+  &:focus, &:hover {
+    + .radio-span {
+      border: 2px solid $zelena2;
+    }
+  }
+  &:checked {
+    + .radio-span {
+      border: 6px solid $zelena2;
+    }
+  }
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  &-span {
+    border: 2px solid $border-input;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    float: left;
+    border-radius: 2px;
+    transition: border 200ms;
+    margin: 1px 10px 0 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    transition: color 200ms, background 200ms;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    &:before {
+      content: "\E016";
+      font-family: 'iconfont';
+      opacity: 0;
+      transition: opacity 200ms;
+    }
+  }
+  &:focus, &:hover {
+    + .checkbox-span {
+      border: 2px solid $zelena2;
+    }
+  }
+  &:checked {
+    + .checkbox-span {
+      border: 2px solid $zelena2;
+      background-color: $zelena2;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

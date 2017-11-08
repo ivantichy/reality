@@ -1,0 +1,67 @@
+nadpis: Pronájem bytu 1+1, 54 m²
+slug: pronajem-dum-54-praha
+souradnice: 50.1350389, 14.4703642
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Šimůnkova 17, Praha 8 - Kobylisy
+
+jmeno: Ivan tichý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento, při předání nevybavený, byt se nachází v 5. patře panelového domu domu na Praze 8 v Kobylisích. Ve svých 54 m² skrývá vše potřebné - obývák, koupelnu, vybavenou kuchyň a v “patře” prostor ideálně velký pro manželskou postel. Byt je nedávno rekonstruovaný a vymalovaný.
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 54 m²
+  Dispozice: 1+1
+  Cena: 7 000 Kč
+  Poplatky: 3 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Cihla
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 100 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 7000
+polatky: 5000
+kauce: 7000
+vybrane_terminy:
+  - 27.6.2017 19:00
+  - 29.6.2017 19:00
+  - 4.7.2017 19:00
+datum_ukonceni: 18.7.2017
+
+obrazky:
+  1: Jídelna s výhledem
+  2: Obývací pokoj
+  3: Kuchyně
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Ivana Q.
+  - Ladislav K.
+  - Anna K.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

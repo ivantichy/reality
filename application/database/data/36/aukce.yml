@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+1, 31 m²
+slug: pronajem-byt-2-1-31-ostrava
+souradnice: 49.8247814, 18.2567658
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Daliborova 52, Ostrava
+
+jmeno: Ladislav Konečný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Útulný ostravský byt se nachází ve 2. Patře nížkého panelového domu. Hlavní pokoj spojuje obývací pokoj, ložnici (po rozložení pohovky) a jídelní kout. V podlouhlé chodbé najdete vybavenou kuchyni. Z chodby vedou dvoje dveře - na toaletu a do koupelny s vanou. Po domluvě je možné zakoupit nábytek viditelný na fotografiích.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 31 m²
+  Dispozice: 2+1
+  Cena: 4 000 Kč
+  Poplatky: 1 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: srpen/září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 4000
+polatky: 5000
+kauce: 8000
+vybrane_terminy:
+  - 28.6.2017 17:00
+  - 5.7.2017 17:00
+  - 12.7.2017 17:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Obývací pokoj
+  3: Obývací pokoj
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Ladislava B.
+  - Karel G.
+  - Vladimír T.
+
+zajemci_pocet: 8
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

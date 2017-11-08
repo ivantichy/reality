@@ -1,0 +1,69 @@
+nadpis: Prodej bytu 3+kk, 96 m²
+slug: prodej-byt-3kk-praha
+souradnice: 50.077013, 14.415749
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha 2
+adresa: Náplavní 2009/9, Praha 2
+
+jmeno: Karel Drak
+email: karel.drak@seznam.cz
+telefon: +420 707 971 098
+
+popis: Hledám nového majitele pro perfektní byt v centru Prahy. Byt disponuje vstupní halou, z níž se můžete dostat do koupelny a servisní místnosti. V koupelně je sprchový kout a WC. Dále byt disponuje obývákem napojeným na kuchyň a dvěma dalšími pokoji ve vyšší patře bytu. Byt jsem obýval jako jediný po interiérové rekonstrukci. Novému majiteli mohu v rámci ceny přenechat i zobrazené elektronické vybavení (TV s nástěnným držákem, audiosystém, lednice a další). Prémiová lokalita, zvláště pro zájemce o práci v centru Prahy.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 96 m²
+  Dispozice: 3+kk
+  Cena: 3 900 000 Kč
+  Poplatky: 5 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Cihla
+  Vybavení: Částečně vybavený
+  Podlaží: 6
+  Výtah: Ano
+  Terasa: Ne
+  Internet: Ano / 100 Mbit/s
+  Energetická třída: Třída B
+
+podminky:
+  Termín nastěhován: Od 1. 8. 2017
+  Rezervační smlouva: Ne
+
+model_aukce: A
+cena_vyvolavaci: 3900000
+polatky: 5500
+kauce: 0
+vybrane_terminy:
+  - 7.7.2017 18:00
+  - 14.7.2017 18:00
+  - 21.7.2017 18:00
+datum_ukonceni: 28.7.2017
+
+obrazky:
+  1: Obývák
+  2: Obývák 2
+  3: Ložnice
+  4: Ložnice 2
+  5: Koupelna
+
+zajemci:
+  - Andreas Z.
+  - Karol N.
+  - Lukáš R.
+
+zajemci_pocet: 8
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

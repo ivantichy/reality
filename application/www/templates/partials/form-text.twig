@@ -1,0 +1,22 @@
+<div class="form-text form-input {{ parametry.class_wrap }}">
+  {% if parametry.label %}
+  <label class="form-label">{{ parametry.label }}: {% if parametry.required %}<sup>*</sup>{% endif %}</label>
+  {% endif %}
+  {% if parametry.type == 'date' or parametry.pripona %}
+  <div class="form-input-wrap {% if parametry.type == 'date' %}date-input{% endif %}">
+  {% endif %}
+    <input class="form-text-input {{ parametry.class }}"
+      type="{% if parametry.type %}{{ parametry.type }}{% else %}text{% endif %}"
+      name="{{ nazev }}"
+      value="{{ value }}"
+      placeholder="{{ parametry.placeholder }}"
+      {% if parametry.required %}required="required"{% endif %}
+      {% if parametry.type == 'number' %}min="0"{% endif %}
+      {% if parametry.autocomplete == 'number' %}autocomplete="{{ parametry.autocomplete }}"{% endif %}
+      >
+    {% if parametry.type == 'date' %}<i class="icon icon-kalendar" aria-hidden="true"></i>{% endif %}
+    {% if parametry.pripona %}<span class="form-input-pripona">{{ parametry.pripona|raw }}</span>{% endif %}
+  {% if parametry.type == 'date' or parametry.pripona %}
+  </div>
+  {% endif %}
+</div>

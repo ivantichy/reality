@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 1+1, 29 m²
+slug: pronajem-byt-1-1-29-praha
+souradnice: 50.0733878, 14.4363483
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Uruguayská 3, Praha 2 - Vinohrady
+
+jmeno: Vlasta Úžasná
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Malý, milý a v centru města! Pokud hledáte bydlení pro jednoho nebo jeden tulivý pár, možná jste narazili na byt právě pro vás. Hlavní pokoj slouží jako ložnice a obývák zároveň. Chodbou s kuchyňkou se dostanete ke dvěma dveřím - samostatné toaletě a nedávno rekonstruované koupelně se sprchovým koutem. Díky velkému oknu je byt světlý a vzdušný. Při předání bude byt nevybavený, je možné domluvit se o koupi ledničky.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 29 m²
+  Dispozice: 1+1
+  Cena: 7 000 Kč
+  Poplatky: 2 200 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Činžovní
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 7000
+polatky: 5000
+kauce: 14000
+vybrane_terminy:
+  - 10.7.2017 18:30
+  - 17.7.2017 18:30
+  - 24.7.2017 18:30
+datum_ukonceni: 6.8.2017
+
+obrazky:
+  1: Hlavní pokoj
+  2: Hlavní pokoj
+  3: Postel
+  4: Chodba s kuchyňkou
+  5: Koupelna
+
+zajemci:
+  - Vlasta Ú.
+  - Karel G.
+  - Jana I.
+
+zajemci_pocet: 8
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

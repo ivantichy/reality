@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 2+1, 39 m²
+slug: pronajem-byt-39-praha-3
+souradnice: 50.0883567, 14.4892808
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: V Rozkvětu 19, Praha 3
+
+jmeno: Ludmila Příšerná
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Pokud máte rádi číslo 3, toto je znamení, že jste narazili na ten správný byt - se 3 pokoji, ve 3. patře, na Praze 3. Obývací pokoj je propojený s kuchyní a malým jídelním koutem. Ložnice je dostatečně prostorná pro manželskou postel a šatní skříň. Kuchyně je nově po rekonstrukci. V koupelně najdete sprchový kout. Po domluvě je možné zakoupit parkovací místo před domem.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 39 m²
+  Dispozice: 2+1
+  Cena: 11000
+  Poplatky: 3300
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: srpen - září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 11000
+polatky: 5000
+kauce: 11000
+vybrane_terminy:
+  - 7.7.2017 8:00
+  - 14.7.2017 17:30
+  - 21.7.2017 17:30
+datum_ukonceni: 28.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Obývací pokoj s jídelním koutem
+  3: Ložnice
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Žaneta L.
+  - Veronika U.
+  - Filip F.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

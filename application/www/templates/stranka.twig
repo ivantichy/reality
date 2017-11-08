@@ -1,0 +1,34 @@
+{% set title = data.title %}
+
+{% include 'header.twig' %}
+
+<div class="page">
+  <div class="container">
+    <div class="row">
+      <aside class="col page-leva">
+        <div class="page-leva-wrap">
+          {% block sidabar_top %}
+            {% include 'partials/menu-side.twig' %}
+          {% endblock %}
+          {% block sidabar_bottom %}
+            <p class="page-leva-info">
+              {{ data.levy_sloupec.text|raw }}
+              <br> <a href="/kontakty">{{ data.levy_sloupec.tlacitko }}</a>
+            </p>
+          {% endblock %}
+        </div>
+      </aside>
+      <article class="col page-prava">
+        {% block content %}
+          <p>
+            //todo: doplnit obsah
+          </p>
+        {% endblock %}
+      </article>
+    </div>
+  </div>
+
+  {% block content_bottom %}
+  {% endblock %}
+</div>
+{% include 'footer.twig' %}

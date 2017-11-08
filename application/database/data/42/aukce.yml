@@ -1,0 +1,69 @@
+nadpis: Prodej bytu 3+1, 81 m²
+slug: prodej-byt-31-brno
+souradnice: 49.193781, 16.622890
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Stavební 175/7, Brno
+
+jmeno: Tomáš Uzrban
+email: u.tomas2@gmail.com
+telefon: +420 774 717 812
+
+popis: Prodáme velmi prostorný a světlý byt v centrální části Brna. Během 5 minut můžete dojet do města šalinou. V současném rozložení byt obsahuje 2 ložnice a jeden průchozí obývací pokoj. Jedna z ložnic má atypický přístavek, který lze využít jak ke spánku, tak i například jako šatník nebo knihovna. Byt prodáváme bez nábytku. Novému majitele zůstane pouze kuchyňská linka, vestavěná trouba a vestavěné skříně.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 81 m²
+  Dispozice: 3+1
+  Cena: 2 499 990 Kč
+  Poplatky: 2 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Cihla
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: Ne
+  Terasa: Ne
+  Internet: Ano / 100 Mbit/s
+  Energetická třída: Třída B
+
+podminky:
+  Termín nastěhován: Možné ihned
+  Rezervační smlouva: Ne
+
+model_aukce: A
+cena_vyvolavaci: 2499990
+polatky: 2500
+kauce: 0
+vybrane_terminy:
+  - 12.7.2017 17:45
+  - 19.7.2017 18:00
+  - 1.8.2017 18:15
+datum_ukonceni: 10.8.2017
+
+obrazky:
+  1: Kuchyně
+  2: Kuchyně 2
+  3: Chodba
+  4: Obývák
+  5: První ložnice
+
+zajemci:
+  - Michaela J.
+  - Michal H.
+  - David G.
+
+zajemci_pocet: 5
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

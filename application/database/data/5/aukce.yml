@@ -1,0 +1,67 @@
+nadpis: Pronájem bytu 2+kk, 45 m²
+slug: pronajem-2kk-praha-7-holesovice
+souradnice: 50.0997725, 14.4246553
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Praha 7 - Holešovice, Ovenecká 24
+
+jmeno: Alžběta Ohrádková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento vybavený byt najdete v 5. podlaží 15podlažního bytového domu v Modřanech. Slunných 90 m² je členěno na obývací pokoj, ložnici s manželskou postelí, plně vybavenou kuchyň, koupelnu s vanou a prostorný balkón. Lokalita poskytuje klid, snadné spojení do centra, parky a sportoviště s možností rozmanitých sportovních aktivit. V ceně není zahrnuto parkovací stání a sklepní kóje. V případě zájmu je možné se domluvit na pronájmu i těchto prostor.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 45 m²
+  Dispozice: 2+kk
+  Cena: 14 000 Kč
+  Poplatky: 2 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Vybavený
+  Podlaží: 3
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Od 1. srpna do 1. září
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 14000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 21.6.2017 - 19:00
+  - 23.6.2017 - 9:00
+  - 26.6.2017 - 18:00
+datum_ukonceni: 6.7.2017
+
+obrazky:
+  1: Ložnice
+  2: Kuchyně 1
+  3: Kuchyně 2
+  4: Chodba
+  5: Koupelna
+
+zajemci:
+  - Pavlína B.
+  - Hynek O.
+  - Martin K.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

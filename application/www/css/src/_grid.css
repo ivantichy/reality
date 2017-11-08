@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  @mixin clearfix;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 12px;
+  padding-left: 12px;
+  max-width: 100%;
+  &.row, &.row-xs {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.fit {
+    width: 925px;
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+  @media (max-width: $screen-xs-max) {
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+  @media (max-width: $screen-sm-max) {
+    margin-right: -7px;
+    margin-left: -7px;
+  }
+}
+.row-xs {
+  @media (max-width: $screen-xs-max) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.row.col {
+  flex-direction: column;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.col,
+.col-xxs {
+  flex: 1 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+
+  @media (max-width: $screen-xs-max) {
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%; /* chrome fix */
+  }
+  @media (max-width: $screen-sm-max) {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+.col-half {
+  @mixin flex-basis 50%;
+}
+/*
+.full-xs {
+  max-width: 100% !important;
+  flex-basis: 100% !important;
+}
+*/
+
+@media (min-width: $screen-xs-min) {
+  .container {
+    width: $container-xs;
+    padding-left: $half-gutter-width;
+    padding-right: $half-gutter-width;
+
+    &.small {
+      width: 500px;
+      max-width: 100%;
+    }
+
+    &.medium {
+      width: 970px;
+      max-width: 100%;
+    }
+  }
+
+  .row-xs {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+  }
+  .row-lg, .row-md, .row-sm {
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+  }
+  .col-xs {
+    flex: 1 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    max-width: 100%;
+  }
+
+  .col-half-xs {
+    @mixin flex-basis 50%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .container {
+    width: $container-sm;
+    padding-left: $half-gutter-width;
+    padding-right: $half-gutter-width;
+  }
+
+  .row-sm {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+  }
+
+  .col-sm {
+    flex: 1 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
+
+  .col-half-sm {
+    @mixin flex-basis 50%;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .container {
+    width: $container-md;
+  }
+
+  .row-md {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+  }
+
+  .col-md {
+    flex: 1 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .container {
+    width: $container-lg;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row-lg {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+  }
+  .col-lg {
+    flex: 1 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
+}
+
+.grid-4 {
+  .box {
+    @media (min-width: $screen-xs-min) {
+
+    }
+    @media (min-width: $screen-md-min) {
+
+    }
+  }
+  @supports (display: grid) {
+     @media (min-width: $screen-xs-min){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $screen-md-min) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .box {
+      @media (min-width: $screen-xs-min) {
+        max-width: inherit;
+      }
+    }
+  }
+}
+
+.grid-5 {
+  .box {}
+}

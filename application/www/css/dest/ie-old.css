@@ -1,0 +1,24 @@
+/* breakpoint pro hamburger menu */
+/* breakpoint pro patičku */
+/* tmavší, vhodná pro text */
+/* světlejší, vhodná do pozadí */
+.row:after, .row:before, .row-xs:after, .row-xs:before {
+    content: ' ';
+    display: table;
+}
+.row:after, .row-xs:after {
+    clear: both;
+}
+.header-left {
+    float: left;
+  }
+.header-right {
+    float: right;
+  }
+.nabidka, .vyhoda, .footer-col, .funguje-box {
+  float: left;
+  width: 100%;
+}
+.footer-right {
+  float: right;
+}

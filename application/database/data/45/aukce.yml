@@ -1,0 +1,69 @@
+nadpis: Prodej rodinného domu, 150 m²
+slug: prodej-domu-205-praha
+souradnice: 50.077013, 14.415749
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: dum
+mesto: Praha
+adresa: Ul. Na Pískách, Praha
+
+jmeno: Tomáš Mrkvička
+email: mrkev892@gmail.com
+telefon: +420 604 933 100
+
+popis: Prodáváme patrový rodinný dům s menším podkrovím v atraktivní pražské části Hanspaulka. Důvodem prodeje je stěhování rodiny do zahraničí. Cena obsahuje kromě nemovitosti také okolní malý pozemek o velikosti 200 m² se štěrkovou odstavnou plochou pro automobil. V přízení domu naleznete vstupní halu, hlavní kuchyni s jídelnou a hlavní ložnici s vlastní koupelnou. První patro se skládá z obývacího pokoje, hlavní koupelny a pokoje. V podkroví je poté další měnší pokoj bez koupelny.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 185 m²
+  Dispozice: 5+2
+  Cena: 3 100 000 Kč
+  Poplatky: 3 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Cihla
+  Vybavení: Vybavený
+  Podlaží: 2
+  Výtah: Ano
+  Terasa: Ne
+  Internet: Ano / 50 Mbit/s
+  Energetická třída: Třída C
+
+podminky:
+  Termín nastěhován: Ihned
+  Rezervační smlouva: Ne
+
+model_aukce: A
+cena_vyvolavaci: 3100000
+polatky: 3000
+kauce: 0
+vybrane_terminy:
+  - 4.7.2017 18:00
+  - 6.7.2017 18:00
+  - 18.7.2017 18:00
+datum_ukonceni: 26.7.2017
+
+obrazky:
+  1: Obývák
+  2: Ložnice
+  3: Kuchyně
+  4: Kuchyně 2
+  5: Koupelna
+
+zajemci:
+  - Jana Z.
+  - Zdeněk W.
+  - Lada I.
+
+zajemci_pocet: 4
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

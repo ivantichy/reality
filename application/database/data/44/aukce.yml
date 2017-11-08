@@ -1,0 +1,69 @@
+nadpis: Prodej bytu 2+1, 60 m²
+slug: prodej-byt-21-brno
+souradnice: 50.077013, 14.415749
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Záhřebská 2471, Brno
+
+jmeno: Alena Dornychová
+email: alena.dorn@seznam.cz
+telefon: +420 605 918 981
+
+popis: V aukci prodáváme byt v brněnské části Žabovřesky. Byt je součástí bytového domu na ulici Záhřebská a prošel v posledních 2 letech rekonstrukcí. Nabízen je s vybavením v hodnotě přibližně 120 000 Kč. Hodnota tohoto vybavení je součástí vyvolávací ceny. V okolí bytu najdete klíčové dopravní spoje a opravdu široké možnosti sportovního i kulturního vyžití. Z tohoto důvodu jsou byt i lokalita vhodné jak pro jednotlivce, tak i pro rodiny s dětmi.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 60 m²
+  Dispozice: 2+1
+  Cena: 2 000 000 Kč
+  Poplatky: 3 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Cihla
+  Vybavení: Vybavený
+  Podlaží: 2
+  Výtah: Ano
+  Terasa: Ne
+  Internet: Ano / 50 Mbit/s
+  Energetická třída: Třída C
+
+podminky:
+  Termín nastěhován: Ihned
+  Rezervační smlouva: Ne
+
+model_aukce: A
+cena_vyvolavaci: 2000000
+polatky: 3000
+kauce: 0
+vybrane_terminy:
+  - 4.7.2017 18:00
+  - 6.7.2017 18:00
+  - 18.7.2017 18:00
+datum_ukonceni: 28.7.2017
+
+obrazky:
+  1: Obývák
+  2: Ložnice
+  3: Kuchyně
+  4: Kuchyně 2
+  5: Koupelna
+
+zajemci:
+  - Jana Z.
+  - Zdeněk W.
+  - Lada I.
+
+zajemci_pocet: 6
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

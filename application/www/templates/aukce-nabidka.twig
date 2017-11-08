@@ -1,0 +1,372 @@
+{% extends "aukce-form.twig" %}
+
+{% block sidebar %}
+  <h3>Potřebujete poradit?</h3>
+  <p class="vlozit-leva-podnadpis">Neváhejte nás kontaktovat.</p>
+  <p class="vlozit-leva-p">
+    <a class="vlozit-leva-link" href="mailto:{{ data.levy_sloupec.email }}">
+      <i class="icon icon-obalka-2"></i>
+      {{ data.levy_sloupec.email }}
+    </a>
+  </p>
+  <p class="vlozit-leva-p last">
+    <a class="vlozit-leva-link" href="tel:{{ data.levy_sloupec.telefon|replace({' ':''}) }}">
+      <i class="icon icon-telefon"></i>
+      {{ data.levy_sloupec.telefon }}
+    </a>
+  </p>
+{% endblock %}
+
+{% block content %}
+
+  {% if krok_aktualni == 1 %}
+  <form
+    id="krok-1"
+    class="krok-1"
+    method="post"
+    action="{{ url_current() }}"
+    {% if krok_aktualni != 1 %}style="display: none;"{% endif %}>
+    {% include 'templates/partials/zpravy.twig' %}
+
+    {%
+      include 'templates/partials/form-radio.twig'
+      with { 'nazev' : 'typ_aukce', 'parametry' : data.form.typ_aukce, 'value' : nabidka.typ_aukce}
+    %}
+
+    {%
+      include 'templates/partials/form-radio.twig'
+      with { 'nazev' : 'typ_nemovitosti', 'parametry' : data.form.typ_nemovitosti, 'value' : nabidka.typ_nemovitosti}
+    %}
+
+    <div class="form-block">
+      <p class="h3">Zadejte adresu</p>
+      <div class="row">
+        <div class="col">
+          {%
+            include 'templates/partials/form-text.twig'
+            with { 'nazev' : 'mesto', 'parametry' : data.form.mesto, 'value' : nabidka.mesto}
+          %}
+        </div>
+        <div class="col">
+          {%
+            include 'templates/partials/form-text.twig'
+            with { 'nazev' : 'adresa', 'parametry' : data.form.adresa, 'value' : nabidka.adresa}
+          %}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <p class="form-title h3">Specifikace nemovitosti</p>
+
+      <div class="row">
+        {%
+          include 'templates/partials/form-text.twig'
+          with {
+            'nazev' : 'specifikace[dispozice]',
+            'parametry' : data.form.specifikace.dispozice,
+            'value' : specifikace.dispozice
+          }
+        %}
+        {%
+          include 'templates/partials/form-text.twig'
+          with {
+            'nazev' : 'specifikace[plocha]',
+            'parametry' : data.form.specifikace.plocha,
+            'value' : specifikace.plocha
+          }
+        %}
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[typ_vlastnictvi]',
+            'parametry' : data.form.specifikace.typ_vlastnictvi,
+            'value' : specifikace.typ_vlastnictvi
+          }
+        %}
+
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[typ_budovy]',
+            'parametry' : data.form.specifikace.typ_budovy,
+            'value' : specifikace.typ_budovy
+          }
+        %}
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[vybaveni]',
+            'parametry' : data.form.specifikace.vybaveni,
+            'value' : specifikace.vybaveni
+          }
+        %}
+        {%
+          include 'templates/partials/form-text.twig'
+          with {
+            'nazev' : 'specifikace[podlazi]',
+            'parametry' : data.form.specifikace.podlazi,
+            'value' : specifikace.podlazi
+          }
+        %}
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[vytah]',
+            'parametry' : data.form.specifikace.vytah,
+            'value' : specifikace.vytah
+          }
+        %}
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[terasa]',
+            'parametry' : data.form.specifikace.terasa,
+            'value' : specifikace.terasa
+          }
+        %}
+        {%
+          include 'templates/partials/form-select.twig'
+          with {
+            'nazev' : 'specifikace[internet]',
+            'parametry' : data.form.specifikace.internet,
+            'value' : specifikace.internet
+          }
+        %}
+      </div>
+
+    </div>
+
+    <div class="form-block form-aukce-kontakt">
+      <p class="form-title h3">Kontaktní údaje</p>
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'jmeno', 'parametry' : data.form.jmeno, 'value' : nabidka.jmeno }
+      %}
+
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'email', 'parametry' : data.form.email, 'value' : nabidka.email }
+      %}
+
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'telefon', 'parametry' : data.form.telefon, 'value' : nabidka.telefon}
+      %}
+
+      {%
+        include 'templates/partials/form-checkbox.twig'
+        with { 'nazev' : 'souhlas', 'parametry' : data.form.souhlas}
+      %}
+    </div>
+
+    <footer class="form-footer">
+      <button class="button stredni" type="submit" name="button">
+        Pokračovat<i class="icon icon-prava-kolecko" aria-hidden="true"></i>
+      </button>
+      <input type="hidden" name="krok" value="1">
+      <input type="hidden" name="id_nabidky" value="{{ id_nabidky }}">
+      {{ csrf_field() }}
+    </footer>
+  </form>
+  {% endif %}
+
+  {% if krok_aktualni == 2 %}
+  <form
+    id="krok-2"
+    class="krok-2"
+    method="post"
+    action="{{ url_current() }}"
+    {% if krok_aktualni != 2 %}style="display: none;"{% endif %}>
+    {% include 'partials/zpravy.twig' %}
+
+    {% if nabidka.typ_aukce == 'pronajem' %}
+      <h3>Vyberte si model aukce</h3>
+      <div class="modely form-input">
+        <div class="modely-help form-help"></div>
+        <div class="row">
+          {%
+            include 'partials/model-box.twig'
+            with {
+              class : '',
+              input_label : data.model_a.label,
+              input_value : 'A',
+              input_error: 'Výběr modelu aukce je povinný',
+              info_text: data.model_a.text,
+              info_2_title: data.model_a.info_2_nadpis,
+              info_2_text: data.model_a.info_2_text,
+              input_cena: {
+                popis: 'Jednorázově',
+                nazev: 'cena_vyvolavaci_A',
+                value: nabidka.cena_vyvolavaci_array.A|cislo
+              },
+              value: nabidka.model_aukce
+            }
+          %}
+
+          {%
+            include 'partials/model-box.twig'
+            with {
+              class : 'uzky',
+              input_label : data.model_b.label,
+              input_value : 'B',
+              input_error: 'Výběr modelu aukce je povinný',
+              info_text: data.model_b.text,
+              info_2_title: data.model_b.info_2_nadpis,
+              info_2_text: data.model_b.info_2_text,
+              input_cena: {
+                popis: 'Měsíčně',
+                nazev: 'cena_vyvolavaci_B',
+                value: nabidka.cena_vyvolavaci_array.B|cislo
+              },
+              value: nabidka.model_aukce
+            }
+          %}
+        </div>
+      </div>
+
+      <div class="form-block form-poplatky">
+        <h3>Doplňte poplatky a kauci</h3>
+        <div class="form-poplatky-row row">
+          <div class="form-poplatky-col col">
+            <p class="form-title h5">
+              {{ data.form.poplatky.label }} <sup>*</sup>
+            </p>
+            <p>
+              {{ data.form.poplatky.podnadpis }}
+            </p>
+
+            {%
+              include 'partials/form-text-cena.twig'
+              with {
+                'nazev' : 'poplatky',
+                'parametry' : data.form.poplatky,
+                'value' : nabidka.poplatky|cislo
+              }
+            %}
+
+          </div>
+          <div class="form-poplatky-col col">
+            <p class="form-title h5">
+              {{ data.form.kauce.label }} <sup>*</sup>
+            </p>
+            <p class="form-kauce-intro">
+              {{ data.form.kauce.podnadpis }}
+            </p>
+
+            {%
+              include 'partials/form-text-cena.twig'
+              with {
+                'nazev' : 'kauce',
+                'parametry' : data.form.kauce,
+                'value' : nabidka.kauce|cislo
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    {% else %}
+    <div class="form-block">
+      <h3 class="form-label h3">{{ data.form.cena_vyvolavaci.nadpis_1 }} <sup>*</sup></h3>
+      <p>{{ data.form.cena_vyvolavaci.nadpis_2 }} </p>
+      {%
+        include 'partials/form-text.twig'
+        with {
+          'nazev' : 'cena_vyvolavaci',
+          'parametry' : data.form.cena_vyvolavaci,
+          'value' : nabidka.cena_vyvolavaci|cislo
+        }
+      %}
+      <p>{{ data.form.cena_vyvolavaci.spodni_text }}</p>
+      <input type="hidden" name="model_aukce" value="A">
+    </div>
+    {% endif %}
+    <div class="form-block">
+      <h3>{{ data.krok_2.terminy_nadpis }}</h3>
+      <p>{{ data.krok_2.terminy_text }}</p>
+
+      <div class="terminy" id="terminy">
+        {%
+          include 'partials/form-terminy.twig'
+        %}
+      </div>
+
+      <p>
+        <button id="pridat-termin" class="button sedy" type="button" name="button">
+          Přidat další termín
+        </button>
+      </p>
+    </div>
+    <div class="form-block">
+      <h3>Datum ukončení aukce</h3>
+      <p>Vyberte, kdy chcete ukončit aukci a vybrat vítěze</p>
+      {%
+        include 'partials/form-text.twig'
+        with {
+          'nazev' : 'datum_ukonceni',
+          'parametry' : data.form.datum_ukonceni,
+          'value' : nabidka.datum_ukonceni
+        }
+      %}
+    </div>
+
+    <footer class="form-footer">
+      <button class="button stredni" type="submit" name="button">
+        Pokračovat<i class="icon icon-prava-kolecko" aria-hidden="true"></i>
+      </button>
+      <input type="hidden" name="krok" value="2">
+      <input type="hidden" name="id_nabidky" value="{{ id_nabidky }}">
+      {{ csrf_field() }}
+    </footer>
+
+  </form>
+  {% endif %}
+
+  {% if krok_aktualni == 3 %}
+  <form
+    id="krok-3"
+    class="krok-3"
+    method="post"
+    action="{{ url_current() }}"
+    {% if krok_aktualni != 3 %}style="display: none;"{% endif %}>
+    {% include 'partials/zpravy.twig' %}
+
+    <div class="form-block">
+      <h3>{{ data.krok_3.nadpis }}</h3>
+      <p class="form-p-uzky">
+        {{ data.krok_3.podnadpis }}
+      </p>
+    </div>
+
+    {%
+      include 'partials/form-radio.twig'
+      with { 'nazev' : 'dotaz_jsem', 'parametry' : data.form.dotaz_jsem}
+    %}
+
+    {%
+      include 'partials/form-hodnoceni.twig'
+      with { 'nazev' : 'dotaz_dulezite', 'parametry' : data.form.dotaz_dulezite}
+    %}
+
+    {%
+      include 'partials/form-checkbox.twig'
+      with { 'nazev' : 'dotaz_zaujalo_mne', 'parametry' : data.form.dotaz_zaujalo_mne}
+    %}
+
+    {%
+      include 'partials/form-checkbox.twig'
+      with { 'nazev' : 'dotaz_chci', 'parametry' : data.form.dotaz_chci}
+    %}
+
+    <footer class="form-footer">
+      <button class="button stredni" type="submit" name="button">
+        Odeslat nabídku do aukce<i class="icon icon-prava-kolecko" aria-hidden="true"></i>
+      </button>
+      <input type="hidden" name="krok" value="3">
+      <input type="hidden" name="id_nabidky" value="{{ id_nabidky }}">
+      {{ csrf_field() }}
+    </footer>
+
+  </form>
+  {% endif %}
+{% endblock %}

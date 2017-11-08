@@ -1,0 +1,13 @@
+<nav class="drobky">
+  <div class="container">
+    {% for drobek in drobky %}
+      {% if drobek.url is not empty %}
+        <a class="drobky-box" href="{{ drobek.url }}">{{ drobek.nazev }}</a>
+      {% else %}
+        {{ drobek.nazev }}
+      {% endif %}
+      <span class="drobky-box drobky-oddelovac">»</span>
+    {% endfor %}
+    <span class="drobky-box">{{ aktualni_drobek }}</span>
+  </div>
+</nav>

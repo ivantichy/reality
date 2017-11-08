@@ -1,0 +1,87 @@
+{% set title = data.title %}
+{% include 'header.twig' %}
+
+<article class="kontakt">
+  <div class="container">
+    <header class="kontakt-header">
+      <h1 class="kontakt-nazev">Kontakt</h1>
+    </header>
+    <section class="kontakt-row row">
+      <div class="kontakt-levy col">
+        <h3>Kontaktujte nás</h3>
+
+        <div class="kontakt-box">
+          <img class="kontakt-avatar" src="/images/avatar-majitel.jpg"
+            alt="Ivan Tichý" width="46" height="46">
+          <p class="kontakt-jmeno h2">Ivan Tichý</p>
+          <p>Zakladatel Aukce bydlení</p>
+        </div>
+        <div class="kontakt-boxy">
+          <div class="kontakt-box">
+            <i class="icon icon-obalka-2" aria-hidden="true"></i>
+            <p class="kontakt-nadpis">Email</p>
+            <p><a href="mailto:{{ data.email }}">{{ data.email }}</a></p>
+          </div>
+          <div class="kontakt-box">
+            <i class="icon icon-telefon" aria-hidden="true"></i>
+            <p class="kontakt-nadpis">Telefon</p>
+            <p><a href="tel:{{ data.telefon|replace({' ':''}) }}">{{ data.telefon }}</a></p>
+          </div>
+        </div>
+
+        <div class="kontakt-popis">
+          <p>{{ data.text_pod_kontakty|raw }}</p>
+          <p></p>
+        </div>
+
+      </div>
+      <div class="kontakt-pravy col">
+        <h2>Napište nám vzkaz</h2>
+
+        <form id="kontakt-form" class="kontakt-form" action="/kontakty" method="post">
+
+          {% include 'partials/zpravy.twig' %}
+
+          <div class="row form-row">
+            <label class="col form-col form-input">
+              <span class="form-label">Jméno a příjmení:<sup aria-hidden="true">*</sup></span>
+              <input class="form-text-input"
+                type="text" name="jmeno" value=""
+                placeholder="Vaše jméno" required=""
+                autocomplete="name" data-error="Tato kolonka je povinná">
+            </label>
+            <label class="col form-col form-input">
+              <span class="form-label">E-mail:<sup aria-hidden="true">*</sup></span>
+              <input class="form-text-input"
+                type="email"
+                name="email" value=""
+                placeholder="@" required=""
+                autocomplete="email" data-error="Email je povinný">
+            </label>
+          </div>
+          <label class="form-input">
+            <span class="form-label">Telefon:<sup aria-hidden="true">*</sup></span>
+            <input class="form-text-input"
+              type="text" name="telefon"
+              value=""
+              placeholder="" required=""
+              autocomplete="tel" data-error="Telefon je povinný">
+          </label>
+          <label class="form-input">
+            <span class="form-label">Zpráva:<sup aria-hidden="true">*</sup></span>
+            <textarea class="form-textarea-input"
+              name="zprava"
+              placeholder="" required=""  data-error="Tato kolonka je povinná"></textarea>
+          </label>
+          <footer class="form-footer">
+            <button id="button-kontakty" class="button" type="submit" name="submitVzkaz">Odeslat</button>
+            <input type="hidden" name="typ_formulare" value="kontakty">
+            {{ csrf_field() }}
+            {# honeypot_generate() #}
+          </footer>
+        </form>
+      </div>
+    </section>
+  </div>
+</article>
+{% include 'footer.twig' %}

@@ -1,0 +1,71 @@
+title: Vložit nabídku
+claim: Získejte vyšší výnos z nemovitosti za[mezera]méně starostí
+claim_2: Vyzkoušejte online aukci, ať už hledáte nájemníka nebo[mezera]prodáváte nemovitost.
+
+vyhody:
+  - ikona: domek
+    text: Spolehliví a ověření zájemci
+  - ikona: ruka
+    text: Získáte vyšší nájem nebo provizi
+  - ikona: stitek-25
+    text: Až o 75 % méně prohlídek
+  - ikona: panacek
+    text: Vložení aukce je zcela zdarma
+
+jak_vlozit_nadpis: Jak vložit aukci zdarma?
+jak_vlozit:
+  - ikona: domek
+    text: Vložte základní informace o nabídce a vyberte si termíny prohlídek.
+  - ikona: osoba
+    text: Ozveme se vám, poradíme a pomůžeme s doplněním nabídky.
+  - ikona: panacek
+    text: Společně spustíme aukci vaší nemovitosti.
+
+cim_se_lisime:
+  nadpis: Čím se aukce bydlení liší?
+  text_pod_nadpisem: Aukce bydlení je nová služba.
+    Řídí očekávání nabízejícího i zájemce o bydlení. Naší motivací je transparentnější, výhodnější a pohodlnější hledání bydlení.
+  priklad_nadpis: Příklad aukce pronájmu bytu 2+1 v Praze
+  priklad_text: s nájmem v hodnotě 18 000 Kč bez poplatků.
+
+tabulka_radek_1: Cena nájmu
+tabulka_radek_2: Řízení prohlídek
+tabulka_radek_3: Poplatek
+tabulka_radek_4: Získám nejvyšší možnou cenu
+
+tabulka:
+  Aukce bydlení:
+    bunka_1: Je na vás
+    bunka_2: Kalendář
+    bunka_3:
+      text_1: 25 %
+      toolit_1: V případě aukce pronájmu bydlení zájemce o bydlení zaplatí 25 % z prvního nájmu jako jednorázový poplatek.
+      text_2: 0.5 % z ceny
+      toolit_2: V případě aukce prodeje nemovitosti nabízející zaplatí 0,5 % z ceny nemovitosti jako jednorázový poplatek.
+    bunka_4: Ano
+  Realitní servery:
+    bunka_1: Je na vás
+    bunka_2: Chaos
+    bunka_3: Zdarma
+    bunka_4: Ne
+  Realitní agenti:
+    bunka_1: 18 000 Kč
+    bunka_2: Telefony a emaily
+    bunka_3: 18 000 Kč
+    bunka_4: Ne
+
+
+
+otazka_1:
+  nadpis: Kdo a jak vybírá výherce aukce?
+  text: Aukce nabízejícímu doporučí TOP3 zájemce podle nejvyšší nabídky, motivace a délky pronájmu. Konečné slovo při výběru nájemce má nabízející.
+
+otazka_2:
+  nadpis: Kdo za službou stojí?
+  text: Aukce bydlení je nová online služba.
+    Založili jsme ji proto, že v našem okolí přibývalo přátel, kterým neustále unikaly zajímavé nabídky bydlení.
+    Přečtěte si více o <a href="/nas-pribeh">našem příběhu</a>
+
+otazka_3:
+  nadpis: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+  text: Majitel si může při dražbě volit mezi 2 modely. Dražbou servisního poplatku (např. 2 500 Kč) nebo dražbou nájmu (např. 18 000 Kč měsíčně). Nic více neplatíte.

@@ -1,0 +1,337 @@
+.page {
+  padding-top: 67px;
+  &-leva {
+    padding-bottom: 25px;
+    @media (min-width: $screen-xs-min) {
+      @mixin flex-basis 30%;
+    }
+    @media (min-width: $screen-md-min) {
+      @mixin flex-basis 26%;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding-right: 55px;
+    }
+    &-wrap {
+      @media (min-width: $screen-xs-min) {
+        position: sticky;
+        top: 10px;
+      }
+    }
+    &-info {
+      padding: 9px 25px 0 7px;
+      line-height: 1.8;
+    }
+    .jak-funguje-vyjimecny & {
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+    }
+  }
+  &-prava {
+    @media (min-width: $screen-xs-min) {
+      @mixin flex-basis 70%;
+    }
+    @media (min-width: $screen-md-min) {
+      @mixin flex-basis 74%;
+    }
+    .jak-funguje-vyjimecny & {
+      @media (max-width: $screen-md-max) {
+        @mixin flex-basis 100%;
+      }
+    }
+  }
+}
+.menu-side {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 25px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 3px;
+  &-li {
+    border-bottom: 1px solid #f1f1f1;
+    &.first {
+      .menu-side-link {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+    }
+    &.last {
+      border-bottom: none;
+      .menu-side-link {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+  &-link {
+    color: $text1;
+    display: block;
+    text-decoration: none;
+    padding: 12px 18px;
+    position: relative;
+    @media (min-width: $screen-xs-min) {
+      .sipka {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        width: 16px;
+        height: 24px;
+        overflow: hidden;
+        transform: translateY(-50%);
+        transition: opacity 200ms;
+        &:after {
+          background-color: $zelena2;
+          content: '';
+          width: 16px;
+          height: 16px;
+          display: block;
+          border-radius: 4px;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+          transform-origin: 0 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:hover, &:focus, &.active {
+      background-color: $zelena2;
+      color: #fff;
+    }
+    &.active {
+      .sipka {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.jak-funguje {
+  padding-bottom: 85px;
+  &-nadpis {
+    margin-bottom: 49px;
+  }
+  &-top {
+    padding-bottom: 114px;
+  }
+  &-bot {
+    text-align: center;
+    padding-top: 75px;
+    @media(max-width: $screen-xs-max) {
+      padding-top: 35px;
+    }
+  }
+}
+.jak-funguje.vyjimecny {
+  background-color: $seda;
+  .plovouci-nadpis {
+    top: -87px;
+  }
+}
+
+.funguje-blok {
+  position: relative;
+  padding-left: 78px;
+  margin-bottom: 20px;
+  @media(max-width: $screen-sm-max) {
+    padding-left: 50px;
+  }
+  &-6 {
+    .text {
+      padding-right: 95px;
+      @media(max-width: $screen-xs-max) {
+        padding-right: 75px;
+      }
+    }
+  }
+  &-3 {
+    .funguje-blok-prava {
+      padding-right: 0;
+    }
+  }
+  &-leva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-prava {
+    color: $text2;
+    line-height: 24px;
+    @media(min-width: $screen-xs-min) {
+
+    }
+    p {
+      margin-bottom: 24px;
+    }
+    .text {
+      position: relative;
+    }
+    svg {
+      position: absolute;
+      right: 0;
+      top: -9px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &-sloupce {
+    .siroky {
+      @media(min-width: $screen-sm-min) {
+        @mixin flex-basis 45%;
+      }
+    }
+    .stred {
+
+      @media(min-width: $screen-sm-min) {
+        @mixin flex-basis 10%;
+        padding-top: 20px;
+      }
+
+      @media(max-width: $screen-sm-max) {
+        padding-bottom: 20px;
+      }
+    }
+    .textik {
+      display: block;
+    }
+    .icon-krizek {
+      background-color: $zelena2;
+      width: 30px;
+      height: 30px;
+      display: block;
+      color: #fff;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 9px;
+      @media(min-width: $screen-xs-min) {
+        margin-left: 6px;
+      }
+    }
+  }
+  &-cislo, &-sipka {
+    flex: 1 1 auto;
+  }
+  &-cislo {
+    flex-grow: 0;
+    .cislo {
+      background-color: $zelena2;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  &-sipka {
+    position: relative;
+    .cara {
+      position: absolute;
+      background-color: $zelena2;
+      width: 1px;
+    }
+    .dlouha {
+      height: 100%;
+      left: 15px;
+      top: 0;
+    }
+    .kratka {
+      height: 10px;
+      left: 15px;
+      bottom: 0;
+      transform-origin: bottom center;
+      &.leva {
+        transform: rotate(-45deg);
+      }
+      &.prava {
+        transform: rotate(45deg);
+      }
+    }
+
+  }
+}
+
+.pribeh {
+  text-align: center;
+  padding: 0 0 80px;
+  color: $text2;
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0;
+  }
+  &-nadpis {
+    margin-bottom: 45px;
+  }
+  &-box {
+    box-shadow: $box-shadow;
+    padding: 29px 55px;
+    text-align: left;
+    margin: 0 14% 52px;
+    position: relative;
+    line-height: 1.8;
+    @media (max-width: $screen-md-max) {
+      margin: 0 5% 40px;
+    }
+    @media (max-width: $screen-sm-max) {
+      padding: 25px;
+      margin: 0 0 40px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 10px;
+    }
+  }
+  &-trojuhelnik {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 27px;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
+    &:after {
+      box-shadow: $box-shadow;
+      content: '';
+      border-radius: 7px;
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: -4px;
+      background-color: #fff;
+    }
+  }
+  &-foto {
+    margin-bottom: 0;
+  }
+  &-jmeno {
+
+  }
+}
+
+.caste-otazky {
+  text-align: center;
+}
+
+.nenasli-odpoved {
+  text-align: center;
+  padding: 50px 0;
+  &-text {
+    margin-bottom: 25px;
+  }
+}
+
+.vlozit-paticka {
+  text-align: center;
+  padding-bottom: 45px;
+}

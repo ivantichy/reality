@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 2+1, 69 m²
+slug: prodej-byt-2-1-brno
+souradnice: 49.1998031, 16.5972569
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Gorkého 20, Brno
+
+jmeno: Lidmila Líbivá
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento nově plně zrekonstruovaný byt ve středu Brna je díky orientaci na západ příjemně slunný.  Hlavní místnost je opticky oddělena na obývací pokoj s rozměrným oknem a kuchyň s praktickým jídelním stolkem. V navazující místnosti se nachází ložnice, kousek od níž se dveřmi dostanete do koupelny, která uspokojí chotky jak sprchomilům, tak vanomilovníkům. Byt je nabízen s nábytkem, který vidíte na fotografiích.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 69 m²
+  Dispozice: 2+1
+  Cena: 900 000 Kč
+  Poplatky: 2 900 Kč
+  Typ vlastnictví: Družstevní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Vybavený
+  Podlaží: 4
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 900000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 27.6.2017 20:00
+  - 30.6.2017 19:00
+  - 6.7.2017 19:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Ložnice
+  3: Kuchyň
+  4: Koupelna
+  5: Fotka nemovitosti
+
+zajemci:
+  - Karel T.
+  - Vlaďka P.
+  - Petr G.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

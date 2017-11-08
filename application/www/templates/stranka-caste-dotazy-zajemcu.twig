@@ -1,0 +1,62 @@
+{% extends "stranka.twig" %}
+
+{% block content %}
+  <h1 class="otazky-title">Časté dotazy zájemců</h1>
+
+  <div class="tabs">
+    <div class="tabs-nav">
+      <ul class="tab-list" role="tablist">
+        <li class="tab-item active">
+          <a class="tab-link" href="#pronajem"
+            role="tab" aria-selected="true" aria-controls="pronajem">Chci pronájem nemovitost</a>
+        </li>
+        <li class="tab-item">
+          <a class="tab-link" href="#prodej"
+            role="tab" aria-selected="false" aria-controls="prodej">Chci koupit nemovitost</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tabs-panels">
+      <div class="tab-panel active" id="pronajem" role="tabpanel" aria-hidden="false">
+        <div class="caste-otazky">
+          {% for otazka in data.otazky_pronajem %}
+            <div class="otazka {{ loop.index is odd ? 'uzka' : 'siroka' }}">
+              <div class="otazka-box">
+                <div class="otazka-text">
+                  <h3>{{ otazka.otazka }}</h3>
+                  <p>{{ otazka.odpoved|raw }}</p>
+                </div>
+                <div class="otazka-trojuhelnik {{ loop.index is odd ? 'levy' : 'pravy' }}"></div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="tab-panel" id="prodej" role="tabpanel" aria-hidden="true">
+        <div class="caste-otazky">
+          {% for otazka in data.otazky_prodej %}
+            <div class="otazka {{ loop.index is odd ? 'uzka' : 'siroka' }}">
+              <div class="otazka-box">
+                <div class="otazka-text">
+                  <h3>{{ otazka.otazka }}</h3>
+                  <p>{{ otazka.odpoved|raw }}</p>
+                </div>
+                <div class="otazka-trojuhelnik {{ loop.index is odd ? 'levy' : 'pravy' }}"></div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nenasli-odpoved">
+    <p class="nenasli-odpoved-text h1">
+      {{ data.paticka_cta.text }}
+    </p>
+    <p>
+      <a class="button" href="/#nabidky">{{ data.paticka_cta.tlacitko }}</a>
+    </p>
+  </div>
+
+{% endblock %}

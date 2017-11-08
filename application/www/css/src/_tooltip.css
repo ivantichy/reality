@@ -1,0 +1,98 @@
+
+/*	Container */
+.tooltip--is-ready {
+	position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.tooltip-toggle {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  &:hover, &:focus {
+    outline: none;
+    .icon-info {
+      color: $zelena;
+      &:before {
+        content: "\E004";
+      }
+    }
+  }
+}
+
+/*	Toolip */
+.tooltip--is-ready .tooltip-tooltip {
+	box-shadow: $box-shadow;
+  color: $text2;
+  background-color: #fff;
+  bottom: 100%;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  display: block;
+  padding: 15px;
+  border-radius: 2px;
+  transition: opacity 200ms;
+  margin-bottom: 25px;
+  text-align: center;
+  width: 190px;
+  transform: translateX(-50%);
+  max-width: 0;
+  font-size: 16px;
+  vertical-align: 0;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 7px;
+    font-size: 14px;
+  }
+  &.leva {
+    transform: translateX(-15%);
+    .tooltip-trojuhelnik {
+      left: 15%;
+    }
+  }
+  &.prava {
+    transform: translateX(-85%);
+    .tooltip-trojuhelnik {
+      left: 85%;
+    }
+  }
+}
+.tooltip--is-ready .tooltip-tooltip[aria-hidden="false"] {
+	visibility: visible;
+  opacity: 1;
+  max-width: none;
+}
+.tooltip--is-ready .tooltip-trojuhelnik {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 25px;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  &:after {
+    box-shadow: $box-shadow;
+    content: '';
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    background-color: #fff;
+  }
+}
+/*	No JS */
+.tooltip:not(.tooltip--is-ready) .tooltip-tooltip::before {
+	content: " (";
+}
+.tooltip:not(.tooltip--is-ready) .tooltip-tooltip::after {
+	content: ")";
+}

@@ -1,0 +1,234 @@
+title: Vložit nabídku
+
+levy_sloupec:
+  telefon: +420 721 379 606
+  email: info@aukcebydleni.cz
+
+kroky:
+  - Vložení nabídky
+  - Ceny a termíny prohlídky
+  - Doplňující informace
+
+form:
+  typ_aukce:
+    label: Vložení nabídky
+    class: form-block
+    required: true
+    hodnoty:
+      pronajem: Pronájem nemovitosti
+      prodej: Prodej nemovitosti
+
+  typ_nemovitosti:
+    label: Typ nemovitosti
+    class: form-block
+    required: true
+    hodnoty:
+      byt: Byt
+      dum: Dům
+  mesto:
+    label: Město nebo obec
+    required: true
+    autocomplete: city
+  adresa:
+    label: Ulice
+    autocomplete: street-address
+
+  # kontaktní údaje
+  jmeno:
+    label: Jméno a příjmení
+    placeholder: Jméno a příjmení
+    required: true
+    autocomplete: name
+  email:
+    label: E-mail
+    placeholder: '@'
+    required: true
+    type: email
+    autocomplete: email
+  telefon:
+    label: Telefon
+    placeholder: ''
+    required: true
+    type: tel
+    autocomplete: tel
+
+  #specifikace nemovitosti
+  specifikace:
+    dispozice:
+      label: Dispozice
+      placeholder: např. 3+1
+      class_wrap: col form-tretina
+      required: true
+    plocha:
+      label: Plocha
+      class_wrap: col form-tretina
+      type: number
+      required: true
+      pripona: 'm<sup>2</sup>'
+    typ_vlastnictvi:
+      label: Typ vlastnictví
+      class_wrap: col form-tretina
+      required: true
+      hodnoty:
+        - Osobní
+        - Družstevní
+    typ_budovy:
+      label: Typ budovy
+      class_wrap: col form-tretina
+      hodnoty:
+        - Panel
+        - Cihla
+        - Dřevo
+    vybaveni:
+      label: Vybavení
+      class_wrap: col form-tretina
+      hodnoty:
+        - Vybavený
+        - Částečně vybavený
+        - Nevybavený
+    podlazi:
+      label: Podlaží
+      class_wrap: col form-tretina
+    vytah:
+      label: Výtah
+      class_wrap: col form-tretina
+      hodnoty:
+        - Ano
+        - Ne
+    terasa:
+      label: Terasa
+      class_wrap: col form-tretina
+      hodnoty:
+        - Ano
+        - Ne
+    internet:
+      label: Internet
+      class_wrap: col form-tretina
+      hodnoty:
+        - Ano
+        - Ne
+
+  souhlas:
+    label: Souhlasím se zpracováním osobních údajů a <a href="/obchodni-podminky" target="_blank">obchodními podmínkami</a>.
+    error: Musíte souhlasit se zpracováním osobních údajů
+    required: true
+
+  cena_vyvolavaci:
+    label: Vyvolávací cena
+    required: true
+    error: Kolonka 'Vyvolávací cena' je povinná
+    pripona: Kč
+    type: number
+    nadpis_1: Dražit cenu nemovitosti
+    nadpis_2: Vítěz aukce platí za nemovitost plnou vydraženou cenu. Zvolte vyvolávací cenu.
+    spodni_text: Doporučujeme začít na 80-90 % ceny nemovitosti, kterou skutečně chcete vydražit, abyste motivovali více zájemců.
+
+  terminy:
+    den:
+      label: Den
+      type: date
+      class: termin-den
+      placeholder: 1.1.2017
+    hodina:
+      label: Hodina
+      class: termin-hodina
+      type: time
+      placeholder: 00:00
+    pocet_zajemcu:
+      label: Max. počet zájemců
+      type: number
+      class: termin-pocet
+      placeholder: Např. 3
+
+  poplatky:
+    label: Poplatky nemovitosti
+    popis:
+    error: Kolonka 'Poplatky nemovitosti' je povinná
+    required: true
+    podnadpis: Uveďte orientační cenu poplatků na energie, domovní služby, případně další náklady.
+
+  kauce:
+    label: Kauce nemovitosti
+    popis:
+    error: Kolonka 'Kauce nemovitosti' je povinná
+    required: true
+    podnadpis: Uveďte, jakou hodnotu kauce požadujete. V případě, že nepožadujete kauci, uveďte 0 Kč.
+
+  datum_ukonceni:
+    label: Vybrat datum
+    type: date
+    required: true
+
+  dotaz_jsem:
+    label: V současnosti jsem…
+    class: form-block
+    required: true
+    error: Vyberte prosím jednu z hodnot
+    zobraz_text_povinny_udaj: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Agent
+      - Individuální nabízející
+      - Developer
+
+  dotaz_dulezite:
+    label: Jak důležité jsou pro vás vlastnosti ideálního nájemce?
+    class: form-block
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Upřednosňuji nájemce s vyšší nabídkou
+      - Upřednostňuji důvěryhodnějšího nájemce
+      - Upřednostňuji dlouhodobého nájemce
+      - Upřednostňuji vysokou kauci
+
+  dotaz_zaujalo_mne:
+    label: Čím vás Aukce bydlení zaujala?
+    popis: Zvolit můžete více možností! Budeme rádi, když nám dáte vědět, co vám na naší službě přijde skvělé.
+    class: form-block form-block-sloupce
+    required: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Najdu lepšího zájemce
+      - Získám vyšší výdělek
+      - Transparentnost aukce
+      - Jednoduchost aukce
+      - Rychlost aukce
+      - Snížím počet prohlídek
+      - Služba je sympatická
+
+  dotaz_chci:
+    label: Která z těchto služeb by vám přišla zajímavá?
+    popis: Zvolit můžete více možností! Budeme rádi, když nám pomůžete s tím, co by vám v budoucnu usnadnilo nabízet nemovitost.
+    class: form-block form-block-sloupce
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Mobilní aplikace
+      - Prověření zájemců
+      - Profily uživatelů
+      - Topování nabídky
+      - Právní pomoc se smlouvou
+      - Online podpis smlouvy
+
+krok_2:
+  terminy_nadpis: Zvolte termíny prohlídky
+  terminy_text: Zvolte termíny, kdy zájemci můžou osobně navštívit vaší nemovitost a prohlédnout si ji.
+
+krok_3:
+  nadpis: Děkujeme za váš zájem o aukci
+  podnadpis: Pomozte nám zdokonalit Aukci bydlení. Prozraďte nám něco málo o sobě a pomozte nám dále se zlepšovat. Děkujeme!
+
+model_a:
+  label: Dražit vratnou aukci
+  text: Poplatek majiteli je jednorázová odměna pro majitele. Je obdobou odměny pro realitního agenta, jen s tím rozdílem, že 75 % tohoto poplatku jde vám, majiteli. Aukce Bydlení si ponechá 25 % za zprostředkování.
+  info_2_nadpis: Zvolte vyvolávací cenu poplatku
+  info_2_text: V případě pronájmu doporučujeme od 20 % měsíčního nájmu. V případě prodeje doporučujeme začít na 0,1 % prodejní ceny.
+
+model_b:
+  label: Dražit měsíční nájem
+  text: V případě tohoto modelu vám bude vítěz aukce platit vydražený nájem v této hodnotě po dobu nájemní smlouvy.
+  info_2_nadpis: Zvolte vyvolávací cenu nájmu
+  info_2_text: Doporučujeme začít na 80-90 % ceny, na kterou cílíte, abyste motivovali více zájemců.
+
+
+email_odesilatel: info@aukcebydleni.cz
+email_predmet: 'Aukce bydlení: Zamítnutí poptávky vložení aukce'

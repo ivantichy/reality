@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+kk, 70 m²
+slug: pronajem-byt-2kk-ostrava
+souradnice: 49.839202, 18.291473
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Matiční 2255/12, Ostrava-město
+
+jmeno: Martin Zoubek
+email: zeoubek@gmail.com
+telefon: +420 776 881 981
+
+popis: Pronajmu velmi pěkný byt se základním vybavením v centru města, blízko Ekonomické fakulty VŠB-TU Ostrava, blízko řeky Otravice. Byt je 2 minuty chůze od blízkých parků, kaváren a kulturních institucí. Lokace je skvělá pro pár nebo zodpovědné studenty (univerzita je opravdu přes ulici).
+
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 70 m²
+  Dispozice: 2+kk
+  Cena: 10 000 Kč
+  Poplatky: 1 800 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Cihla
+  Vybavení: Častečně vybavený
+  Podlaží: 5
+  Výtah: Ano
+  Terasa: Ne
+  Internet: Ano / 50 Mbit/s
+  Energetická třída: Třída D
+
+podminky:
+  Termín nastěhován: Kdykoli
+  Výpovědní lhůta: 3 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 11000
+polatky: 1800
+kauce: 11000
+vybrane_terminy:
+  - 10.7.2017 17:30
+  - 14.7.2017 17:00
+  - 18.7.2017 09:00
+datum_ukonceni: 24.7.2017
+
+obrazky:
+  1: Kuchyně
+  2: Kuchyně 2
+  3: Ložnice
+  4: Obývák
+  5: Koupelna
+
+zajemci:
+  - Tadeusz S.
+  - Andrea H.
+  - Jiří U.
+
+zajemci_pocet: 6
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

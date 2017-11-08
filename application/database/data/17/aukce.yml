@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 2+1, 64 m²
+slug: byt-prodej-2-1-praha-10
+souradnice: 50.0682467, 14.4497394
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Rostovská 4, Praha 10-Vršovice
+
+jmeno: Rostislav Rošťácký
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento nově zrekonstruovaný byt se nachází několik minut od vršovického nadráží.  Kousek od vršovického nádraží. Z jedné strany obývacího pokoje je opticky oddělena plně vybavená kuchyň, z druhé strany je připojený balkón. Druhá místnost je ideální pro ložnici s manželskou postelí, skříní a minimálním nábytkem. Při prodeji je možné domluvit prodání i většího nábytku.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 84 m²
+  Dispozice: 3+1
+  Cena: 800 000 Kč
+  Poplatky: 3 500 Kč
+  Typ vlastnictví: Družstevní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ano
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 800000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 29.6.2017 18:00
+  - 6.7.2017 17:00
+  - 13.7.2017 18:00
+datum_ukonceni: 29.7.2017
+
+obrazky:
+  1: Kuchyně
+  2: Obývací pokoj, pohled 1
+  3: Obývací pokoj, pohled 2
+  4: Loužnice
+  5: Koupelna
+
+zajemci:
+  - Karel M.
+  - Patra Ř.
+  - Radek V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

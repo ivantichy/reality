@@ -1,0 +1,15 @@
+sklonovani:
+  Praha: Praze
+  Brno: Brně
+  Ostrava: Ostravě
+
+tooltip_cena_pronajem: Vydražená cena je finální, nejsou do ní započítány poplatky za energie.
+tooltip_cena_prodej: Vydražená cena je finální. K ceně nebudou připočítány další poplatky.
+
+jak_funguje:
+  text: Jak funguje výběr vítěze?
+  tooltip: Po ukončení aukce portál doporučí TOP3 zájemce podle ceny, a v případě pronájmu i spolehlivosti a délky.
+
+hodnoceni_odbornika:
+  text: Získat nezávislé hodnocení našeho odborníka
+  tlacitko: Kontaktujte nás

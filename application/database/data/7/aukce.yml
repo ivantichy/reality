@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 1+1, 40 m²
+slug: pronajem-1-1-brno-kralovo-pole
+souradnice: 49.2201917, 16.5966864
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Palackého třída 9, Brno-Královo Pole
+
+jmeno: Petr Posedlý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento byt na Palackého třídě je součástí činžovního domu a nachází se ve 2. patře. Základem je prostorná ložnice vybavená manželskou postelí a stolkem s židlemi k posezení. Druhou částí bytu je plně vybavená kuchyň. Koupelna je nově zrekonstruovaná, s vanou. Lokalita je vzdálená 20 minut od centra a plně dostupná díky MHD.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 40 m²
+  Dispozice: 1+1
+  Cena: 7 500 Kč
+  Poplatky: 2 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Vybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 30 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 7500
+polatky: 3500
+kauce: 0
+vybrane_terminy:
+  - 30.6.2017 - 18:00
+  - 4.7.2017 - 08:00
+  - 6.7.2017 - 19:00
+datum_ukonceni: 14.7.2017
+
+obrazky:
+  1: Hlavní pokoj
+  2: Hlavní pokoj podruhé
+  3: Kuchyň
+  4: Kuchyň podruhé
+  5: Koupelna
+
+zajemci:
+  - Roman R.
+  - Lenka P.
+  - Kateřina N.
+
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

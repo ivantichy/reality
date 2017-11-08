@@ -1,0 +1,14 @@
+<div class="form-text form-select {{ parametry.class_wrap }}">
+  <label class="form-label">{{ parametry.label }}: {% if parametry.required %}<sup>*</sup>{% endif %}</label>
+  <div class="form-select-wrap">
+    <select
+      class="form-select-input {{ parametry.class }}"
+      name="{{ nazev }}"
+      {% if parametry.required %}required="required"{% endif %}>
+      <option></option>
+      {% for hodnota in parametry.hodnoty %}
+        <option value="{{ hodnota }}" {% if hodnota == value %}selected="selected"{% endif %}>{{ hodnota }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

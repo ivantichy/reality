@@ -1,0 +1,69 @@
+nadpis: Prodej bytu 3+1, 82 m²
+slug: prodej-byt-31-ostrava
+souradnice: 49.835540, 18.270580
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Varenská 2962/34, Moravská Ostrava
+
+jmeno: Martin Zoubek
+email: zeoubek@gmail.com
+telefon: +420 776 881 981
+
+popis: Prodám byt v domě po kompletní revitalizaci (od oken až po odpad). Byt je v 3. podlaží vícepatrové budovy. V blízkém okolí jsou všechny nezbytné obchody, nákupní centrum i několik možností dopravy z/do centra města. V případě zájmu mohu zprostředkovat i nákup parkovacího místa v této lokalitě. V případě zájmu, uveďte zájem o parkování do žádosti taktéž.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 82 m²
+  Dispozice: 2+kk
+  Cena: 650 000 Kč
+  Poplatky: 2 200 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Výborný
+  Typ budovy: Cihla
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: Ano
+  Terasa: Ano
+  Internet: Ano / 100 Mbit/s
+  Energetická třída: Třída B
+
+podminky:
+  Termín nastěhován: Ihned
+  Rezervační smlouva: Ne
+
+model_aukce: A
+cena_vyvolavaci: 650000
+polatky: 2200
+kauce: 0
+vybrane_terminy:
+  - 14.7.2017 18:00
+  - 21.7.2017 18:00
+  - 28.7.2017 18:00
+datum_ukonceni: 7.8.2017
+
+obrazky:
+  1: Kuchyně
+  2: Obývák
+  3: Obývák 2
+  4: Kuchyně 2
+  5: Koupelna
+
+zajemci:
+  - Martin Z.
+  - Alena P.
+  - Barbora I.
+
+zajemci_pocet: 3
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

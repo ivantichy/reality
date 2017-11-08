@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+1, 36 m²
+slug: pronajem-byt-2-1-36-ostrava
+souradnice: 49.7922267, 18.2538003
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Šponarova 12, Ostrava-jih - Hrabůvka
+
+jmeno: Bohuslava Kožená
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Ostravský byt ve 2. podlaží panelového domu se nachází v klidné oblasti městké části Hrabůvka. Byt se skládá z hlavní místnosti v současné chvíli rozdělené na obývací pokoj, kuchyni a jídelní kout. Z chodby se poté dostanete do ložnice a koupelny s vanou. Byt je nabízen k pronájmu částečně vybavený - s vybavenou kuchyňskou linkou, zabudovanou čatní skříní v ložnici a manželskou postelí. Po domluvě je možné zakoupit sklepní kóji.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 36 m²
+  Dispozice: 2+1
+  Cena: 4 500 Kč
+  Poplatky: 1 900 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Cihla
+  Vybavení: Částečně vybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: srpen - září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 4500
+polatky: 5000
+kauce: 4500
+vybrane_terminy:
+  - 28.6.2017 17:00
+  - 5.7.2017 17:00
+  - 12.7.2017 19:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Kuchyně
+  3: Jídelní kout
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Karel P.
+  - Karolína W.
+  - Vojtěch Z.
+
+zajemci_pocet: 5
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

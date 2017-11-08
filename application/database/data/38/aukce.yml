@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+1, 51 m²
+slug: pronajem-byt-2-1-51-brno
+souradnice: 49.2075928, 16.6026631
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Kotlářská 47, Brno-střed
+
+jmeno: Vratislav Střešný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Byt se nachází v centru města, budete tak mít vše potřebné od kultury až po sport na dosah. Hlavní místnost bytu je opticky rozdělena na obývací pokoj a kuchyň. Kuchyně je nedávno rekostruovaná. Prostorná ložnice poslouží nejen ke spánku, ale můžete ji také využít k odkládání potřebných věcí. V koupelně se nachází vana se sprchou a spchovým závěsem Toaleta není samostatná, je součástí koupelny. Po domluvě je možné zakoupit větší kusy nábytku viditelné na fotografiích.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 51 m²
+  Dispozice: 2+1
+  Cena: 8 000 Kč
+  Poplatky: 2 800 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 4
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 65 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září/říjen 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 8000
+polatky: 5000
+kauce: 8000
+vybrane_terminy:
+  - 6.7.2017 17:00
+  - 13.7.2017 17:00
+  - 20.7.2017 17:00
+datum_ukonceni: 3.8.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Obývací pokoj
+  3: Kuchyně
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Elena D.
+  - Radomír J.
+  - Rudolf O.
+
+zajemci_pocet: 11
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

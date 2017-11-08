@@ -1,0 +1,67 @@
+nadpis: Prodej domu, 152 m²
+slug: prodej-dum-152-brno
+souradnice: 49.1735900, 16.6152028
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: dum
+mesto: Brno
+adresa: Kšírova 67, Brno
+
+jmeno: Ladislav Mokrý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Dvoupatrový rodinný dům se nachází v klidném prostředí na okraji Brna. V přízemí se nachází obývací pokoj, kuchyně, koupelna se sprchovým koutem a menší ložnice. Z obývacího pokoje pak snadno vyjdete na prostornou terasu. Ve druhém patře jsou umístěny 3 ložnice a prostorná koupelna. Dům je vybaven termostatem a lze tak nastavit teplotu v různých místnostech pomocí jednoho panelu. V koupelnách vs pak potěší podlahové topení. Domu náleží menší pozemek. Auto lze jednoduše parkovat na příjezdové cestě.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 152 m²
+  Dispozice: 5+1
+  Cena: 3 500 000 Kč
+  Poplatky: 4 600 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ano
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 3500000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 30.6.2017 18:00
+  - 7.7.2017 18:00
+  - 14.7.2017 18:00
+datum_ukonceni: 28.7.2017
+
+obrazky:
+  1: Vnější pohled
+  2: Chodba
+  3: Obývací pokoj
+  4: Ložnice
+  5: Kuchyň
+
+zajemci:
+  - Jiří S.
+  - Radim P.
+  - Josef Ř.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

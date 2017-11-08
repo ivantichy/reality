@@ -1,0 +1,67 @@
+nadpis: Prodej domu, 112 m²
+slug: prodej-dum-112-brno
+souradnice: 49.1847286, 16.5607269
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: ukoncena
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: dum
+mesto: Brno
+adresa: Kluchova 30, Brno-Nový Lískovec
+
+jmeno: Roman Výstižný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento dvoupatrový rodinný dům se nachází v brněnském Novém Lískovci. V přízemí najdete obývací pokoj a prostornou kuchyň. V patře se nachází dvě samostatné ložnice a koupelna. Dům je svou rozlohou i umístěním velice vhodný pro rodiny s dětmi, neboť je v klidném prostředí v okolí zeleně a zároveň je v dojezdové vzdálenosti do centra, Bonusem je pak i přístřešek pro auto.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 112 m²
+  Dispozice: 4+1
+  Cena: 1 900 000 Kč
+  Poplatky: 4 800 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 1900000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 26.5.2017 17:00
+  - 29.5.2017 17:00
+  - 30.5.2017 17:00
+datum_ukonceni: 13.6.2017
+
+obrazky:
+  1: Vnější pohled
+  2: Obývací pokoj
+  3: Ložnice
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Martin N.
+  - Marcel S.
+  - Adam Ž.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

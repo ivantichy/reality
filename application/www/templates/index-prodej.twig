@@ -1,0 +1,462 @@
+{% set title = data.title %}
+{% include 'header.twig' %}
+
+{% block banner %}
+  <section class="banner">
+    <div class="container">
+      <h1 class="banner-title">
+        {{ data.claim|konverze_mezer }}
+      </h1>
+      <h2 class="banner-title">
+        {{ data.claim_2|konverze_mezer }}
+      </h2>
+      <p>
+        <a class="button scroll ruzovy" href="#nabidky">Zobrazit nabídky</a>
+
+        <a class="button" href="/jak-aukce-funguje">Jak to funguje?</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block vyhody %}
+  <section class="vyhody">
+    <div class="container">
+      <div class="row">
+        {% for vyhoda in data.vyhody %}
+          <div class="vyhoda vyhoda-{{ loop.index }} col">
+            <div class="vyhoda-ikona" role="presentation">
+              {#
+              <i class="icon icon-{{ vyhoda.ikona }}"></i>
+              <svg
+                width="60"
+                height="60" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50">
+                <use xlink:href="/svg/dest/ikony.svg#{{ vyhoda.ikona }}"></use>
+               </svg>
+              #}
+              {% include './svg/dest/' ~ vyhoda.ikona ~ '.svg' %}
+            </div>
+            <p class="vyhoda-text">
+              {{ vyhoda.text }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block nabidky %}
+  {% block nabidky_probihajici %}
+    <section id="nabidky" class="nabidky nabidky-probihajici">
+      <div class="container">
+        <h1 class="nabidky-title">
+          {{ data.aukce_probihajici_nadpis }}
+        </h1>
+
+        <div class="tabs">
+          <div class="tabs-nav">
+            <ul class="tab-list" role="tablist">
+              <li class="tab-item active">
+                <a class="tab-link" href="#vse"
+                  role="tab" aria-selected="true" aria-controls="vse">Všechny aukce</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#praha"
+                  role="tab" aria-selected="false" aria-controls="praha">Praha</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#brno"
+                  role="tab" aria-selected="false" aria-controls="brno">Brno</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#ostrava"
+                role="tab" aria-selected="false" aria-controls="ostrava">Ostrava</a>
+              </li>
+            </ul>
+            <a class="button hlidacipes-tlacitko hlidacipes-js" href="#kontaktujte-nas">
+              <i class="icon icon-lupa-2"></i>
+              Nastavit hlídacího psa
+            </a>
+          </div>
+
+          <div class="tabs-panels">
+            <div class="tab-panel active" id="vse" role="tabpanel" aria-hidden="false">
+              <div class="nabidky-row row">
+                {% for aukce in aukce.probihajici %}
+                  {% include 'partials/nabidka.twig' %}
+                {% else %}
+                  <p class="zprava">Momentálně zde nejsou žádné aukce.</p>
+                {% endfor %}
+              </div>
+              {% if aukce.probihajici.hasMorePages() %}
+                <p class="nacti-dalsi-wrap">
+                  <span class="spinner"></span>
+                  <button
+                    class="button nacti-dalsi"
+                    type="button"
+                    data-strana="1"
+                    data-stav="probihajici"
+                    data-typ="{{ typ }}"
+                    data-lokalita="vse">Zobrazit další</button>
+                </p>
+              {% endif %}
+            </div>
+            <div class="tab-panel" id="praha" role="tabpanel" aria-hidden="true">
+              <div class="nabidky-row row">
+                {% for aukce in aukce.praha %}
+                  {% include 'partials/nabidka.twig' %}
+                {% else %}
+                  <p class="zprava">Momentálně zde nejsou žádné aukce pro tuto lokalitu.</p>
+                {% endfor %}
+              </div>
+              {% if aukce.praha.hasMorePages() %}
+                <p class="nacti-dalsi-wrap">
+                  <span class="spinner"></span>
+                  <button
+                    class="button nacti-dalsi"
+                    type="button"
+                    data-strana="1"
+                    data-stav="probihajici"
+                    data-typ="{{ typ }}"
+                    data-lokalita="praha">Zobrazit další</button>
+                </p>
+              {% endif %}
+            </div>
+            <div class="tab-panel" id="brno" role="tabpanel" aria-hidden="true">
+              <div class="nabidky-row row">
+                {% for aukce in aukce.brno %}
+                  {% include 'partials/nabidka.twig' %}
+                {% else %}
+                  <p class="zprava">Momentálně zde nejsou žádné aukce pro tuto lokalitu.</p>
+                {% endfor %}
+              </div>
+              {% if aukce.brno.hasMorePages() %}
+                <p class="nacti-dalsi-wrap">
+                  <span class="spinner"></span>
+                  <button
+                    class="button nacti-dalsi"
+                    type="button"
+                    data-strana="1"
+                    data-stav="probihajici"
+                    data-typ="{{ typ }}"
+                    data-lokalita="brno">Zobrazit další</button>
+                </p>
+              {% endif %}
+            </div>
+            <div class="tab-panel" id="ostrava" role="tabpanel" aria-hidden="true">
+              <div class="nabidky-row row">
+                {% for aukce in aukce.ostrava %}
+                  {% include 'partials/nabidka.twig' %}
+                {% else %}
+                  <p class="zprava">Momentálně zde nejsou žádné aukce pro tuto lokalitu.</p>
+                {% endfor %}
+              </div>
+              {% if aukce.ostrava.hasMorePages() %}
+                <p class="nacti-dalsi-wrap">
+                  <span class="spinner"></span>
+                  <button
+                    class="button nacti-dalsi"
+                    type="button"
+                    data-strana="1"
+                    data-stav="probihajici"
+                    data-typ="{{ typ }}"
+                    data-lokalita="ostrava">Zobrazit další</button>
+                </p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block hlidacipes %}
+    <section class="hlidacipes">
+      <div class="container row-xs">
+        <p class="col hlidacipes-left">
+          {{ data.hlidaci_pes.text }}
+        </p>
+        <div class="col hlidacipes-right">
+          <a class="button velky hlidacipes-button hlidacipes-js"
+            href="#kontaktujte-nas"
+            data-cssmodal-nohash>{{ data.hlidaci_pes.tlacitko }}</a>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block nabidky_ukoncene %}
+    <section class="nabidky nabidky-ukoncene">
+      <div class="container">
+        <h1 class="nabidky-title">
+          {{ data.aukce_ukoncene_nadpis }}
+        </h1>
+        <div class="nabidky-row row">
+          {% for aukce in aukce.ukoncena %}
+            {% include 'partials/nabidka.twig' %}
+          {% else %}
+            <p class="zprava">Momentálně zde nejsou žádné ukončené aukce.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+{% endblock %}
+
+
+{% block vyjimecny %}
+  <section class="vyjimecny">
+    <div class="container fit">
+      <div class="vyjimecny-top">
+        <h2 class="vyjimecny-nadpis plovouci-nadpis h1">
+          <span class="span">{{ data.cim_se_lisime.nadpis }}</span>
+        </h2>
+        <p>
+          {{ data.cim_se_lisime.text_pod_nadpisem }}
+        </p>
+        <div class="vyjimecny-priklad">
+          <h3 class="vyjimecny-priklad-title h2">{{ data.cim_se_lisime.priklad_nadpis }}</h3>
+          <p>{{ data.cim_se_lisime.priklad_text }}</p>
+        </div>
+      </div>
+      <table class="tabulka">
+        <thead>
+          <tr>
+            <td> </td>
+            <td>Aukce bydlení</td>
+            <td>Bez realitky</td>
+            <td>Realitní agenti</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ data.tabulka_radek_1 }}</td>
+            {% for key, bunka in data.tabulka %}
+              <td>{{ bunka.bunka_1 }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>{{ data.tabulka_radek_2 }}</td>
+            {% for key, bunka in data.tabulka %}
+              <td>{{ bunka.bunka_2 }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>{{ data.tabulka_radek_3 }}</td>
+            {% for key, bunka in data.tabulka %}
+              <td>
+                {% if bunka.bunka_3.text_1 %}
+                  {{ bunka.bunka_3.text_1 }}
+                  {%
+                    include 'partials/tooltip.twig'
+                    with {
+                      text: bunka.bunka_3.toolit_1
+                    } only
+                  %}
+                  {% if bunka.bunka_3.text_2 %}
+                  <br>
+                  {{ bunka.bunka_3.text_2 }}
+                    {%
+                      include 'partials/tooltip.twig'
+                      with {
+                        text: bunka.bunka_3.toolit_2
+                      } only
+                    %}
+                  {% endif %}
+                {% else %}
+                  {{ bunka.bunka_3 }}
+                {% endif %}
+              </td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>{{ data.tabulka_radek_4 }}</td>
+            {% for key, bunka in data.tabulka %}
+              <td>{{ bunka.bunka_4 }}</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="priklad">
+        {% for key, bunka in data.tabulka %}
+          <li class="priklad-li">
+            <p class="priklad-nadpis h4">
+              {{ key }}
+            </p>
+            <p>
+              <span class="priklad-stitek">{{ data.tabulka_radek_1 }}:</span> {{ bunka.bunka_1 }}
+            </p>
+            <p>
+              <span class="priklad-stitek">{{ data.tabulka_radek_2 }}:</span> {{ bunka.bunka_2 }}
+            </p>
+            <p>
+              <span class="priklad-stitek">{{ data.tabulka_radek_3 }}:</span>
+
+              {% if bunka.bunka_3.text_1 %}
+                {{ bunka.bunka_3.text_1 }}
+                {%
+                  include 'partials/tooltip.twig'
+                  with {
+                    text: bunka.bunka_3.toolit_1
+                  } only
+                %}
+                {{ bunka.bunka_3.text_2 }}
+                {%
+                  include 'partials/tooltip.twig'
+                  with {
+                    text: bunka.bunka_3.toolit_2
+                  } only
+                %}
+              {% else %}
+                {{ bunka.bunka_3 }}
+              {% endif %}
+            </p>
+            <p>
+              <span class="priklad-stitek">{{ data.tabulka_radek_4 }}:</span> {{ bunka.bunka_4 }}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endblock %}
+
+{% block funguje %}
+{% endblock %}
+
+{% block otazky %}
+  <section class="otazky">
+    <div class="container">
+      <div class="otazka otazka-1">
+        <div class="otazka-box">
+          <div class="otazka-text">
+            <h3>{{ data.otazka_1.nadpis }}</h3>
+            <p>{{ data.otazka_1.text|raw }}</p>
+          </div>
+          {#
+          <div class="otazka-ikona">
+            <i class="icon icon-znacka"></i>
+          </div>
+          #}
+          <div class="otazka-trojuhelnik levy"></div>
+        </div>
+      </div>
+      <div class="otazka otazka-2">
+        <div class="otazka-box">
+          <div class="otazka-text">
+            <h3>{{ data.otazka_2.nadpis }}</h3>
+            <p>{{ data.otazka_2.text|raw }}</p>
+          </div>
+          {#
+          <div class="otazka-ikona">
+            <i class="icon icon-znacka"></i>
+          </div>
+          #}
+          <div class="otazka-trojuhelnik pravy"></div>
+        </div>
+      </div>
+      <div class="otazka otazka-3">
+        <div class="otazka-box">
+          <div class="otazka-text">
+            <h3>{{ data.otazka_3.nadpis }}</h3>
+            <p>{{ data.otazka_3.text|raw }}</p>
+          </div>
+          <div class="otazka-trojuhelnik levy"></div>
+        </div>
+      </div>
+      <div class="otazka otazka-4">
+        <div class="otazka-box">
+          <div class="otazka-text">
+            <h3>{{ data.otazka_4.nadpis }}</h3>
+            <p>{{ data.otazka_4.text|raw }}</p>
+          </div>
+          <div class="otazka-trojuhelnik spodni"></div>
+        </div>
+      </div>
+      <p class="otazky-btn">
+        <a class="button" href="/jak-aukce-funguje">Jak to funguje</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content_bottom %}
+  <template id="kontaktujte-nas">
+    <section
+      tabindex="1"
+      role="dialog"
+      aria-label="Kontaktní formulář"
+      aria-hidden="false">
+      <div class="kontaktujte-nas">
+        <div class="zprava zprava-uspech" role="alert" style="display: none;"></div>
+        <form id="form-modal" class="form-modal" action="/kontakty" method="post">
+
+          <h2>Popište nám, co hledáte</h2>
+
+          {% include 'partials/zpravy.twig' %}
+
+          <div class="row form-row">
+            <label class="col form-col form-input">
+              <span class="form-label">Jméno:<sup aria-hidden="true">*</sup></span>
+              <input class="form-text-input"
+                type="text" name="jmeno" value=""
+                placeholder="Vaše jméno" required=""
+                autocomplete="name">
+            </label>
+            <label class="col form-col form-input">
+              <span class="form-label">E-mail:<sup aria-hidden="true">*</sup></span>
+              <input class="form-text-input"
+                type="email"
+                name="email" value=""
+                placeholder="Váš email" required=""
+                autocomplete="email">
+            </label>
+          </div>
+          <label class="form-input">
+            <span class="form-label">Lokalita:</span>
+            <input class="form-text-input"
+              type="text" name="lokalita"
+              value=""
+              placeholder="Město nebo obec"
+              autocomplete="city">
+          </label>
+          <label class="form-input">
+            <span class="form-label">Telefon:</span>
+            <input class="form-text-input"
+              type="text" name="telefon"
+              value=""
+              placeholder="Váš telefon"
+              autocomplete="tel">
+          </label>
+          <label class="form-input">
+            <span class="form-label">Dispozice:</span>
+            <input class="form-text-input"
+              type="text" name="dispozice"
+              value=""
+              placeholder="např.: dům, nebo 2+kk">
+          </label>
+          <label class="form-input">
+            <span class="form-label">Zpráva:</span>
+            <textarea class="form-textarea-input"
+              name="zprava"
+              placeholder="Popište nám, jaký byt hledáte"></textarea>
+          </label>
+          <footer class="form-footer">
+            <button id="button-hlidacipes" class="button" type="submit" name="submitVzkaz">Odeslat</button>
+            <input type="hidden" name="modal" value="1">
+            <input type="hidden" name="typ_formulare" value="homepage">
+            {{ csrf_field() }}
+            {# honeypot_generate() #}
+          </footer>
+
+        </form>
+      </div>
+
+    </section>
+  </template>
+{% endblock %}
+
+{% include 'footer.twig' %}

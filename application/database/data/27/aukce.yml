@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 1+1, 33 m²
+slug: pronajem-byt-33-ostrava
+souradnice: 49.7729744, 18.3069681
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: K Sokolovně 5, Vratimov, Ostrava-město
+
+jmeno: Adam Čapek
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Pokud nepotřebujete rozdělený obývák a ložnici, je tento byt ideální. Zbývající místo totiž vyplňuje prostornou vybavenou kuchyní. Radost určitě udělá i balkón s výhledem do dvora. Koupelna je nově po rekonstukci. V případě zájmu je možno domluvit i koupi stávající pračky.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 33 m²
+  Dispozice: 1+1
+  Cena: 4000
+  Poplatky: 1100
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Cihla
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ano
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: možno ihned
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 4000
+polatky: 5000
+kauce: 12000
+vybrane_terminy:
+  - 28.6.2017 17:00
+  - 5.7.2017 17:00
+  - 12.7.2017 19:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Pokoj
+  2: Pohovka/ Postel
+  3: Balkón
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Martin F.
+  - Martin Z.
+  - Petr P.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

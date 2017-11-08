@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+1, 47 m²
+slug: pronajem-byt-2-1-47-brno
+souradnice: 49.1835328, 16.6201814
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Kovářská 6, Brno-jih
+
+jmeno: Lilie I.
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento byt je rozdělen do 2 hlavních místností, po jejichž délce se táhne terasa s výhledem do dvora. Prosklené dveře na terasu zároveň slouží jako vydatný zdroj světla. V pokoji vpravo z chodby se nachází kuchyňský kout s barovým pultem. Z chodby vedou dvěře na samostatnou toaletu a poté do koupelny se sprchovým koutem. Po domluvě je možné zakoupit k bytu sklepní kóji.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 47 m²
+  Dispozice: 2+1
+  Cena: 6 000 Kč
+  Poplatky: 2 300 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ano
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: srpen/září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 6000
+polatky: 5000
+kauce: 6000
+vybrane_terminy:
+  - 18.7.2017 18:30
+  - 20.7.2017 18:30
+  - 25.7.2017 18:30
+datum_ukonceni: 4.8.2017
+
+obrazky:
+  1: Pokoj 1
+  2: Pokoj 1
+  3: Chodba
+  4: Pokoj 2
+  5: Pokoj 2
+
+zajemci:
+  - Radka F.
+  - Francesca G.
+  - Vojtěch Z.
+
+zajemci_pocet: 6
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

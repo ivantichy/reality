@@ -1,0 +1,67 @@
+nadpis: Pronájem bytu 2+1, 90 m²
+slug: pronajem-90m-praha-4
+souradnice: 50.003314, 14.405482
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: ukoncena
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Komořanská 13, Praha 4
+
+jmeno: Petr Veverka
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento vybavený byt najdete v 5. podlaží 15podlažního bytového domu v Modřanech. Slunných 90 m² je členěno na obývací pokoj, ložnici s manželskou postelí, plně vybavenou kuchyň, koupelnu s vanou a prostorný balkón. Lokalita poskytuje klid, snadné spojení do centra, parky a sportoviště s možností rozmanitých sportovních aktivit. V ceně není zahrnuto parkovací stání a sklepní kóje. V případě zájmu je možné se domluvit na pronájmu i těchto prostor.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 90 m²
+  Dispozice: 2+1
+  Cena: 18 000 Kč
+  Poplatky: 2 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Vybavený
+  Podlaží: 5
+  Výtah: ano
+  Terasa: ano
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída B
+
+podminky:
+  Termín nastěhován: mezi 1. srpnem až 1. říjnem
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 18000
+polatky: 2700
+kauce: 0
+vybrane_terminy:
+  - 22.5.2017 - 17:00
+  - 24.5.2017 - 18:00
+  - 26.5.2017 - 8:00
+datum_ukonceni: 23.6.2017
+
+obrazky:
+  1: Obývací pokoj + Kuchyň
+  2: Obývací pokoj
+  3: Ložnice
+  4: Koupelna
+  5: Terasa
+
+zajemci:
+  - Petr K.
+  - Karolína V.
+  - Láďa P.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

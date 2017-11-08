@@ -1,0 +1,123 @@
+@font-face {
+	font-family: "iconfont";
+	src: url(../../ikony/dest/iconfont.eot);
+	src: url(../../ikony/dest/iconfont.eot?#iefix) format('eot'),
+		url(../../ikony/dest/iconfont.woff2) format('woff2'),
+		url(../../ikony/dest/iconfont.woff) format('woff'),
+		url(../../ikony/dest/iconfont.ttf) format('truetype'),
+		url(../../ikony/dest/iconfont.svg#iconfont) format('svg');
+}
+
+.icon:before {
+	font-family: "iconfont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-facebook:before {
+	content: "\E001";
+}
+
+.icon-fotak:before {
+	content: "\E002";
+}
+
+.icon-hodiny:before {
+	content: "\E003";
+}
+
+.icon-info-2:before {
+	content: "\E004";
+}
+
+.icon-info:before {
+	content: "\E005";
+}
+
+.icon-kalendar:before {
+	content: "\E006";
+}
+
+.icon-krizek:before {
+	content: "\E007";
+}
+
+.icon-leva-kolecko:before {
+	content: "\E008";
+}
+
+.icon-lide:before {
+	content: "\E009";
+}
+
+.icon-lupa-2:before {
+	content: "\E00A";
+}
+
+.icon-lupa:before {
+	content: "\E00B";
+}
+
+.icon-obalka-2:before {
+	content: "\E00C";
+}
+
+.icon-obalka:before {
+	content: "\E00D";
+}
+
+.icon-prava-kolecko:before {
+	content: "\E00E";
+}
+
+.icon-sipka-dlouha:before {
+	content: "\E00F";
+}
+
+.icon-sipka-leva:before {
+	content: "\E010";
+}
+
+.icon-sipka-prava:before {
+	content: "\E011";
+}
+
+.icon-sipka-tenka-leva:before {
+	content: "\E012";
+}
+
+.icon-sipka-tenka-prava:before {
+	content: "\E013";
+}
+
+.icon-telefon:before {
+	content: "\E014";
+}
+
+.icon-twitter:before {
+	content: "\E015";
+}
+
+.icon-zaskrtnuto:before {
+	content: "\E016";
+}
+
+.icon-znacka-2:before {
+	content: "\E017";
+}
+
+.icon-znacka:before {
+	content: "\E018";
+}
+
+.icon-icon_template.html:before {
+	content: "\E019";
+}
+

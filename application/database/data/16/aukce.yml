@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 1+1, 48 m²
+slug: prodej-byt-1-1-praha-brevnov
+souradnice: 50.0830508, 14.3697211
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Vodňanského 4, Praha 6-Břevnov
+
+jmeno: Radmila Rozkošná
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Ideální pro jednoho nebo hodně přítulný pár. Byt se nachází ve 3. patře 3podlažního činčovního domu na Praze 6. Byt se skládá z jedné hlavní místnosti, která v sobě umně spojuje obývací pokoj, kuchyň, pracovnu a po rozložení pohovky i ložnici. V loňském roce zrekonstruovaná koupelna vám nabídne prostorný sprchový kout. V ceně není zahrnuté parkovací místo a sklepní kóje. Po domluvě je lze přikoupit.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 48 m²
+  Dispozice: 1+1
+  Cena: 800 000 Kč
+  Poplatky: 2 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: do 1. října 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 800000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 27.6.2017 15:30
+  - 4.7.2017 16:00
+  - 11.7.2017 19:00
+datum_ukonceni: 23.7.2017
+
+obrazky:
+  1: Kuchyňský kout
+  2: Hlavní pokoj, pohled 1
+  3: Hlavní pokoj, pohled 2
+  4: Hlavní pokoj, pohled 3
+  5: Koupelna
+
+zajemci:
+  - Alena A.
+  - Pavlína W..
+  - Tomáš P.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

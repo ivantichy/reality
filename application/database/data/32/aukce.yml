@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 1+1, 30 m²
+slug: pronajem-byt-30-brno
+souradnice: 49.2001317, 16.6062594
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Mášova 1, Brno-střed - Veveří
+
+jmeno: Roman Žikán
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Minimalistický byt si žádá minimalistický popis. Byt. Brno. 30 m². Obývák, kuchyně a ložnice v jednom. Samostatný záchod. Koupelna s vanou. Parkovací místo možné po domluvě zakoupit.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 33 m²
+  Dispozice: 1+1
+  Cena: 5000
+  Poplatky: 2000
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 5
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 5000
+polatky: 5000
+kauce: 10000
+vybrane_terminy:
+  - 6.7.2017 17:00
+  - 10.7.2017 17:00
+  - 15.7.2017 17:00
+datum_ukonceni: 22.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Kuchyň
+  3: Celkový pokoj
+  4: Záchod
+  5: Koupelna
+
+zajemci:
+  - Adéla M.
+  - Francesca G.
+  - Adam J.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

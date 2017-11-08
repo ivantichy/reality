@@ -1,0 +1,91 @@
+{% extends "index-prodej.twig" %}
+
+{% block banner %}
+  <section class="banner">
+    <div class="container">
+      <h1 class="banner-title">
+        {{ data.claim|konverze_mezer|raw }}
+      </h1>
+      <h2 class="banner-title">
+        {{ data.claim_2|konverze_mezer|raw }}
+      </h2>
+      <p>
+        <a
+          class="button velky ruzovy majitel-form-js"
+          href="#majitel-form{#{ url_route('majitel-form', 1) }#}">Vložit aukci zdarma</a>
+      </p>
+      <div class="banner-bot">
+        <p>
+          <a class="banner-link scroll" href="#nabidky">Zobrazit nabídky</a>
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block funguje %}
+  <section class="funguje">
+    <div class="container">
+      <div class="funguje-nadpis">
+        <h2 class="h1">
+          {{ data.jak_vlozit_nadpis }}
+        </h2>
+      </div>
+      <div class="row-xs">
+        {% for polozka in data.jak_vlozit %}
+          <div class="funguje-box funguje-box-{{ loop.index }} col">
+            <div class="funguje-wrap">
+              <div class="funguje-ikona">
+                <div class="funguje-kolecko">
+                  <span class="funguje-cislo">{{ loop.index }}</span>
+                  {#<svg
+                    width="78"
+                    height="78" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50">
+                    <use xlink:href="/svg/dest/ikony.svg#{{ polozka.ikona }}"></use>
+                  </svg>#}
+                   {% include './svg/dest/' ~ polozka.ikona ~ '.svg' %}
+                </div>
+              </div>
+              <p class="funguje-text">
+                {{ polozka.text|konverze_mezer|raw }}
+              </p>
+            </div>
+            {% if not loop.last %}
+              <i class="icon icon-sipka-dlouha" aria-hidden="true"></i>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block nabidky %}
+{% endblock %}
+
+{% block content_bottom %}
+  <section id="nabidky" class="nabidky nabidky-ukoncene">
+    <div class="container">
+      <h1 class="nabidky-title">
+        Ukončené aukce
+      </h1>
+      <div class="nabidky-row row">
+        {% for aukce in aukce_ukoncene %}
+          {% include 'partials/nabidka.twig' %}
+        {% else %}
+          <p class="zprava">Momentálně zde nejsou žádné ukončené aukce.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="vlozit-paticka">
+    <p>
+      <a
+        class="button velky ruzovy majitel-form-js"
+        href="#majitel-form">Vložit aukci zdarma</a>
+    </p>
+  </section>
+
+{% endblock %}

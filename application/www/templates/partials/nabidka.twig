@@ -1,0 +1,37 @@
+<section class="nabidka {% if aukce.ukoncena() %}nabidka-ukoncena{% endif %} col">
+  <a href="{{ aukce.getLink() }}" class="nabidka-wrap">
+    <div class="nabidka-top">
+      <img
+        class="nabidka-top-img"
+        src="/images/aukce/{{ aukce.id }}/1-thumb.jpg"
+        alt="{{ aukce.nadpis }}"
+        width="375" height="281">
+      {% if aukce.ukoncena() %}
+        <span class="nabidka-datum">Ukončena {{ aukce.datum_ukonceni|date("d.m.Y") }}</span>
+      {% endif %}
+      <div class="hover">
+        <i class="icon icon-lupa" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="nabidka-center">
+      <h3 class="nabidka-nazev">{{ aukce.nadpis }}</h3>
+      <p class="nabidka-adresa"><i class="icon icon-znacka" aria-hidden="true"></i>{{ aukce.adresa }}</p>
+    </div>
+    <div class="nabidka-bot">
+      <p class="nabidka-konec">
+        <span>Konec aukce</span>
+        <span class="nabidka-value">{{ aukce.aukce_konci }}</span>
+      </p>
+      <p class="nabidka-cena">
+        <span>
+          {% if aukce.ukoncena() %}
+            Vydražená cena
+          {% else %}
+            Vyvolávací cena
+          {% endif %}
+        </span>
+        <span class="nabidka-value">{{ aukce.cena_vyvolavaci|cena }}</span>
+      </p>
+    </div>
+  </a>
+</section>

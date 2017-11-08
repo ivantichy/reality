@@ -1,0 +1,140 @@
+title: Vložit poptávku
+
+kroky:
+  - Výběr termínu a dražební metody
+  - Informace o vás
+
+form:
+  termin:
+    label: Vložení poptávky
+    popis: Zvolte jeden z níže uvedených termínů, kdy přijdete na prohlídku. Tyto termíny určil nabízející. Prosíme, abyste respektovali čas prohlídky a dostavili se včas.
+    class: form-block form-block-terminy
+    required: true
+    error: Vyberte vhodný termín prohlídky
+    hodnoty:
+      individualni termín: Nemohu, potřebuji individuální termín
+      nepotřebuji prohlídku: Nepotřebuji jít na prohlídku
+
+  delka_pronajmu:
+    label: Nabídněte délku pronájmu
+    popis: Délka pronájmu může ovlivnit majitele v tom, kterého zájemce o bydlení zvolí.
+    class: form-block
+    required: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Do 6 měsíců
+      - 6–12 měsíců
+      - 1–2 roky
+      - 2 a více let
+
+  # kontaktní údaje
+  jmeno:
+    label: Jméno a příjmení
+    placeholder: Jméno a příjmení
+    required: true
+    autocomplete: name
+  email:
+    label: E-mail
+    placeholder: '@'
+    required: true
+    autocomplete: email
+  telefon:
+    label: Telefon
+    placeholder: ''
+    required: true
+    type: tel
+    autocomplete: tel
+  motivace:
+    label: Proč by si měl majitel vybrat právě vás?
+    placeholder: Popište, proč byste měli získat tento nájem právě vy.
+    skryt_dojtecku: true
+    required: true
+
+  souhlas:
+    label: Souhlasím se zpracováním osobních údajů a <a href="/obchodni-podminky" target="_blank">obchodními podmínkami</a>.
+    error: Musíte souhlasit se zpracováním osobních údajů
+    required: true
+
+  dotaz_vek:
+    label: Váš věk
+    class: form-block
+    required: true
+    error: Vyberte prosím váš věk
+    zobraz_text_povinny_udaj: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - 18–26
+      - 27-30
+      - 31-40
+      - 41-50
+      - 50-60 a více
+
+  dotaz_jsem:
+    label: V současnosti jsem…
+    class: form-block form-block-sloupce
+    required: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Student
+      - Zaměstnanec
+      - OSVČ / Podnikatel
+      - Nezaměstnaný
+      - Na mateřské
+      - V důchodu
+
+  dotaz_zaujalo_mne:
+    label: Čím vás Aukce bydlení zaujala?
+    popis: Zvolit můžete více možností! Budeme rádi, když nám dáte vědět, co vám na naší službě přijde skvělé.
+    class: form-block form-block-sloupce
+    required: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Můžu zvýšit své šance
+      - Vím, jak na tom jsem
+      - Transparentnost aukce
+      - Organizace prohlídek
+      - Aukce mi dává adrenalin
+      - Služba je sympatická
+      - Zajímavé nemovitosti
+      - Nízké ceny nemovitostí
+
+  dotaz_chci:
+    label: Která z těchto služeb by vám přišla zajímavá?
+    popis: Zvolit můžete více možností! Budeme rádi, když nám pomůžete s tím, co by vám v budoucnu usnadnilo nabízet nemovitost.
+    class: form-block form-block-sloupce
+    required: true
+    hodnoty_bez_klice: true
+    hodnoty:
+      - Mobilní aplikace
+      - Upozornění/hlídací pes
+      - Profily nabízejících
+      - Zastoupení na prohlídce
+      - Právní pomoc se smlouvou
+      - Online podpis smlouvy
+      - Poslat zprávu majiteli
+      - Funkce Pronajmi/Kup teď
+      - Zařízení stěhování
+      - Více informací o nabídce
+
+model_a:
+  label: Dražit vratnou kauci
+  text: V tomto modelu dražíte vratnou kauci. Kauce je během vašeho nájmu uschována u AukceBydlení a vrácena Vám zpět po ukončení doby nájmu.
+  nadpis: Vyvolávací vratná kauce
+
+model_b:
+  label: Dražit měsíční nájem
+  text: Uveďte, jaký měsíční nájem nabízíte. V případě výhry aukce budete tuto částku platit měsíčně majiteli po dobu nájemní smlouvy.
+  nadpis: Vyvolávací cena nájmu
+
+
+blok_vyvolavaci_cena:
+  nadpis: Vyvolávací cena nemovitosti
+  text: Majitel nemovitosti určil tuto vyvolávací cenu. Po ukončení prohlídek bude aukce začínat na této vyvolávací ceně nemovitosti.
+  podnadpis: Vyvolávací cena nemovitosti
+
+krok_2:
+  nadpis: Děkujeme za váš zájem o aukci
+  text: Pomozte nám zdokonalit Aukci bydlení. Prozraďte nám něco málo o sobě a pomozte nám dále se zlepšovat. Děkujeme!
+
+email_odesilatel: info@aukcebydleni.cz
+email_predmet: 'Aukce bydlení: Zamítnutí poptávky vstupu do aukce'

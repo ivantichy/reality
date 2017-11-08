@@ -1,0 +1,671 @@
+/* banner je použit i na stránce vlozit aukci */
+.banner {
+  background-color: $text2;
+  background-position: top center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 147px 0 137px;
+  position: relative;
+  @media (max-width: $screen-sm-max) {
+    padding: 100px 0;
+  }
+
+  .main-index-pronajem & {
+    background-image: url(../../images/banner-pronajem.jpg);
+    @media (max-width: 1000px) {
+      background-image: url(../../images/banner-pronajem-1000.jpg);
+    }
+    @media (max-width: 800px) {
+      background-image: url(../../images/banner-pronajem-800.jpg);
+    }
+  }
+
+  .main-index-prodej & {
+    padding: 100px 0 90px;
+    background-image: url(../../images/banner-prodej.jpg);
+  }
+
+  .main-vlozit-nabidku & {
+    padding: 100px 0 90px;
+    background-image: url(../../images/banner-nabidka.jpg);
+
+    @media (max-width: 1000px) {
+      background-image: url(../../images/banner-nabidka-1000.jpg);
+    }
+    @media (max-width: 800px) {
+      background-image: url(../../images/banner-nabidka-800.jpg);
+    }
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 36px;
+    margin: 0 0 12px;
+    font-weight: normal;
+    line-height: 1.5;
+    max-width: 750px;
+    display: inline-block;
+    @media (max-width: $screen-md-max) {
+      font-size: 30px;
+      line-height: 1.3;
+    }
+    @media (max-width: $screen-sm-max) {
+      font-size: 28px;
+    }
+    @media (max-width: $screen-xs-max) {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+    h2&{
+      max-width: 700px;
+      margin: 0 auto 24px;
+      font-size: 22px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 18px;
+      }
+    }
+  }
+  &-bot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 25px 10px;
+    text-align: center;
+    width: 100%;
+  }
+  &-link {
+    color: #fff;
+    padding: 5px 10px;
+  }
+  .button {
+    margin: 0 20px 10px;
+  }
+  .button.velky {
+    padding: 19px 40px;
+    font-size: 20px;
+  }
+}
+/*
+.main-vlozit-nabidku .banner .button {
+  border-color: $zelena;
+  background-color: $zelena;
+  &:hover, &:focus {
+    background-color: #fff;
+    color: $zelena;
+  }
+}
+*/
+.vyhody {
+  background-color: $seda;
+  padding: 50px 0 40px;
+
+  .main-vlozit-nabidku & {
+    background-color: #fff;
+    padding-bottom: 85px;
+  }
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0;
+  }
+}
+
+.plovouci-nadpis {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 1.5px;
+  transform: translateY(-50%);
+  @media (max-width: $screen-xs-max) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    top: -50px;
+  }
+  .span {
+    box-shadow: $box-shadow;
+    display: inline-block;
+    background-color: #fff;
+    padding: 24px 37px;
+    max-width: calc(100% - 20px);
+    @media (max-width: $screen-sm-max) {
+      padding: 20px 30px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 7px 10px;
+    }
+  }
+}
+
+/* Výhoda je použita na uvodní stránce i na na stránce Jak aukce funguje */
+.vyhoda {
+  display: flex;
+  align-items: center;
+  color: $text1;
+  line-height: 1.5;
+  padding-bottom: 10px;
+  width: 100%;
+  @media(min-width: $screen-xs-min) {
+    @mixin flex-basis 50%;
+  }
+  @media(min-width: 950px) {
+    @mixin flex-basis 25%;
+  }
+  &-ikona, &-text {
+    flex: 1 1 auto;
+  }
+  &-ikona {
+    @mixin flex-basis 80px;
+    flex-shrink: 0;
+
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 37%;
+      text-align: center;
+    }
+    /*.icon {
+      display: block;
+      background-color: $zelena2;
+      border-radius: 50%;
+      width: 77px;
+      height: 77px;
+      color: #fff;
+      text-align: center;
+      line-height: 77px;
+      font-size: 45px;
+    }
+    */
+    svg {
+      max-width: 60px;
+      width: 100%;
+    }
+  }
+  &-text {
+    margin-bottom: 0;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 63%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+
+    }
+  }
+}
+
+.hlidacipes {
+  /*background-color: #3A5ABF;
+  background-image: url(../../images/bg-nenasli.jpg);
+  background-position: bottom center;
+  color: #fff;
+  */
+  border-top: 1px solid $zelena;
+  border-bottom: 1px solid $zelena;
+  padding: 65px 0;
+
+  &-left {
+    font-size: 24px;
+    line-height: 1.6;
+    @media (min-width: $screen-sm-min) {
+      padding-right: 40px;
+      @mixin flex-basis 70%;
+    }
+    @media (min-width: $screen-xs-min) {
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  .col {
+    flex-grow: 0;
+  }
+  .button {
+    padding: 13px 20px;
+  }
+  &-tlacitko {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    padding: 9px 15px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+    .icon {
+      margin-right: 4px;
+      vertical-align: -2px;
+    }
+  }
+}
+
+.vyjimecny {
+  background-color: $seda;
+  color: $text2;
+  padding: 87px 0;
+  position: relative;
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0;
+  }
+  &-nadpis {
+    top: -87px;
+    @media (max-width: $screen-xs-max) {
+      top: -50px;
+    }
+  }
+  &-top {
+    text-align: center;
+    position: relative;
+    @media (min-width: $screen-xs-min) {
+      padding: 0 12%;
+    }
+  }
+  &-priklad {
+    padding-top: 50px;
+    padding-bottom: 23px;
+    @media (max-width: $screen-xs-max) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &-title {
+      margin-bottom: 4px;
+    }
+  }
+
+  .tabulka {
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+  }
+
+}
+
+.tabulka {
+  box-shadow: $box-shadow;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+
+  thead {
+    background-color: #e6e6e6;
+    td {
+      border-right: 1px solid #cfcfcf;
+      border-left: 1px solid #cfcfcf;
+      color: #333333;
+    }
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+  }
+  td {
+    padding: 26px;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    color: #888888;
+    @media (max-width: $screen-md-max) {
+      padding: 20px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 10px;
+    }
+    &:first-child {
+      text-align: left;
+      color: #333333;
+    }
+  }
+  tbody {
+    td {
+    }
+  }
+  .tooltip {
+    vertical-align: -6px;
+  }
+}
+
+.icon-info {
+  font-size: 22px;
+  color: $zelena;
+}
+
+.funguje {
+  padding: 88px 0 0;
+  position: relative;
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0;
+  }
+  .container {
+    @media (min-width: $screen-md-min) {
+      padding: 0 4.5%;
+    }
+    @media (max-width: $screen-md-max) and (min-width: $screen-xs-min) {
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+  &-nadpis {
+    text-align: center;
+    @media (min-width: $screen-xs-min) {
+      margin-bottom: 47px;
+    }
+  }
+  &-box {
+    color: $text2;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    position: relative;
+    @media (min-width: $screen-md-min) {
+      @mixin flex-basis 36%;
+      &-3 {
+        @mixin flex-basis 28%;
+      }
+    }
+
+    .icon {
+      color: $zelena;
+      font-size: 35px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-60%);
+      display: block;
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+    }
+
+  }
+  &-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &-ikona, &-text {
+    flex: 1 1 auto;
+  }
+  &-ikona {
+    position: relative;
+    @mixin flex-basis 95px;
+    flex-shrink: 0;
+    /*.icon {
+      font-size: 40px;
+    }*/
+    svg {
+      width: 100%;
+      max-width: 78px;
+    }
+  }
+  &-cislo {
+    background-color: $zelena;
+    font-size: 18px;
+    padding: 0;
+    position: absolute;
+    left: 55px;
+    top: -5px;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 50%;
+  }
+  &-text {
+    margin-bottom: 0;
+    @media (min-width: $screen-lg-min) {
+      padding-right: 15%;
+    }
+  }
+  /*&-kolecko {
+    display: inline-block;
+    background-color: $zelena2;
+    border-radius: 50%;
+    width: 77px;
+    height: 77px;
+    line-height: 77px;
+    color: #fff;
+  }
+  */
+}
+
+.otazky {
+  overflow: hidden;
+  text-align: center;
+  padding: 100px 0 50px;
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0 10px;
+  }
+  &-btn {
+    padding-top: 45px;
+  }
+  &-title {
+    text-align: center;
+  }
+}
+/* otázka je použita na uvodní stránce i an na stránkách Časté dotazy zájemců/majitelů */
+.otazka {
+  padding-bottom: 20px;
+  &-1 {
+    padding: 0 19% 20px;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 0 20px 50px;
+    }
+  }
+  &-2 {
+    padding: 0 14% 20px;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 50px 20px 0;
+    }
+    .otazka-ikona {
+      left: auto;
+      right: -80px;
+    }
+  }
+  &-3 {
+    padding: 0 17% 20px;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 50px 20px 0;
+    }
+  }
+  &-4 {
+    padding: 0 13% 20px;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 0 20px;
+    }
+  }
+  &.uzka {
+    padding-left: 8%;
+    padding-right: 8%;
+    @media (max-width: $screen-xs-max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &.siroka {
+    padding-left: 4%;
+    padding-right: 4%;
+    @media (max-width: $screen-xs-max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-box {
+    color: $text2;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: $box-shadow;
+    position: relative;
+
+    h3 {
+      color: $text1;
+      margin-bottom: 3px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+
+  }
+  &-text {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 23px;
+    position: relative;
+    z-index: 2;
+    line-height: 29px;
+    @media (max-width: $screen-xs-max) {
+      padding: 10px;
+    }
+  }
+  /*
+  &-ikona {
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    text-align: center;
+    font-size: 45px;
+  }
+  */
+  &-trojuhelnik {
+    width: 27px;
+    height: 58px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    @media (max-width: $screen-xs-max) {
+      .main-caste-dotazy-zajemcu &, .main-caste-dotazy-majitelu & {
+        display: none;
+      }
+    }
+    &.levy {
+      left: -27px;
+      top: 50%;
+      margin-top: -29px;
+    }
+    &.pravy {
+      right: -27px;
+      top: 50%;
+      margin-top: -29px;
+      &:after {
+        left: auto;
+        right: 20px;
+      }
+    }
+    &.spodni {
+      width: 58px;
+      height: 27px;
+      left: 50%;
+      bottom: -27px;
+      transform: translateX(-50%);
+      &:after {
+        left: 0;
+        top: -7px;
+      }
+    }
+    &:after {
+      box-shadow: $box-shadow;
+      content: '';
+      border-radius: 7px;
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 27px;
+      background-color: #fff;
+    }
+  }
+}
+
+.kontaktujte-nas {
+  padding: 5px;
+  width: 100%;
+  .form-modal {
+
+  }
+  .zprava-uspech {
+    margin-bottom: 0;
+  }
+  .form-row {
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+  .col {
+    padding-right: 5px;
+    padding-left: 5px;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 50%;
+    }
+  }
+  .form-input {
+    margin-bottom: 10px;
+  }
+  .form-textarea-input {
+    height: 125px;
+  }
+  .form-text-input, .form-textarea-input {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .form-footer {
+    padding-bottom: 0;
+  }
+  .form-label {
+    padding-bottom: 5px;
+  }
+}
+
+.priklad {
+  list-style: none;
+  padding: 0;
+  @media(min-width: $screen-xs-min) {
+    display: none;
+  }
+  &-li {
+    box-shadow: $box-shadow;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    > p {
+      margin-bottom: 10px;
+    }
+  }
+  &-stitek {
+    color: $text1;
+  }
+  .tooltip {
+    vertical-align: -6px;
+  }
+}
+
+.nacti-dalsi {}
+.nacti-dalsi-wrap {
+  text-align: center;
+  padding: 55px 0 20px;
+  position: relative;
+  .spinner {
+    background-image: url('/images/spinner.svg');
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    display: block;
+    visibility: hidden;
+  }
+  &.roztocto {
+    .spinner {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ nastaveni.title }}{% if title %} - {{ title }}{% endif %}</title>
+    {#<meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="{{ nastaveni.meta_description }}">
+
+    <link href="/css/dest/styles{{ script_prefix }}.css?upd=1207" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.gstatic.com/s/varelaround/v8/APH4jr0uSos5wiut5cpjrj0LW-43aMEzIO6XUTLjad8.woff2" rel="preload" as="font">
+
+    <script src="/js/dest/webcomponents-loader{{ script_prefix }}.js" defer></script>
+
+    <script src="/js/dest/main{{ script_prefix }}.js?upd=1207" defer></script>
+
+    {# todo: myslím že secondary.js není nutné načítat na HP #}
+    <script src="/js/dest/secondary{{ script_prefix }}.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    {% block head %}
+
+    {% endblock %}
+
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" href="/css/dest/ie-old.css">
+    <![endif]-->
+
+    {% block head_opengraph %}
+      <meta property="og:url" content="{{ current_url }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="{{ nastaveni.title }}" />
+      <meta property="og:description" content="{{ nastaveni.meta_description }}" />
+      <meta property="og:image" content="{{ asset('images/opengraph.jpg') }}" />
+    {% endblock %}
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col header-left">
+            <a class="logo" href="/">
+              <img src="/images/logo.svg" alt="{{ nastaveni.title }}" width="215">
+            </a>
+            <button class="hamburger" id="hamburger"
+              type="button" aria-hidden="true"
+              aria-haspopup="true" aria-label="Menu">
+              <span class="hamburger-label">
+                Menu
+              </span>
+              <span class="hamburger-pruhy">
+                <span class="pruh"></span><span class="pruh"></span><span class="pruh"></span>
+              </span>
+            </button>
+          </div>
+          <div class="col header-right">
+            <nav>
+              <ul id="menu" class="menu">
+                <li class="menu-li">
+                  <a class="menu-link {% if page == 'index-pronajem' %}active{% endif %}" href="/">
+                    Chci pronájem
+                  </a>
+                </li>
+                <li class="menu-li">
+                  <a class="menu-link {% if page == 'index-prodej' %}active{% endif %}" href="/chci-koupit">
+                    Chci koupit
+                  </a>
+                </li>
+                <li class="menu-li">
+                  <a class="menu-link {% if page == 'jak-aukce-funguje' %}active{% endif %}" href="/jak-aukce-funguje">
+                    Jak to funguje
+                  </a>
+                </li>
+                <li class="menu-li">
+                  <a class="menu-link {% if page == 'kontakty' %}active{% endif %}" href="/kontakty">
+                    Kontakt
+                  </a>
+                </li>
+                <li class="menu-li">
+                  <a class="menu-link menu-link-btn {% if page == 'vlozit-nabidku' %}active{% endif %} majitel-form-js"
+                    href="#majitel-form">
+                    Vložit aukci
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main main-{{ page }}">

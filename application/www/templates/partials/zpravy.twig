@@ -1,0 +1,30 @@
+{# todo: vylepšit proměnné s errory #}
+{% if session_has('success') or success %}
+	<div class="zprava zprava-uspech" role="alert">
+		{{ session_get('success') }}
+    {{ success }}
+	</div>
+{% endif %}
+
+{% if session_has('error') or error %}
+	<div class="zprava zprava-chyba" role="alert">
+		<strong>Chyba:</strong>
+		<ul class="zprava-ul">
+  			<li>
+          {{ session_get('error') }}
+          {{ error }}
+        </li>
+		</ul>
+	</div>
+{% endif %}
+
+{% if errors|length > 0 %}
+	<div class="zprava zprava-chyba" role="alert">
+		<strong>Chyby:</strong>
+		<ul class="zprava-ul">
+      {% for error in errors.all() %}
+  			<li>{{ error }}</li>
+      {% endfor %}
+		</ul>
+	</div>
+{% endif %}

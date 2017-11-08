@@ -1,0 +1,67 @@
+title:
+
+claim: Nenechte si vyfouknout pronájem snů
+claim_2: Vyzkoušejte online aukci pronájmu! Vždy víte, jak na tom jste. Díky tomu ušetříte starosti, čas i peníze.
+
+aukce_probihajici_nadpis: Probíhající aukce pronájmů
+aukce_ukoncene_nadpis: Ukončené aukce pronájmů
+
+hlidaci_pes:
+  text: Nenašli jste, co hledáte? Dáme vám vědět, jakmile se objeví něco podle vašich představ.
+  tlacitko: Dejte mi vědět
+
+vyhody:
+  - ikona: domek
+    text: Bez kliček makléřů, transparentně, férově
+  - ikona: ruka
+    text: Vyhrát můžete, i když nebudete nejrychlejší
+  - ikona: stitek-25
+    text: Vyšší šance pro spolehlivé nájemce
+  - ikona: panacek
+    text: Vstup do aukce je zcela zdarma
+
+cim_se_lisime:
+  nadpis: V čem je aukce bydlení jiná?
+  text_pod_nadpisem: Tato nová služba je určena všem lidem, kteří právě řeší svoje bydlení. Pomocí Aukce bydlení jim chceme dopřát výhodnější, pohodlnější a transparentnější hledání či nabízení nemovitosti.
+  priklad_nadpis: Příklad aukce pronájmu bytu 2+1
+  priklad_text: v Praze s nájmem v hodnotě 18 000 Kč bez poplatků.
+
+tabulka_radek_1: Cena nájmu
+tabulka_radek_2: Řízení prohlídek
+tabulka_radek_3: Poplatek
+tabulka_radek_4: Vím, jakou mám šanci
+
+tabulka:
+  Aukce bydlení:
+    bunka_1: Je na vás
+    bunka_2: Kalendář
+    bunka_3:
+      text_1: 25 % z 1. nájmu
+      toolit_1: V případě aukce pronájmu bydlení zájemce o bydlení zaplatí 25 % z prvního nájmu jako jednorázový poplatek.
+    bunka_4: Ano
+  Bez realitky:
+    bunka_1: 18 000 Kč
+    bunka_2: Chaos
+    bunka_3: Většinou zdarma
+    bunka_4: Ne
+  Realitní agenti:
+    bunka_1: 18 000 Kč
+    bunka_2: Telefony a emaily
+    bunka_3: 18 000 Kč
+    bunka_4: Ne
+
+otazka_1:
+  nadpis: Jak Aukce bydlení funguje?
+  text: Vyberete si pronájem svých snů. Zvolíte si termín prohlídky a když se vám bude byt líbit, nabídnete v online aukci výši vratné kauce, která je po dobu vašeho nájmu uschována u Aukce Bydlení a vrácena Vám zpět po ukončení nájmu.
+
+otazka_2:
+  nadpis: Kdo a jak vybírá vítěze aukce?
+  text: Aukce doporučí majiteli bydlení TOP3 zájemce, vybrané podle nejvyšší nabídky, motivace a délky pronájmu. Konečný výběr už je pak na majiteli.
+
+otazka_3:
+  nadpis: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+  text: Poplatek za zprostředkování aukce hradí výherce aukce a činí 25 % z 1. nájmu nebo hodnoty vratné kauce. Vyhraje-li tedy Tomáš aukci s nájmem 15 000 Kč, zaplatí portálu Aukce bydlení 3 750 Kč.
+
+otazka_4:
+  nadpis: Jak Aukce bydlení vznikla a kdo za ní stojí?
+  text: V našem okolí stále přibývá přátel, kteří by rádi změnili bydlení, ale ty nejzajímavější nabídky jim vždycky utečou. Proto jsme se rozhodli založit tuto novou online službu. Přečtěte si více v <a href="/nas-pribeh">našem příběhu</a>

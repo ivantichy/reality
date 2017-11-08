@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 3+kk, 102 m² + terasa 8 m²
+slug: pronajem-3kk-praha-10
+souradnice: 50.0731703, 14.5069172
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Dobročovická 54, Praha 10 - Strašnice
+
+jmeno: Běloslava Bělohrádková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Velmi prostorný nevybavený byt, který si můžete zařídit přesně tak, jak potřebujete, se nachází v klidné oblasti Prahy 10 ve Strašnicích. Má 102 m² a součástí je i terasa o velikosti 8 m². 3 pokoje jsou rozdělené na dvě větší místnosti, kde součástí jedné je kuchyňská linka, a na 1 menší místnost. Strašnice jsou velmi klidná lokalita, která zároveň nabízí rozmanité možnosti aktivního vyžití. V ceně není zahrnuto místo k parkování. Nicméně je možné se na pronájmu těchto prostor domluvit.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 102 m², 8 m² terasa
+  Dispozice: 3+kk
+  Cena: 23 000 Kč
+  Poplatky: 4 200 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ano
+  Internet: ano / 30 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. září
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 23000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 15.6.2017 - 18:00
+  - 21.6.2017 - 8:00
+  - 27.6.2017 - 19:00
+datum_ukonceni: 9.7.2017
+
+
+obrazky:
+  1: Pokoj 1
+  2: Pokoj 2
+  3: Pokoj 3
+  4: Pohled zvenku
+  5: Koupelna
+
+zajemci:
+  - Michal K.
+  - Dana P.
+  - Petra V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

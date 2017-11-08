@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="_icons.css">
+<style type="text/css">
+.icon-binary {
+    font-family: "iconfont";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.my-class-name:before{
+	content: "\E001";
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li{
+    float: left;
+    text-align: center;
+}
+ul li:hover{
+    background: #ddd;
+}
+
+#icon-list li{
+	padding: 10px;
+}
+.icon-show-type{
+	clear: both;
+}
+.icon-show-type li span{
+	display: block;
+	padding: 10px;
+}
+.icon-show-type input{
+	display: none;
+}
+.icon-show-type input:checked ~ span{
+	background: #ddd;
+}
+
+i{
+	display: block;
+}
+
+#icon-demo i{
+	float: left;
+    padding-left: 10px;
+}
+.class-name li, .hex li, .binary li{
+	display: none;
+}
+.class-name .class-name-demo{
+	display: block;
+}
+.hex .hex-demo{
+	display: block;
+}
+.binary .binary-demo{
+	display: block;
+}
+
+.binary .binary-demo pre{
+	display: inline;
+}
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+
+</style>
+</head>
+<body>
+
+<ul class="icon-show-type clearfix">
+	<li>
+		<label onclick="showIconType(0)">
+			<input type="radio" name="icon-type">
+			<span>className</span>
+		</label>
+	</li>
+	<li>
+		<label onclick="showIconType(1)">
+			<input type="radio" name="icon-type">
+			<span>hex</span>
+		</label>
+	</li>
+	<li>
+		<label onclick="showIconType(2)">
+			<input type="radio" name="icon-type">
+			<span>binary</span>
+		</label>
+	</li>
+</ul>
+<hr/>
+Demo
+<div id="icon-demo" class="class-name clearfix">
+	<li class="class-name-demo">
+		<i class="icon icon-facebook"></i>
+		<pre>
+			&lt;i class="icon icon-facebook"&gt;&lt;/i&gt;
+		</pre>
+	</li>
+	<li class="hex-demo">
+		<i class="icon my-class-name"></i>
+		<pre>
+		    &lt;style&gt;
+			    .my-class-name:before{
+				    content: "\E001";
+				}
+			&lt;/style&gt;
+
+			&lt;i class="icon my-class-name"&gt;&lt;/i&gt;
+		</pre>
+	</li>
+	<li class="binary-demo">
+		<i class="icon-binary">&#57345;</i>
+		<pre>
+		    &lt;style&gt;
+				.icon-binary {
+				    font-family: "iconfont";
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    font-style: normal;
+				    font-variant: normal;
+				    font-weight: normal;
+				    text-decoration: none;
+				    text-transform: none;
+				}
+			&lt;/style&gt;
+			&lt;i class="icon-binary"&gt; &amp;#57345;&lt;/i&gt;
+		</pre>
+	</li>
+</div>
+<hr/>
+<ul id="icon-list" class="class-name">
+
+<li class="class-name-demo">
+    <i class="icon icon-facebook"></i>
+    <pre>icon-facebook</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-facebook"></i>
+    <pre>\E001</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57345;</i>
+    <pre>&amp;#57345;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-fotak"></i>
+    <pre>icon-fotak</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-fotak"></i>
+    <pre>\E002</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57346;</i>
+    <pre>&amp;#57346;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-hodiny"></i>
+    <pre>icon-hodiny</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-hodiny"></i>
+    <pre>\E003</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57347;</i>
+    <pre>&amp;#57347;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-info-2"></i>
+    <pre>icon-info-2</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-info-2"></i>
+    <pre>\E004</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57348;</i>
+    <pre>&amp;#57348;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-info"></i>
+    <pre>icon-info</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-info"></i>
+    <pre>\E005</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57349;</i>
+    <pre>&amp;#57349;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-kalendar"></i>
+    <pre>icon-kalendar</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-kalendar"></i>
+    <pre>\E006</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57350;</i>
+    <pre>&amp;#57350;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-krizek"></i>
+    <pre>icon-krizek</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-krizek"></i>
+    <pre>\E007</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57351;</i>
+    <pre>&amp;#57351;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-leva-kolecko"></i>
+    <pre>icon-leva-kolecko</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-leva-kolecko"></i>
+    <pre>\E008</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57352;</i>
+    <pre>&amp;#57352;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-lide"></i>
+    <pre>icon-lide</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-lide"></i>
+    <pre>\E009</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57353;</i>
+    <pre>&amp;#57353;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-obalka-2"></i>
+    <pre>icon-obalka-2</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-obalka-2"></i>
+    <pre>\E00A</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57354;</i>
+    <pre>&amp;#57354;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-obalka"></i>
+    <pre>icon-obalka</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-obalka"></i>
+    <pre>\E00B</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57355;</i>
+    <pre>&amp;#57355;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-prava-kolecko"></i>
+    <pre>icon-prava-kolecko</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-prava-kolecko"></i>
+    <pre>\E00C</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57356;</i>
+    <pre>&amp;#57356;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-sipka-dlouha"></i>
+    <pre>icon-sipka-dlouha</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-sipka-dlouha"></i>
+    <pre>\E00D</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57357;</i>
+    <pre>&amp;#57357;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-sipka-leva"></i>
+    <pre>icon-sipka-leva</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-sipka-leva"></i>
+    <pre>\E00E</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57358;</i>
+    <pre>&amp;#57358;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-sipka-prava"></i>
+    <pre>icon-sipka-prava</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-sipka-prava"></i>
+    <pre>\E00F</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57359;</i>
+    <pre>&amp;#57359;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-sipka-tenka-leva"></i>
+    <pre>icon-sipka-tenka-leva</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-sipka-tenka-leva"></i>
+    <pre>\E010</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57360;</i>
+    <pre>&amp;#57360;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-sipka-tenka-prava"></i>
+    <pre>icon-sipka-tenka-prava</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-sipka-tenka-prava"></i>
+    <pre>\E011</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57361;</i>
+    <pre>&amp;#57361;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-telefon"></i>
+    <pre>icon-telefon</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-telefon"></i>
+    <pre>\E012</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57362;</i>
+    <pre>&amp;#57362;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-twitter"></i>
+    <pre>icon-twitter</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-twitter"></i>
+    <pre>\E013</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57363;</i>
+    <pre>&amp;#57363;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-zaskrtnuto"></i>
+    <pre>icon-zaskrtnuto</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-zaskrtnuto"></i>
+    <pre>\E014</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57364;</i>
+    <pre>&amp;#57364;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-znacka-2"></i>
+    <pre>icon-znacka-2</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-znacka-2"></i>
+    <pre>\E015</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57365;</i>
+    <pre>&amp;#57365;</pre>
+</li>
+
+<li class="class-name-demo">
+    <i class="icon icon-znacka"></i>
+    <pre>icon-znacka</pre>
+</li>
+<li class="hex-demo">
+    <i class="icon icon-znacka"></i>
+    <pre>\E016</pre>
+</li>
+<li class="binary-demo">
+    <i class="icon-binary">&#57366;</i>
+    <pre>&amp;#57366;</pre>
+</li>
+
+</ul>
+
+<script type="text/javascript">
+	function showIconType(type){
+		var classMap = {
+			0: 'class-name',
+			1: 'hex',
+			2: 'binary',
+		};
+
+		document.getElementById('icon-list').className = classMap[type];
+		document.getElementById('icon-demo').className = classMap[type] + ' clearfix';
+
+	}
+</script>
+</body>
+</html>

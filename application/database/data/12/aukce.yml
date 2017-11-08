@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 2+1, 67 m²
+slug: prodej-byt-2-1-ostrava
+souradnice: 49.7748567, 18.2540672
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Jaroslava Misky 14, Ostrava-Dubina
+
+jmeno: Magdaléna Plíšková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Středně velký byt v Ostravě si vás získá slunnými prostory, retro nádechem a moderní koupelnou. Kuchyň je propojena s jídelním koutem a prostorná ložnice se může po jednoduchých úpravách proměnit, např. i v obývací pokoj. Sklepní kóje a parkovací místo jsou zahrnuty v prodejní ceně bytu.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 84 m²
+  Dispozice: 3+1
+  Cena: 620 000 Kč
+  Poplatky: 2 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 18. srpna
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 620000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 23.6.2017 17:00
+  - 4.7.2017 16:00 
+  - 7.7.2017 8:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Kuchyň
+  2: Ložnice
+  3: Jídelní kout
+  4: Chodba
+  5: Sprchový kout
+
+zajemci:
+  - Karel P.
+  - Radek L.
+  - Květa R.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

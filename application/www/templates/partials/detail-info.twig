@@ -1,0 +1,29 @@
+<section class="detail-info">
+  <div class="detail-popis">
+    <h2>Popis nemovitosti</h2>
+    <p>{{ aukce.popis }}</p>
+  </div>
+  <div class="detail-parametry row">
+    <ul class="seznam col">
+      {% for key, podminka in aukce.specifikace_array %}
+        <li><strong class="nazev">{{ key }}:</strong> {{ podminka }}</li>
+        {% if aukce.specifikace_celkem > 1 and loop.index == aukce.specifikace_celkem / 2 %}
+          </ul>
+          <ul class="seznam col">
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="detail-podminky">
+    <h2>Podmínky nabízejícího</h2>
+    <ul class="seznam">
+      <li>
+        <strong class="nazev">Kauce:</strong>
+        {% if aukce.kauce > 0 %}{{ aukce.kauce|cena }}{% else %}žádná{% endif %}
+      </li>
+      {% for key, podminka in aukce.podminky_array %}
+        <li><strong class="nazev">{{ key|e }}:</strong> {{ podminka }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

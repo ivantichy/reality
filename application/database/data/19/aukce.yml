@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 3+1, 84 m²
+slug: prodej-3-1-praha-3
+souradnice: 50.0806228, 14.4560819
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: ukoncena
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Křišťanova 2, Praha 3 - Žižkov
+
+jmeno: Ladislav Krotký
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento, při předání nevybavený byt, najdete ve 4. patře 6podlažního činžovního domu na pražském Žižkově. 84 m² pokrývá z většiny plovoucí podlaha. Prostorný obývák je doplněn ložnicí, kuchyní s jídělním koutkem a koupelnou s vanou. Díky novým oknům je byt dobře izolovaný. Tato část Prahy je ideální pro všechny, kteří mají rádi vlastní klid a zároveň ocení jednoduché spojení do centra. V ceně bytu je zahrnuta i sklepní kóje.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 84 m²
+  Dispozice: 3+1
+  Cena: 800 000 Kč
+  Poplatky: 3 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 800000
+polatky: 9000
+kauce: 0
+vybrane_terminy:
+  - 30.5.2017 15:30
+  - 1.6.2017 16:00
+  - 4.6.2017 18:00
+datum_ukonceni: 11.6.2017
+
+obrazky:
+  1: Kuchyň
+  2: Další fotka kuchyně
+  3: Chodba v bytu
+  4: Obývací pokoj
+  5: Koupelna
+
+zajemci:
+  - Karel M.
+  - Patra Ř.
+  - Radek V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

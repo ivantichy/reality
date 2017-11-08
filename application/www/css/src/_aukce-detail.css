@@ -1,0 +1,360 @@
+$detail-break-max: 1001px;
+$detail-break2-max: 810px;
+$detail-break2-min: 811px;
+
+.detail {
+  &-row {
+    @media (max-width: $detail-break2-max) {
+      display: block;
+    }
+  }
+  &-leva {
+    @mixin flex-basis 67%;
+    @media (max-width: $detail-break-max) {
+      @mixin flex-basis 62%;
+    }
+    @media (max-width: $detail-break2-max) {
+      @mixin flex-basis 100%;
+    }
+  }
+  &-prava {
+    @mixin flex-basis 33%;
+    @media (max-width: $detail-break-max) {
+      @mixin flex-basis 38%;
+    }
+    @media (max-width: $detail-break2-max) {
+      @mixin flex-basis 100%;
+    }
+  }
+  &-nazev {
+    margin-bottom: 6px;
+    margin-top: -6px;
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 40px;
+      margin-top: -12px;
+    }
+    &.mobil {
+      margin: 0 0 15px;
+      @media (min-width: $detail-break2-min) {
+        display: none
+      }
+    }
+    &.desktop {
+      @media (max-width: $detail-break2-max) {
+        display: none
+      }
+    }
+  }
+  &-box-cena {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    .tooltip {
+      margin-left: 8px;
+    }
+  }
+  &-cena {
+    font-size: 36px;
+    @media (max-width: $screen-md-max) {
+      font-size: 30px;
+    }
+    &-nadpis {
+      margin-bottom: 17px;
+      display: inline-block;
+    }
+    &-stitek {
+      color: $text2;
+    }
+  }
+  &-btn {
+    width: 100%;
+    max-width: 400px;
+    font-size: 20px;
+    padding: 15px 5px;
+    margin-bottom: 16px;
+    text-align: center;
+
+    &-wrap {
+      position: relative;
+      margin-bottom: 25px;
+      @media (min-width: $screen-lg-min) {
+        padding-right: 45px;
+      }
+    }
+  }
+  &-konec {
+    color: $text2;
+    padding-left: 38px;
+    position: relative;
+    margin-bottom: 43px;
+    &-nadpis {
+      margin-bottom: 2px;
+      color: $text1;
+    }
+    .icon {
+      color: $zelena;
+      position: absolute;
+      left: 0;
+      top: 12px;
+      font-size: 25px;
+    }
+  }
+  &-box {
+    padding: 17px 19px;
+    background-color: #f7f7f7;
+    color: $text2;
+    margin-bottom: 45px;
+    border-radius: 3px;
+    &-nadpis {
+      color: $text1;
+    }
+  }
+  &-terminy {
+    .detail-box-nadpis {
+      margin-bottom: 10px;
+    }
+  }
+  &-termin {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .datum {
+      display: inline-block;
+      width: 45%;
+      max-width: 150px
+    }
+  }
+  &-zajemci {
+    padding-bottom: 15px;
+
+    .detail-box-nadpis {
+      margin-bottom: 21px;
+    }
+    .icon {
+      font-size: 32px;
+      margin-right: 10px;
+      float: left;
+      color: $text2;
+    }
+    .pocet {
+      color: $text1;
+    }
+    .zajemci {
+      margin-bottom: 0;
+    }
+    .ucastnik {
+      background-color: #fff;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 2px 6px;
+    }
+  }
+  &-jak-funguje {
+    margin-bottom: 35px;
+    .tooltip {
+      float: left;
+      margin-right: 7px;
+    }
+    .icon {
+      font-size: 24px;
+    }
+    &-link {
+      padding-top: 2px;
+      float: left;
+    }
+  }
+  &-sdilet {
+    .sdilej {
+      color: $text2;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 7%;
+      margin-top: 6px;
+      &:hover, &:focus {
+        color: $zelena;
+      }
+    }
+    .icon {
+      float: left;
+      margin-right: 9px;
+      font-size: 22px;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    display: block;
+  }
+  &-obrazky {
+    &-row {
+      list-style: none;
+      padding-left: 0;
+      margin: 8px -4px;
+    }
+    &-col {
+      @mixin flex-basis 20%;
+      padding-right: 4px;
+      padding-left: 4px;
+      padding-bottom: 8px;
+      @media(max-width: $screen-xs-max) {
+        @mixin flex-basis 50%;
+      }
+    }
+    &-link {
+      display: block;
+      &:focus {
+        box-shadow: 0 0 1px 1px $zelena-shadow;
+        border-radius: 3px;
+      }
+    }
+    &-img {
+      width: 100%;
+      border-radius: 2px;
+      display: block;
+    }
+  }
+  &-info {
+    line-height: 1.7;
+    color: $text2;
+    padding-bottom: 25px;
+    h2, h3 {
+      margin-bottom: 10px;
+    }
+    .seznam {
+      list-style: none;
+    }
+    .nazev {
+      color: $text1;
+      font-weight: normal;
+    }
+  }
+  &-popis {
+    padding: 29px 14% 29px 0;
+    @media (max-width: $screen-xs-max) {
+      padding: 15px 0;
+    }
+  }
+  &-parametry {}
+  &-podminky {
+    .seznam {
+      padding-left: 0;
+    }
+  }
+  &-dalsi {
+    border-top: 1px solid $border;
+    margin-top: 18px;
+    padding-top: 50px;
+
+    &-nadpis {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  &-hodnoceni {
+    position: relative;
+    overflow: hidden;
+    &-button-wrap {
+      margin-bottom: 0;
+      padding-right: 75px;
+    }
+    &-button {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    svg {
+      position: absolute;
+      right: 30px;
+      bottom: -1px;
+      fill: #888888;
+      height: 80px;
+      width: auto;
+      @media(max-width: $screen-xs-max) {
+        right: 10px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.ikona-prepinaci {
+  color: $text2;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: #fff;
+  background-image: none;
+  border: none;
+  padding: 7px 0;
+  border-radius: 3px;
+  text-align: center;
+  width: 60px;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+  @media(max-width: $screen-xs-max) {
+    left: 5px;
+    bottom: 5px;
+    width: 40px;
+  }
+  &:focus, &:hover {
+    box-shadow: 0 0 5px 0 $zelena-shadow;
+  }
+  &-text {
+    display: block;
+    font-size: 13px;
+  }
+  .icon {
+    vertical-align: bottom;
+    font-size: 25px;
+    @media(max-width: $screen-xs-max) {
+      font-size: 18px;
+    }
+  }
+}
+
+#mapa {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 400ms;
+  display: block;
+
+  &.skryt {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+#google-mapa {
+  height: 100%;
+  width: 100%;
+  min-height: 150px;
+  img {
+    max-width: inherit;
+    height: auto;
+  }
+}
+
+#detail-vizual {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#detail-info-leva, #detail-info-prava {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.zpet {
+  text-align: center;
+  padding: 45px 0;
+}

@@ -1,0 +1,69 @@
+nadpis: Pronájem bytu 2+kk, 36 m²
+slug: pronajem-2-kk-ostrava-moravska-ostrava
+souradnice: 49.8411533, 18.2859917
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Na Desátém 19, Ostrava-Moravská Ostrava
+
+jmeno: Karolína Nováková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento, pro pronájem částečně vybavený, byt v těsné blízkosti centra města je členěný na rozlehlý obývací pokoj s vybavenou kuchyní. Zbytek bytu tvoří ložnice s manželskou postelí a šatní skříní, dohromady tedy 36 m². Je velmi světlý a vzdušný. Lokalita, kromě dostupnosti centra města, nabízí i park v těsné blízkosti.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 36 m²
+  Dispozice: 2+kk
+  Cena: 6 500 Kč
+  Poplatky: 2 200 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. září
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 6500
+polatky: 3000
+kauce: 0
+vybrane_terminy:
+  - 30.6.2017 - 17:00
+  - 4.7.2017 - 19:00
+  - 11.7.2017 - 08:00
+datum_ukonceni: 25.7.2017
+
+
+obrazky:
+  1: Hlavní pokoj
+  2: Hlavní pokoj podruhé
+  3: Ložnice
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Hanka O.
+  - Tadeáš L.
+  - Lukáš P.
+
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

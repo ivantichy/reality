@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 3+1, 72 m²
+slug: prodej-byt-3-1-ostrava
+souradnice: 49.8407819, 18.3042625
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Keltičkova 58, Ostrava-Slezská Ostrava
+
+jmeno: Jarmila Pižmonková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Pokud hledáte byt, ve kterém se hned budete cítit “jako doma”, nenechte si proklouznout tento. Útulný, hřejivě působící a navíc s balkónem ideálním na večerní posezení u skleničky vína. Hlavní prostor tvoří obývací pokoj propojený s kuchyní. Díky optickému rozdělení však stále působí jako dva oddělené pokoje. Ložnice nabízí výhled do zeleně a v koupelně můžete uspokojit jak své sprchové, tak vanové.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 72 m²
+  Dispozice: 3+1
+  Cena: 570 000 Kč
+  Poplatky: 2 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Částečně vybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ano
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 570000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 20.6.2017 17:00
+  - 27.6.2017 17:00
+  - 4.7.2017 18:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Kuchyně
+  3: Ložnice
+  4: Koupelna
+  5: Balkón
+
+zajemci:
+  - Lukáš Ž.
+  - Ludmila F.
+  - Radislav N.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

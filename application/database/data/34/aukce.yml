@@ -1,0 +1,70 @@
+nadpis: Pronájem bytu 2+1, 41 m²
+slug: pronajem-byt-2-1-41-Praha
+souradnice: 50.0837581, 14.3723236
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Bělohorská 55, Praha 6 - Břevnov
+
+jmeno: Jan Květný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Podkrovní byt na Praze 6 rozděluje hlavní pokoj na obývák a kuchyň s jídelním koutem. Z pokoje vedou dveře do ložnice a menší koupelny se sprchovým koutem. V obýváku a ložnici se nachází plovoucí podlaha. Střešní okna jsou kvalitně izolovaná. Do centra se dostanete snadno díky tramvajím, které staví 5 minut pěší chůze od domu. Při předání bude byt nevybavený.
+
+
+specifikace:
+  Typ aukce: Pronajem
+  Plocha: 41 m²
+  Dispozice: 2+1
+  Cena: 7 000 Kč
+  Poplatky: 2 600 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Cihla
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: září 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 7000
+polatky: 5000
+kauce: 7000
+vybrane_terminy:
+  - 4.7.2017 17:00
+  - 12.7.2017 17:00
+  - 18.7.2017 19:00
+datum_ukonceni: 28.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Obývací pokoj
+  3: Kuchyně
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Ondřej T.
+  - Anna A.
+  - Jakub U.
+
+zajemci_pocet: 6
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

@@ -1,0 +1,67 @@
+nadpis: Pronájem bytu 1+1, 54 m²
+slug: pronajem-byt-1-1-praha-6
+souradnice: 50.1059197, 14.3937853
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: ukoncena
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Nikoly Tesly 6, Praha 6 - Dejvice
+
+jmeno: Věnceslava Všetečná
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento, při předání nevybavený byt, najdete ve 2. patře 4podlažního panelového domu na pražském Břevnově. Útulných 54 m² je ideálním bydlením pro pár pár nebo pro člověka, který má rád své pohodlí. Hlavní místnost kombinuje ibývací pokoj, kuchyň a jídelní koutek. Druhý pokoj skrývá prostornou ložnici. Koupelna je vyvedena v příjemném rustikálním stylu.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 54 m²
+  Dispozice: 1+1
+  Cena: 15 000 Kč
+  Poplatky: 3 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 15000
+polatky: 7000
+kauce: 0
+vybrane_terminy:
+  - 16.5.2017 17:00
+  - 23.5.2017 17:00
+  - 30.5.2017 17:00
+datum_ukonceni: 6.6.2017
+
+obrazky:
+  1: Kuchyň
+  2: Další fotka kuchyně
+  3: Chodba v bytu
+  4: Obývací pokoj
+  5: Koupelna
+
+zajemci:
+  - Karel M.
+  - Patra Ř.
+  - Radek V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 2+1, 120 m²
+slug: podkrovni-byt-2-1-praha-3
+souradnice: 50.0816692, 14.4463333
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Kubelíkova 5, Praha 3 - Karlín
+
+jmeno: Radim Vítězný
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Pro milovníky světla a otevřených prostor. Tento byt v Karlíně je velice prostorný, nově zcela zrekonstuovaný a je k prodeji nevybavený. Prostor si tak můžete ne/zaplnit, jak vám bude libo. Po černých schodech působících skoro jako umělecké dílo se snadno dostanete na střešní terasu s dalekým výhledem na Prahu.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 120 m²
+  Dispozice: 2+1
+  Cena: 6 000 000 Kč
+  Poplatky: 4 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ano
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna - 1. října
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 7000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 26.6.2017 18:00
+  - 29.6.2017 16:00
+  - 4.7.2017 17:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Hlavní pokoj
+  2: Hlavní pokoj podruhé
+  3: Kuchyně
+  4: Koupelna
+  5: Střešní terasa
+
+zajemci:
+  - Ludvík M.
+  - Petra B.
+  - Kamil V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

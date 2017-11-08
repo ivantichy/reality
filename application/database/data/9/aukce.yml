@@ -1,0 +1,69 @@
+nadpis: Pronájem bytu 3+1, 95 m²
+slug: pronajem-byt-3-1-ostrava-poruba
+souradnice: 49.8281950, 18.1824461
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Ostrava
+adresa: Čkalovova 4, Ostrava-Poruba
+
+jmeno: Ladislav Černý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Byt je situovaný v Ostravě-Porubě, kde se nachází v 2. patře činžovního domu. Jedná se o velmi světlý a prostorný byt s 95 m². Je členěný na obývák, ložnici s manželskou postelí a jeden pokoj, který lze vyžít jako dětský. Lokalita bytu je velmi klidná a situovaná například blízko sportovního areálu.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 95 m²
+  Dispozice: 3+1
+  Cena: 8 000 Kč
+  Poplatky: 3 000 Kč
+  Typ vlastnictví: Družstevní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Částečně vybavený
+  Podlaží: 2
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 8000
+polatky: 4000
+kauce: 0
+vybrane_terminy:
+  - 20.6.2017 - 17:00
+  - 22.6.2017 - 08:00
+  - 28.6.2017 - 19:00
+datum_ukonceni: 2.7.2017
+
+
+obrazky:
+  1: Ložnice
+  2: Obývací pokoj
+  3: Kuchyně
+  4: Obývací pokoj podruhé
+  5: Koupelna
+
+zajemci:
+  - Linda K.
+  - Tomáš Z.
+  - Diana P.
+
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

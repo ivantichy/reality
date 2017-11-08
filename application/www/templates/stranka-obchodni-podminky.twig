@@ -1,0 +1,17 @@
+{% extends "stranka.twig" %}
+
+{% block sidabar_top %}
+  {% include 'partials/menu-side-2.twig' %}
+{% endblock %}
+
+{% block content %}
+  <div class="podminky">
+    <h1>{{ data.title }}</h1>
+    {% for sekce in data.podminky %}
+    <div id="sekce-{{ loop.index }}">
+      <h2>{{ sekce.nadpis }}</h2>
+      <p>{{ sekce.text|raw }}</p>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}

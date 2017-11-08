@@ -1,0 +1,24 @@
+{% extends "stranka.twig" %}
+
+{% block content %}
+  <div class="pribeh">
+    <h1 class="pribeh-nadpis">Náš příběh</h1>
+    <div class="pribeh-box">
+      {{ data.nas_pribeh|raw }}
+      <div class="pribeh-trojuhelnik"></div>
+    </div>
+    <p class="pribeh-foto">
+      <img src="/images/nas-pribeh-foto.jpg" alt="">
+    </p>
+    <p class="pribeh-jmeno">{{ data.nas_pribeh_jmeno }}</p>
+  </div>
+
+  <div class="nenasli-odpoved">
+    <p class="nenasli-odpoved-text h1">
+      {{ data.paticka_cta.text }}
+    </p>
+    <p>
+      <a class="button" href="/#nabidky">{{ data.paticka_cta.tlacitko }}</a>
+    </p>
+  </div>
+{% endblock %}

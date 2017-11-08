@@ -1,0 +1,69 @@
+<div class="model col {{ class }}">
+  <div class="model-box">
+    <label class="model-label">
+      <span class="form-radio-label">
+        <input
+          class="radio"
+          type="radio"
+          name="model_aukce"
+          value="{{ input_value }}"
+          required="required"
+          {% if value == input_value %}checked="checked"{% endif %}
+          data-error="{% if input_error %}{{ input_error }}{% else %}{{ input_error }}{% endif %}">
+        <span class="radio-span" aria-hidden="true"></span>
+        <span class="form-radio-label">{{ input_label }}</span>
+      </span>
+    </label>
+    <div class="model-bot {% if cena %}bez-ceny{% endif %}">
+      <div class="model-info">
+        <div class="model-info-top">
+          <p>
+            {{ info_text|raw }}
+          </p>
+        </div>
+        {% if info_2_title %}
+          <div class="model-info-bottom">
+            <p class="h4">
+              {{ info_2_title }}
+              {%
+                include 'partials/tooltip.twig'
+                with {
+                  text: info_2_text
+                } only
+              %}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if info_2_title %}
+        <div class="model-cena-box">
+          {%
+            include 'partials/form-text-cena.twig'
+            with {
+              'nazev' : input_cena.nazev,
+              'parametry' : {
+                class: 'model-cena',
+                label: 'Vyvolávací cena',
+                popis: input_cena.popis,
+                error: 'Vyvolávací cena je povinná'
+              },
+              value: input_cena.value|cislo
+            }
+          %}
+        </div>
+      {% endif %}
+
+      {% if cena %}
+        <div class="model-cena-box">
+          <p class="model-cena-nadpis">
+            {{ cena_nadpis }}
+          </p>
+          <p class="model-cena">
+            {{ cena|cena }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+nadpis: Prodej domu, 120 m²
+slug: prodej-dum-120-ostrava
+souradnice: 49.8436628, 18.3336044
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: ukoncena
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: dum
+mesto: Ostrava
+adresa: Štěpničkova 6, Ostrava
+
+jmeno: Patrik Pravdivý
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento středně velký dům najdete na okraji Ostravy. Ve dvou patrech najdete prostorný obývák, kuchyň, ložnici a dětský pokoj. Koupelna je nově zrekonstruovaná. Okna jsou nově vyměněna a poskytují dobrou tepelnou izolaci. A co víc, dům najdete kousek od ostravské ZOO. Je tedy pro rodiny jako dělaný.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 120 m²
+  Dispozice: 4+1
+  Cena: 1 500 000 Kč
+  Poplatky: 4 500 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Nevybavený
+  Podlaží: 3
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 15000000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 3.5.2017 17:00
+  - 12.5.2017 16:30
+  - 25.5.2017 17:00
+datum_ukonceni: 11.6.2017
+
+obrazky:
+  1: Vnější pohled
+  2: Vchod
+  3: Chodba
+  4: Dětský pokoj
+  5: Koupelna
+
+zajemci:
+  - Karel M.
+  - Patra Ř.
+  - Radek V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

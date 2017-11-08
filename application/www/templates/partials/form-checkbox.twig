@@ -1,0 +1,40 @@
+<div class="form-checkbox {{ parametry.class }}">
+  {% if parametry.hodnoty  %}
+    <p class="form-title h3">{{ parametry.label }} {% if parametry.required %}<sup>*</sup>{% endif %}</p>
+
+    {% if parametry.popis %}
+      <p class="form-popis">{{ parametry.popis }}</p>
+    {% endif %}
+
+    <div class="form-input form-checkbox-wrap">
+      {% for key, hodnota in parametry.hodnoty %}
+        <label class="form-checkbox-label">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="{{ nazev }}[]"
+            value="{% if parametry.hodnoty_bez_klice %}{{ hodnota }}{% else %}{{ key }}{% endif %}"
+            {% if value is not empty and value == key %}checked="checked"{% endif %}
+            {% if parametry.required %}required="required"{% endif %}
+            data-error="{% if parametry.error %}{{ parametry.error }}{% else %}{{ parametry.label }}{% endif %}"
+            >
+          <span class="checkbox-span" aria-hidden="true"></span>
+          <span class="form-checkbox-text">{{ hodnota }}</span>
+        </label>
+      {% endfor %}
+    </div>
+  {% else %}
+    <label class="form-input form-checkbox-label">
+      <input
+        class="checkbox"
+        type="checkbox"
+        name="{{ nazev }}"
+        value="1"
+        {% if parametry.required %}required="required"{% endif %}
+        data-error="{% if parametry.error %}{{ parametry.error }}{% else %}{{ parametry.label }}{% endif %}"
+        >
+      <span class="checkbox-span" aria-hidden="true"></span>
+      <span class="form-checkbox-label-span">{{ parametry.label|raw }}</span>
+    </label>
+  {% endif %}
+</div>

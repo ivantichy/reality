@@ -1,0 +1,67 @@
+nadpis: Prodej bytu 1+1, 45 m²
+slug: prodej-byt-1-1-praha-8
+souradnice: 50.0919831, 14.4384814
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Praha 8 - Karlín, Pobřežní 2
+
+jmeno: Ludmila Skočdopolová
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Útulný pražský byt na kulturou žijícím Karlíně je to pravé, pokud hledáte pohodlné příjemné bydlení pro jednoho. Při prodeji bude byt nevybavený a můžete si ho tak zařídit podle vlastní chuti. Koupelna je nově zrekonstruovaná a zláká vás k relaxaci v prostorné vaně. Sousedské posezení ve vnitrobloku potěší nejen vás, ale i vaše přátele či známé.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 45 m²
+  Dispozice: 1+1
+  Cena: 720 000 Kč
+  Poplatky: 3 000 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Nevybavený
+  Podlaží: 4
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: B
+cena_vyvolavaci: 720000
+poplatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 28.6.2017 17:00
+  - 5.7.2017 17:00
+  - 21.7.2017 17:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Kuchyň
+  2: Další fotka kuchyně
+  3: Chodba v bytu
+  4: Obývací pokoj
+  5: Fotka nemovitosti
+
+zajemci:
+  - Karel M.
+  - Patra Ř.
+  - Radek V.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

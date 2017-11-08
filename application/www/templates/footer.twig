@@ -1,0 +1,120 @@
+</main>
+<footer class="footer {% if page == 'jak-aukce-funguje' %}footer-shadow{% endif %}">
+  <div class="container">
+    <div class="footer-row row">
+      <p class="footer-col footer-left col">
+        &copy; 2017 AukceBydlení.cz
+      </p>
+      <div class="footer-col footer-center col">
+        <ul class="menu-footer">
+          <li class="menu-footer-li"><a class="menu-footer-link" href="/jak-aukce-funguje">Jak to funguje</a></li>
+          <li class="menu-footer-li"><a class="menu-footer-link" href="/kontakty">Kontakt</a></li>
+          <li class="menu-footer-li"><a class="menu-footer-link" href="/obchodni-podminky">Podmínky</a></li>
+        </ul>
+      </div>
+      <p class="footer-col footer-right col">
+        Vytvořeno s
+        <a class="footer-bot-db"
+          href="http://www.digitalbrain.cz/?utm_source=clients-web&utm_medium=footer&utm_campaign=aukcebydleni"
+          target="_blank" title="DigitalBrain" rel="noopener">
+          <img
+            src="/images/logo-db.svg"
+            alt="DigitalBrain"
+            width="22">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<template id="majitel-form">
+  <section
+    tabindex="1"
+    role="dialog"
+    aria-label="Kontaktní formulář"
+    aria-hidden="false">
+    <div class="kontaktujte-nas">
+      <div class="zprava zprava-uspech" role="alert" style="display: none;"></div>
+      <form id="form-modal" class="form-modal" action="/kontakty" method="post">
+
+        <h2>Nabídněte nemovitost zdarma</h2>
+
+        <p>Děkujeme za váš zájem. Stačí, když nám pošlete základní údaje. Ozveme se zpět do 24 hodin.</p>
+
+        {% include 'partials/zpravy.twig' %}
+
+        <div class="row form-row">
+          <label class="col form-col form-input">
+            <span class="form-label">Jméno a přijmení:<sup aria-hidden="true">*</sup></span>
+            <input class="form-text-input"
+              type="text" name="jmeno" value=""
+              placeholder="Vaše jméno" required=""
+              autocomplete="name">
+          </label>
+          <label class="col form-col form-input">
+            <span class="form-label">E-mail:<sup aria-hidden="true">*</sup></span>
+            <input class="form-text-input"
+              type="email"
+              name="email" value=""
+              placeholder="Váš email" required=""
+              autocomplete="email">
+          </label>
+        </div>
+        <label class="form-input">
+          <span class="form-label">Lokalita: <sup aria-hidden="true">*</sup></span>
+          <input class="form-text-input"
+            type="text" name="lokalita"
+            value=""
+            placeholder="Město nebo obec"
+            autocomplete="city"
+            required="">
+        </label>
+        <label class="form-input">
+          <span class="form-label">Telefon: <sup aria-hidden="true">*</sup></span>
+          <input class="form-text-input"
+            type="text" name="telefon"
+            value=""
+            placeholder="Váš telefon"
+            autocomplete="tel"
+            required="">
+        </label>
+        <label class="form-input">
+          <span class="form-label">Dispozice nemovitosti:</span>
+          <input class="form-text-input"
+            type="text" name="dispozice"
+            value=""
+            placeholder="např.: dům, nebo 2+kk">
+        </label>
+        <label class="form-input">
+          <span class="form-label">Zpráva:</span>
+          <textarea class="form-textarea-input"
+            name="zprava"
+            placeholder="Krátce popište nabízenou nemovitost. Pole je nepovinné."></textarea>
+        </label>
+        <footer class="form-footer">
+          <button id="button-majitel" class="button" type="submit" name="submitVzkaz">Odeslat</button>
+          <input type="hidden" name="modal" value="1">
+          <input type="hidden" name="typ_formulare" value="majitel">
+          {{ csrf_field() }}
+          {# honeypot_generate() #}
+        </footer>
+
+      </form>
+    </div>
+
+  </section>
+</template>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-57QP6TW');</script>
+<!-- Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57QP6TW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>

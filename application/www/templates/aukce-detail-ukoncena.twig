@@ -1,0 +1,61 @@
+{% extends "aukce-detail.twig" %}
+
+{% block aukce_zprava %}
+  {#
+  <div class="zprava">
+    Tato aukce je již ukončena.
+  </div>
+  #}
+{% endblock %}
+
+{% block aukce_cena %}
+  <div class="detail-box-cena">
+    {% if aukce.typ_aukce == 'pronajem' %}
+      <p class="detail-cena-nadpis">Vydražená cena nájmu</p>
+      <p>
+        <span class="detail-cena">{{ aukce.cena_vyvolavaci|cena }}</span>
+        <span class="detail-cena-stitek">/ měsíčně</span>
+        {%
+          include 'partials/tooltip.twig'
+          with {
+            text: tooltip_cena_pronajem
+          } only
+        %}
+      </p>
+    {% else %}
+      <p class="detail-cena-nadpis">Vydražená cena nemovitosti</p>
+      <p>
+        <span class="detail-cena">{{ aukce.cena_vyvolavaci|cena }}</span>
+        {%
+          include 'partials/tooltip.twig'
+          with {
+            text: tooltip_cena_prodej
+          } only
+        %}
+      </p>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block aukce_konec %}
+  <div class="detail-konec">
+    <i class="icon icon-hodiny" aria-hidden="true"></i>
+    <p class="detail-konec-nadpis">
+      Aukce ukončena:
+    </p>
+    <p>
+      {{ aukce.datum_ukonceni|date("j.n.Y G:i") }}
+    </p>
+  </div>
+{% endblock %}
+
+{% block aukce_zajemci %}
+  <div class="detail-zajemci detail-box">
+    <p class="detail-box-nadpis">
+      <i class="icon icon-lide" aria-hidden="true"></i>Vítěz aukce
+    </p>
+    <p class="zajemci">
+      <span class="ucastnik">{{ aukce.zajemci_array.0 }}</span>
+    </p>
+  </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+title: Časté dotazy majitelů
+otazky:
+  - otazka: Jak aukce nájmu a prodeje funguje?
+    odpoved: >
+      Stačí vyplnit základní informace o vaší inzerované nemovitosti a povinné údaje. Ozveme se vám zpátky a v případě potřeby vám pomůžeme nabídku dokončit a spustit aukci.
+
+  - otazka: Kdo a jak vybírá vítěze aukce?
+    odpoved: >
+      Aukce vám na základě vyhodnocení podstatných kritérií doporučí TOP3 kandidáty. Z nich si pak vyberete vítěze aukce. V případě nájmu rozhoduje délka pronájmu, výše nájmu či nabízené hodnoty vratné kauce a spolehlivost zájemce. V případě prodeje nemovitosti rozhoduje nejvyšší nabídnutá částka.
+
+  - otazka: Co když nevydražím dost vysokou částku, se kterou bych byl spokojený?
+    odpoved: >
+      Naším doporučením je aukci začít na 80-90 % ceny, na níž cílíte. Pokud vydražená částka nedosáhne 100 %, můžete od nabídky nemovitosti odstoupit bez sankcí či poplatků do 3 dnů před jejím ukončením.
+
+  - otazka: Kolik služba stojí, jsou tam nějaké skryté poplatky?
+    odpoved: >
+      Vložení inzerátu je u nás vždy zdarma. Poplatek za zprostředkování koupě nemovitosti je jednorázový a hradíte jej vy jako prodejce nemovitosti. Činí 0,5 % z výše vydražené ceny nemovitosti. V případě aukce pronájmu neplatíte jako majitel žádný poplatek.
+
+  - otazka: Kam peníze jdou - řeším to s vámi nebo vítězem aukce?
+    odpoved: >
+      Platba vítěze aukce jde přímo na váš účet. Pokud máte zájem o služby notáře, rádi je pro vás zařídíme.
+
+  - otazka: Jaký je minimální počet prohlídek, minimální délka pronájmu a výše nájmu nebo prodejní ceny?
+    odpoved: >
+      Všechny tyto podmínky jsou na vás. Počet prohlídek, počet účastníků i finanční podmínky si stanovujete dle svých potřeb. Vyvolávací cenu aukce doporučujeme začít na cca 80-90 % částky, na kterou cílíte.
+
+  - otazka: Můžu z aukce odstoupit a za jakých podmínek?
+    odpoved: >
+      Aukci můžete zrušit maximálně 3 dny před jejím koncem. Pokud aukci zrušíte po tomto termínu, jste povinen portálu Aukce bydlení uhradit jednorázový poplatek, který v případě prodeje nemovitosti činí 0,5 % z vyvolávací ceny a v případě pronájmu 25 % z požadovaného nájmu.
+
+  - otazka: Můžu mít vlastní smlouvu?
+    odpoved: >
+      Vlastní smlouvu mít můžete, pouze je třeba dodržet vydraženou cenu a délku nájmu v případě pronájmu, respektive vydraženou cenu nemovitosti v případě prodeje.
+
+  - otazka: Jakou si mám stanovit výši vyvolávací ceny?
+    odpoved: >
+      Pro zahájení aukce doporučujeme uvést 80-90 % ceny, za kterou chcete nemovitost pronajmout či prodat.
+
+  - otazka: Poskytujete i právní a notářské služby?
+    odpoved: >
+      Tyto služby vám rádi zprostředkujeme, kontaktujte nás <a href="/kontakty">zde</a>.
+
+  - otazka: Můžu nabídku inzerovat i jinde?
+    odpoved: >
+      Pokud využíváte našich služeb a nemovitost nabízíte v Aukci bydlení, není možné ji v době trvání aukce nabízet v rámci jiných služeb. Bez této podmínky bychom nemohli zaručit hladký a úspěšný průběh aukce pro obě strany.
+
+levy_sloupec:
+  text: Nenašli jste zde<br> odpověď na vaši otázku?
+  tlacitko: Kontaktujte nás
+
+paticka_cta:
+  text: Chci vyzkoušet Aukci bydlení
+  tlacitko: Zobrazit nabídky

@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 2+1, 45 m²
+slug: pronajem-2-1-brno-stred
+souradnice: 49.1963547, 16.5899675
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Tvrdého 564, Brno-střed – Stránice
+
+jmeno: Karolína Osmá
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Dominantou tohoto stylového bytu se 45 m² v centru Brna je prostorný a vybavený obývák. Byt se nachází ve 3. patře činžovního domu. Kuchyň je také plně vybavená, v ložnici naleznete manželskou postel a velkou šatní skříň, koupelna má sprchový kout. Lokace bytu je vzdálená jen několik minut od centra, nicméně jedná se o velmi klidnou oblast a možností různých aktivit.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 45 m²
+  Dispozice: 2+1
+  Cena: 11 500 Kč
+  Poplatky: 2 000 Kč
+  Typ vlastnictví: Družstevní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní dům
+  Vybavení: Vybavený
+  Podlaží: 3
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 40 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Kdykoliv do 1. listopadu 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 11500
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 19.6.2017 - 19:00
+  - 20.6. 2017 - 18:00
+  - 23.6. 2017 - 08:00
+datum_ukonceni: 14.7.2017
+
+obrazky:
+  1: Obývací pokoj
+  2: Kuchyně
+  3: Ložnice 
+  4: Ložnice podruhé
+  5: Koupelna
+
+zajemci:
+  - Irena P.
+  - Klára L.
+  - Jan D.
+
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

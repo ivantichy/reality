@@ -1,0 +1,207 @@
+{% extends "aukce-form.twig" %}
+
+{% block drobeckova_navigace %}
+  {% set drobky =  [
+      {'nazev' : 'Aukce bydlení', 'url': '/'},
+      {'nazev' : aukce.nadpis, 'url': aukce.getLink() }
+    ] %}
+  {% set aktualni_drobek = 'Vložit poptávku' %}
+
+  {% include 'partials/drobky.twig' %}
+{% endblock %}
+
+{% block sidebar %}
+  <h3>{{ aukce.nadpis }}</h3>
+  <p class="vlozit-leva-podnadpis">{{ aukce.adresa }}</p>
+
+  <div class="vlozit-leva-p detail-konec">
+    <i class="icon icon-hodiny" aria-hidden="true"></i>
+    <p class="detail-konec-nadpis">
+      {{ aukce.dny_do_konce }}
+    </p>
+    <p>
+      Aukce končí {{ aukce.datum_ukonceni|date("d.n.Y G:i") }}
+    </p>
+  </div>
+
+  <p class="vlozit-leva-p last">
+    <span class="vlozit-leva-cena-nadpis">Vyvolávací cena</span>
+    <span class="vlozit-leva-cena">{{ aukce.cena_vyvolavaci|cena }}</span>
+    {% if aukce.typ_aukce == 'pronajem' %}
+      <span class="vlozit-leva-stitek">měsíčně</span>
+    {% else %}
+
+    {% endif %}
+  </p>
+{% endblock %}
+
+{% block content %}
+  {% if krok_aktualni == 1 %}
+  <form
+    is="iron-form"
+    id="krokJedna"
+    class="krok-1"
+    method="post"
+    action="{{ url_current() }}"
+    {% if krok_aktualni != 1 %}style="display: none;"{% endif %}>
+    {% include 'templates/partials/zpravy.twig' %}
+
+    {%
+      include 'templates/partials/form-radio.twig'
+      with {
+        'nazev' : 'termin',
+        'parametry' : data.form.termin,
+        'value' : poptavka.termin
+      }
+    %}
+
+    {% if aukce.typ_aukce == 'prodej' %}
+    <div class="form-block">
+      <h3>{{ data.blok_vyvolavaci_cena.nadpis }}</h3>
+      <p>
+        {{ data.blok_vyvolavaci_cena.text }}.
+      </p>
+      <p>
+        {{ data.blok_vyvolavaci_cena.podnadpis }}<br>
+        <strong>{{ aukce.cena_vyvolavaci|cena }}</strong>
+      </p>
+    </div>
+    {% endif %}
+
+    {% if aukce.typ_aukce == 'pronajem' %}
+      <div class="form-block">
+        <h3>Vyberte dražební metodu</h3>
+        <div class="modely form-input">
+          <div class="modely-help form-help"></div>
+          <div class="row">
+
+            {%
+              include 'partials/model-box.twig'
+              with {
+                class : '',
+                input_label : data.model_a.label,
+                input_value : 'A',
+                input_error: 'Výběr modelu aukce je povinný',
+                info_text: data.model_a.text,
+                cena_nadpis: data.model_a.nadpis,
+                cena: aukce.poplatky,
+                value: poptavka.model_aukce
+              }
+            %}
+
+            {%
+              include 'partials/model-box.twig'
+              with {
+                class : 'uzky',
+                input_label : data.model_b.label,
+                input_value : 'B',
+                input_error: 'Výběr modelu aukce je povinný',
+                info_text: data.model_b.text,
+                cena_nadpis: data.model_b.nadpis,
+                cena: aukce.cena_vyvolavaci,
+                value: poptavka.model_aukce
+              }
+            %}
+
+          </div>
+        </div>
+      </div>
+
+      {%
+        include 'partials/form-radio.twig'
+        with {
+          'nazev' : 'delka_pronajmu',
+          'parametry' : data.form.delka_pronajmu,
+          'value' : poptavka.delka_pronajmu
+        }
+      %}
+    {% endif %}
+
+    <div class="form-block form-aukce-kontakt">
+      <p class="form-title h3">Kontaktní údaje</p>
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'jmeno', 'parametry' : data.form.jmeno, 'value' : poptavka.jmeno }
+      %}
+
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'email', 'parametry' : data.form.email, 'value' : poptavka.email }
+      %}
+
+      {%
+        include 'templates/partials/form-text.twig'
+        with { 'nazev' : 'telefon', 'parametry' : data.form.telefon, 'value' : poptavka.telefon}
+      %}
+
+      {%
+        include 'templates/partials/form-textarea.twig'
+        with { 'nazev' : 'motivace', 'parametry' : data.form.motivace, 'value' : poptavka.motivace}
+      %}
+
+      {%
+        include 'templates/partials/form-checkbox.twig'
+        with { 'nazev' : 'souhlas', 'parametry' : data.form.souhlas}
+      %}
+    </div>
+
+    <footer class="form-footer">
+      <button class="button stredni" type="submit" name="button">
+        Pokračovat<i class="icon icon-prava-kolecko" aria-hidden="true"></i>
+      </button>
+      <input type="hidden" name="krok" value="1">
+      <input type="hidden" name="id_poptavky" value="{{ id_poptavky }}">
+      {{ csrf_field() }}
+    </footer>
+
+  </form>
+  {% endif %}
+
+  {% if krok_aktualni == 2 %}
+  <form
+    is="iron-form"
+    id="krok-2"
+    class="krok-2"
+    method="post"
+    action="{{ url_current() }}"
+    {% if krok_aktualni != 2 %}style="display: none;"{% endif %}>
+    {% include 'templates/partials/zpravy.twig' %}
+
+    <div class="form-block">
+      <h3>{{ data.krok_2.nadpis }}</h3>
+      <p>
+        {{ data.krok_2.text }}
+    </div>
+
+    {%
+      include 'partials/form-radio.twig'
+      with { 'nazev' : 'dotaz_vek', 'parametry' : data.form.dotaz_vek}
+    %}
+
+    {%
+      include 'partials/form-radio.twig'
+      with { 'nazev' : 'dotaz_jsem', 'parametry' : data.form.dotaz_jsem}
+    %}
+
+    {%
+      include 'partials/form-checkbox.twig'
+      with { 'nazev' : 'dotaz_zaujalo_mne', 'parametry' : data.form.dotaz_zaujalo_mne}
+    %}
+
+
+    {%
+      include 'partials/form-checkbox.twig'
+      with { 'nazev' : 'dotaz_chci', 'parametry' : data.form.dotaz_chci}
+    %}
+
+    <footer class="form-footer">
+      <button class="button stredni" type="submit" name="button">
+        Odeslat poptávku do aukce<i class="icon icon-prava-kolecko" aria-hidden="true"></i>
+      </button>
+      <input type="hidden" name="krok" value="1">
+      <input type="hidden" name="id_poptavky" value="{{ id_poptavky }}">
+      {{ csrf_field() }}
+    </footer>
+  </form>
+  {% endif %}
+{% endblock %}

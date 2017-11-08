@@ -1,0 +1,376 @@
+$screen-vlozit-min: 800px;
+$screen-vlozit-max: 801px;
+.vlozit {
+  background-color: #fff;
+  padding-top: 53px;
+  @media(max-width: $screen-xs-max) {
+    padding-top: 25px;
+  }
+  &-row {
+    @media(max-width: $screen-md-max) {
+      display: block;
+    }
+  }
+  &-leva {
+    @media (min-width: $screen-vlozit-min) {
+      @mixin flex-basis 30%;
+    }
+    @media (max-width: $screen-vlozit-max) {
+      margin-bottom: 15px;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding-right: 33px;
+    }
+    &-box {
+      background-color: #f7f7f7;
+      padding: 25px 30px;
+      border-radius: 3px;
+      @media(max-width: $screen-md-max) {
+        padding: 20px 20px;
+      }
+      @media(max-width: $screen-xs-max) {
+        padding: 15px;
+      }
+    }
+    &-link {
+      color: $text2;
+      text-decoration: none;
+      display: block;
+      .icon {
+        font-size: 30px;
+        display: inline-block;
+        width: 50px;
+        vertical-align: -10px;
+      }
+    }
+    &-podnadpis {
+      margin-bottom: 20px;
+    }
+    &-p {
+      margin-bottom: 15px;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+    &-cena-nadpis {
+      margin-bottom: 5px;
+      display: block;
+    }
+    &-cena {
+      font-size: 22px;
+    }
+    &-stitek {
+      color: $text2;
+    }
+  }
+  &-prava {
+    @media (min-width: $screen-vlozit-min) {
+      @mixin flex-basis 70%;
+    }
+  }
+}
+
+.kroky {
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  list-style: none;
+  margin: 0;
+  padding: 14px;
+  display: flex;
+  margin-bottom: 53px;
+  @media (max-width: $screen-md-max) {
+    padding: 10px;
+  }
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    margin: 0 0 25px 0;
+  }
+  &-li {
+    display: inline-block;
+    flex: 1 1 auto;
+    max-width: 46%;
+    position: relative;
+    @media (max-width: $screen-md-max) {
+      max-width: 100%;
+    }
+    @media (max-width: $screen-xs-max) {
+      display: block;
+      max-width: none;
+    }
+    .icon {
+      position: absolute;
+      right: 24px;
+      top: 15px;
+      @media (max-width: $screen-lg-max) {
+        right: 0px;
+      }
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+    }
+    &.last {
+
+    }
+  }
+  &-button {
+    color: $text2;
+    display: block;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    max-width: calc(100% - 5px);
+    cursor: default;
+    &.aktivni {
+      cursor: default;
+      color: $zelena;
+      .kroky-cislo {
+        background-color: $zelena2;
+      }
+    }
+    &.hotovo {
+      color: $text1;
+      cursor: pointer;
+      .kroky-cislo {
+        background-color: $text1;;
+      }
+    }
+  }
+  &-cislo, &-text {
+    flex: 1 1 auto;
+  }
+  &-cislo {
+    background-color: $text2;
+    flex-grow: 0;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    @media(max-width: $screen-md-max) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.modely {
+  @media(max-width: $screen-xs-max) {
+    display: block;
+  }
+}
+.model {
+  @media(min-width: $screen-xs-min) {
+    @mixin flex-basis 50%;
+  }
+  color: $text2;
+  padding-bottom: 20px;
+  display: flex;
+  &.oznaceny {
+    color: $zelena;
+    b, strong {
+      color: $zelena;
+    }
+    .model-label {
+      background-color: $zelena-modal-label;
+    }
+    .model-box {
+      background-color: $zelena-svetla;
+    }
+    .h4, .form-radio-label, .form-cena-popis {
+      color: $zelena;
+    }
+    .form-text-input {
+      background-color: $zelena-svetla;
+      border-color: $zelena;
+    }
+  }
+  &.uzky {
+    @media(min-width: 100px) {
+      .model-info {
+        padding-right: 50px;
+      }
+    }
+  }
+  &-box, &-bot {
+    display: flex;
+    flex-direction: column;
+  }
+  &-label, &-bot {
+    flex: 0 0 auto;
+  }
+  &-box {
+    border-radius: 3px;
+    border: 1px solid $border;
+    flex: 1 1 auto;
+    transition: background 200ms;
+  }
+  &-label {
+    color: $text1;
+    background-color: #f8f8f8;
+    display: block;
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 18px;
+    transition: background 200ms;
+    cursor: pointer;
+    @media(max-width: $screen-sm-max) {
+      padding: 25px 20px;
+    }
+    @media(max-width: $screen-sm-max) {
+      padding: 25px 5px;
+    }
+    .radio-span {
+      position: relative;
+    }
+    .form-radio-label {
+      display: inline-block;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+  &-bot {
+
+    line-height: 28px;
+    align-content: space-between;
+    flex-grow: 1;
+
+    &.bez-ceny {
+      cursor: pointer;
+    }
+    .h4 {
+      margin-bottom: 20px;
+      position: relative;
+      @media(min-width: $screen-xs-min) {
+        padding-right: 45px;
+      }
+
+    }
+    .tooltip {
+      vertical-align: -5px;
+    }
+    .text {
+      padding-right: 35px;
+      font-size: 13px;
+    }
+  }
+  &-info {
+    padding: 28px 36px 0;
+    cursor: pointer;
+    @media(max-width: $screen-sm-max) {
+      padding: 20px 25px 0;
+    }
+    @media(max-width: $screen-xs-max) {
+      padding: 15px 15px 0;
+    }
+    &-top {
+      @media(min-width: $screen-xs-min) {
+        min-height: 200px;
+      }
+      .main-poptavka & {
+        min-height: 160px;
+      }
+    }
+    &.bez-ceny {
+      padding-bottom: 40px;
+      @media(max-width: $screen-sm-max) {
+        padding-bottom: 20px;
+      }
+      @media(max-width: $screen-xs-max) {
+        padding-bottom: 15px;
+      }
+    }
+  }
+  &-info, &-input {
+    flex: 1 0 auto;
+  }
+  &-cena-box {
+    padding: 0 36px 40px;
+    @media(max-width: $screen-sm-max) {
+      padding: 0 25px 20px;
+    }
+    @media(max-width: $screen-xs-max) {
+      padding: 0 15px 15px;
+    }
+  }
+  &-cena {
+    margin-bottom: 0;
+    position: relative;
+
+    .form-cena-popis {
+      color: $text2;
+    }
+    .form-help {
+      position: absolute;
+      top: 100%;
+    }
+  }
+  &-cena, &-cena-nadpis {
+    color: $text1;
+  }
+  &-cena-nadpis {
+    margin-bottom: 5px;
+  }
+}
+
+
+.form-poplatky {
+  padding-top: 10px;
+  &-row {
+    @media(max-width: $screen-xs-max) {
+      display: block;
+    }
+  }
+  &-col {
+    padding-bottom: 15px;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 50%;
+    }
+  }
+  .h5 {
+    sup {
+
+    }
+  }
+}
+
+.terminy {}
+.termin {
+  border-bottom: 1px solid $border;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  margin-right: -7px;
+  margin-left: -7px;
+
+  &-col {
+    padding-right: 7px;
+    padding-left: 7px;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 31%;
+    }
+  }
+  &-col-button {
+    text-align: right;
+    @media(min-width: $screen-xs-min) {
+      @mixin flex-basis 7%;
+    }
+  }
+  &-button {
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 51px;
+    line-height: 17px;
+    padding-left: 1px
+  }
+  sup {
+    display: none;
+  }
+}

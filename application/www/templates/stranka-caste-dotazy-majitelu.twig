@@ -1,0 +1,27 @@
+{% extends "stranka.twig" %}
+
+{% block content %}
+  <div class="caste-otazky">
+    <h1>Časté dotazy majitelů</h1>
+    {% for otazka in data.otazky %}
+      <div class="otazka {{ loop.index is odd ? 'uzka' : 'siroka' }}">
+        <div class="otazka-box">
+          <div class="otazka-text">
+            <h3>{{ otazka.otazka }}</h3>
+            <p>{{ otazka.odpoved|raw }}</p>
+          </div>
+          <div class="otazka-trojuhelnik {{ loop.index is odd ? 'levy' : 'pravy' }}"></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="nenasli-odpoved">
+    <p class="nenasli-odpoved-text h1">
+      {{ data.paticka_cta.text }}
+    </p>
+    <p>
+      <a class="button" href="/#nabidky">{{ data.paticka_cta.tlacitko }}</a>
+    </p>
+  </div>
+{% endblock %}

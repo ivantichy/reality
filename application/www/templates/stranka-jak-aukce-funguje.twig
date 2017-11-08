@@ -1,0 +1,182 @@
+{% extends "stranka.twig" %}
+
+{% block content %}
+  <div class="jak-funguje">
+    <h1 class="jak-funguje-nadpis">Jak aukce bydlení funguje?</h1>
+    {% for polozka in data.jak_funguje %}
+      <div class="funguje-blok funguje-blok-{{ loop.index }}">
+        <div class="funguje-blok-leva">
+          <div class="funguje-blok-cislo">
+            <p class="cislo">{{ loop.index }}</p>
+          </div>
+          <div class="funguje-blok-sipka">
+            {% if not loop.last %}
+              <div class="cara dlouha"></div>
+              <div class="cara kratka leva"></div>
+              <div class="cara kratka prava"></div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="funguje-blok-prava">
+          {% if not polozka.nadpis_2 %}
+            <h2>{{ polozka.nadpis }}</h2>
+            <div class="text">
+              {{ polozka.text|konverze|raw }}
+              {% if loop.last %}
+                {% include './svg/dest/panacek.svg' %}
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="funguje-blok-sloupce row-xs">
+              <div class="col siroky">
+                <h2>{{ polozka.nadpis|raw }}</h2>
+                <div class="text">
+                  {{ polozka.text|konverze|raw }}
+                </div>
+              </div>
+              <div class="col stred">
+                <span class="textik">nebo</span>
+                <i class="icon icon-krizek" aria-hidden="true"></i>
+              </div>
+              <div class="col siroky">
+                <h2>{{ polozka.nadpis_2|raw }}</h2>
+                <div class="text">
+                  {{ polozka.text_2|konverze|raw }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block content_bottom %}
+<div class="jak-funguje vyjimecny">
+  <div class="container">
+    <div class="row">
+      <div class="col page-leva"></div>
+      <div class="col page-prava">
+        <div class="vyjimecny-top">
+          <h2 class="plovouci-nadpis h1"><span class="span">{{ data.cim_se_lisime.nadpis }}</span></h2>
+          <p>
+            {{ data.cim_se_lisime.text_pod_nadpisem }}
+          </p>
+          <div class="vyjimecny-priklad">
+            <h3 class="vyjimecny-priklad-title h2">{{ data.cim_se_lisime.priklad_nadpis }}</h3>
+            <p>{{ data.cim_se_lisime.priklad_text }}</p>
+          </div>
+        </div>
+        <table class="tabulka">
+          <thead>
+            <tr>
+              <td> </td>
+              <td>Aukce bydlení</td>
+              <td>Realitní servery</td>
+              <td>Realitní agenti</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ data.tabulka_radek_1 }}</td>
+              {% for key, bunka in data.tabulka %}
+                <td>{{ bunka.bunka_1 }}</td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td>{{ data.tabulka_radek_2 }}</td>
+              {% for key, bunka in data.tabulka %}
+                <td>{{ bunka.bunka_2 }}</td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td>{{ data.tabulka_radek_3 }}</td>
+              {% for key, bunka in data.tabulka %}
+                <td>
+                  {% if bunka.bunka_3.text_1 %}
+                    {{ bunka.bunka_3.text_1 }}
+                    {%
+                      include 'partials/tooltip.twig'
+                      with {
+                        text: bunka.bunka_3.toolit_1
+                      } only
+                    %}
+                    {{ bunka.bunka_3.text_2 }}
+                    {%
+                      include 'partials/tooltip.twig'
+                      with {
+                        text: bunka.bunka_3.toolit_2
+                      } only
+                    %}
+                  {% else %}
+                    {{ bunka.bunka_3 }}
+                  {% endif %}
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td>{{ data.tabulka_radek_4 }}</td>
+              {% for key, bunka in data.tabulka %}
+                <td>{{ bunka.bunka_4 }}</td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+
+
+        <ul class="priklad">
+          {% for key, bunka in data.tabulka %}
+            <li class="priklad-li">
+              <p class="priklad-nadpis h4">
+                {{ key }}
+              </p>
+              <p>
+                <span class="priklad-stitek">{{ data.tabulka_radek_1 }}:</span> {{ bunka.bunka_1 }}
+              </p>
+              <p>
+                <span class="priklad-stitek">{{ data.tabulka_radek_2 }}:</span> {{ bunka.bunka_2 }}
+              </p>
+              <p>
+                <span class="priklad-stitek">{{ data.tabulka_radek_3 }}:</span>
+                {% if bunka.bunka_3.text_1 %}
+                  {{ bunka.bunka_3.text_1 }}
+                  {%
+                    include 'partials/tooltip.twig'
+                    with {
+                      text: bunka.bunka_3.toolit_1
+                    } only
+                  %}
+                  {{ bunka.bunka_3.text_2 }}
+                  {%
+                    include 'partials/tooltip.twig'
+                    with {
+                      text: bunka.bunka_3.toolit_2
+                    } only
+                  %}
+                {% else %}
+                  {{ bunka.bunka_3 }}
+                {% endif %}
+              </p>
+              <p>
+                <span class="priklad-stitek">{{ data.tabulka_radek_4 }}:</span> {{ bunka.bunka_4 }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <div  class="jak-funguje-bot">
+          <p class=" h2">
+            {{ data.paticka_cta.text }}
+          </p>
+          <p>
+            <a class="button" href="/#nabidky">
+              Zobrazit nabídky
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

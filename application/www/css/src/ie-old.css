@@ -1,0 +1,22 @@
+@import '__promenne.css';
+@import '_mixins.css';
+
+.row, .row-xs {
+  @mixin clearfix;
+}
+.header {
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+}
+
+.nabidka, .vyhoda, .footer-col, .funguje-box {
+  float: left;
+  width: 100%;
+}
+.footer-right {
+  float: right;
+}

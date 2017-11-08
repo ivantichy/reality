@@ -1,0 +1,9 @@
+<div class="form-input form-textarea">
+  <label class="form-label">{{ parametry.label }}{% if not parametry.skryt_dojtecku %}:{% endif %} {% if parametry.required %}<sup>*</sup>{% endif %}</label>
+  <textarea class="form-textarea-input"
+    type="text"
+    name="{{ nazev }}"
+    placeholder="{{ parametry.placeholder }}"
+    {% if parametry.required %}required="required"{% endif %}
+    >{{ value }}</textarea>
+</div>

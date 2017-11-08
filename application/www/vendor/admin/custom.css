@@ -1,0 +1,12 @@
+.breadcrumb a {
+  font-family: 'Roboto', Arial, Helvetica;
+}
+label {
+  font-weight: bold;
+}
+b, strong {
+    font-weight: bold;
+}
+.side-menu .panel.widget {
+  display: none;
+}

@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 2+kk, 62 m²
+slug: pronajem-2kk-praha-7
+souradnice: 50.102939, 14.452536
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Praha
+adresa: Na Maninách 20, Praha 7 - Holešovice
+
+jmeno: Andrea Kubíčková
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Tento podkrovní byt se nachází v 5. patře činžovního domu na Praze 7 v Holešovicích. Je vybavený a útulný, má prostorných 62 m², které jsou rozdělené do dvou místností – kuchyň s jídelnou a obývacím prostorem a oddělenou ložnici s manželskou postelí. Z Holešovic se pohodlně dostanete do centra během několika minut, lokalita zároveň poskytuje dostatek klidu.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 62 m²
+  Dispozice: 2+kk
+  Cena: 12 800 Kč
+  Poplatky: 2 900 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Panel
+  Vybavení: Vybavený
+  Podlaží: 5
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: Od 1. 8. 2017 do 31. 8. 2017 
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 12800
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 21.6.2017 - 17:30
+  - 24.6.2017 - 18:00
+  - 27.6.2017 - 9:00
+datum_ukonceni: 8.7.2017
+
+
+obrazky:
+  1: Kuchyň
+  2: Kuchyň 2
+  3: Obývací pokoj
+  4: Ložnice
+  5: Koupelna
+
+zajemci:
+  - Karel K.
+  - Sandra O.
+  - Martin P.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

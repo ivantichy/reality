@@ -1,0 +1,68 @@
+nadpis: Prodej domu, 66 m²
+slug: prodej-dum-66-Praha
+souradnice: 50.118664, 14.299037
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: dum
+mesto: Praha
+adresa: K Juliáně 98, Praha-Přední Kopanina
+
+jmeno: Pavel F.
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: 2patrový dům na okraji Prahy je ideálním místem pro ty, kteří chtějí zkombinovat denní městslý život a odpočinková odpoledne a víkendy v klidu a přírodě. Jedna se o dřevostavbu. V přízemí domu najdete kuchyň s jídelním koutem a toaletu. V patře potom ložnici a koupelnu se sprochovým koutem a toaletou. Zakoupení určité velikosti pozemku je možné po dohodě s majitelem.
+
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 66 m²
+  Dispozice: 4 pokoje
+  Cena: 2500000
+  Poplatky: 4200
+  Typ vlastnictví: Osobní
+  Stav objektu: Dobrý
+  Typ budovy: Dřevostavba
+  Vybavení: Nevybavený
+  Podlaží: 2
+  Výtah: ne
+  Terasa: ne
+  Internet: ano / 35 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. srpna - 1. října 2017
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 2500000
+polatky: 5000
+kauce: 0
+vybrane_terminy:
+  - 10.7.2017 18:00
+  - 12.7.2017 18:00
+  - 14.7.2017 18:00
+datum_ukonceni: 30.7.2017
+
+obrazky:
+  1: Pohled zpředu
+  2: Pohled ze strany
+  3: Ložnice
+  4: Kuchyně
+  5: Koupelna
+
+zajemci:
+  - Ladislav H.
+  - Bohumil D.
+  - František Č.
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

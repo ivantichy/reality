@@ -1,0 +1,158 @@
+
+<template id="termin-template">
+  <div class="termin row">
+    <div class="col termin-col">
+      {%
+        include 'partials/form-text.twig'
+        with { 'nazev' : 'terminy[][den]', 'parametry' : data.form.terminy.den}
+      %}
+    </div>
+    <div class="col termin-col">
+      {%
+        include 'partials/form-text.twig'
+        with { 'nazev' : 'terminy[][hodina]', 'parametry' : data.form.terminy.hodina}
+      %}
+    </div>
+    <div class="col termin-col">
+      {%
+        include 'partials/form-text.twig'
+        with { 'nazev' : 'terminy[][pocet_zajemcu]', 'parametry' : data.form.terminy.pocet_zajemcu}
+      %}
+    </div>
+    <div class="col termin-col termin-col-button">
+      <button
+        class="button termin-button"
+        type="button"
+        name="button">
+        &times;<span class="sr-only">Smazat</span>
+      </button>
+    </div>
+  </div>
+</template>
+
+{% for termin in nabidka.vybrane_terminy_array %}
+    <termin-prohlidky data='{{ termin }}'></termin-prohlidky>
+{% endfor %}
+
+<script>
+  document.addEventListener('WebComponentsReady', function(e){
+    class TerminProhlidky extends HTMLElement {
+      constructor() {
+          super();
+          //this.handleChange = this.handleChange.bind(this)
+          //this.handleSubmit = this.handleSubmit.bind(this)
+
+          this.data = [];
+          this.pickadey = false;
+      }
+
+      static get observedAttributes() {
+          return ['data'];
+      }
+
+      connectedCallback() {
+          if( !this.getAttribute('data') ) {
+              this.render();
+          }
+      }
+
+      disconnectedCallback() {
+
+      }
+
+      attributeChangedCallback(attrName, oldVal, newValue) {
+          if (attrName == "data" && newValue) {
+              this.data = this.parseJson(newValue);
+              this.render();
+          }
+      }
+
+      parseJson(repeatData) {
+          let parsedData = null;
+          try {
+              parsedData = JSON.parse(repeatData);
+          } catch (e) {
+              throw new Error("Invalid JSON string provided.");
+          }
+          return parsedData;
+      }
+
+      render() {
+          this.innerHTML = '';
+          let template = document.querySelector('#termin-template');
+          let instance = template.content.cloneNode(true);
+          let toto_je_termin = 1;
+          let terminy = document.querySelectorAll('.termin');
+          if( terminy ) {
+              // ziskej nejvyšší označ
+              Array.prototype.forEach.call(terminy, function(el, i){
+                  toto_je_termin = parseInt(el.dataset.cislo) + 1;
+              });
+          }
+
+          instance.querySelector('.termin').setAttribute('data-cislo', toto_je_termin);
+          instance.querySelector('.termin-den').name = 'terminy['+toto_je_termin+'][den]';
+          instance.querySelector('.termin-hodina').name = 'terminy['+toto_je_termin+'][hodina]';
+          instance.querySelector('.termin-pocet').name = 'terminy['+toto_je_termin+'][pocet_zajemcu]';
+
+          if (typeof this.data === 'object' && typeof this.data.den !== 'undefined') {
+              instance.querySelector('.termin-den').value = this.data.den;
+              instance.querySelector('.termin-hodina').value = this.data.hodina;
+              instance.querySelector('.termin-pocet').value = this.data.pocet_zajemcu;
+          }
+
+          this.appendChild(instance);
+          this.querySelector('.termin-button').addEventListener('click', function(e) {
+              let termin = this.parentNode.parentNode;
+              if ( typeof termin.parentNode.pickadey == 'object' ) {
+                //termin.parentNode.pickadey.destroy();
+              }
+              termin.parentNode.removeChild(termin);
+          });
+          // zruš scrollovací efekt u inputů
+          this.querySelector('.termin-pocet').addEventListener('mousewheel', function(e){
+              e.preventDefault();
+          });
+          if( !checkDateInput() && typeof Pikaday == 'function' ) {
+            this.pickadey = new Pikaday({
+              field: this.querySelector('.termin-den'),
+              i18n: pickadey_preklad,
+              firstDay: 1,
+              minDate: new Date(),
+              format: 'd.M.YY',
+              toString: function(date, format) {
+                 return date.toLocaleDateString().replace(/\s/g,'');
+              }
+            });
+          }
+      }
+
+      handleChange(e) {
+        //console.log('handleChange');
+        //this.text = e.target.value;
+      }
+
+      handleSubmit(e) {
+        //console.log('handleSubmit');
+        //e.preventDefault()
+      }
+
+      checkDateInput() {
+          var input = document.createElement('input');
+          input.setAttribute('type','date');
+
+          var notADateValue = 'not-a-date';
+          input.setAttribute('value', notADateValue);
+
+          return (input.value !== notADateValue);
+      }
+    }
+    customElements.define('termin-prohlidky', TerminProhlidky);
+
+
+    document.getElementById('pridat-termin').addEventListener('click', function(e) {
+      var termin = document.createElement('termin-prohlidky');
+      document.getElementById('terminy').appendChild(termin);
+    }, false);
+  });
+</script>

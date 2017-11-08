@@ -1,0 +1,68 @@
+nadpis: Pronájem bytu 3+1, 110 m²
+slug: pronájem-3-1-brno-stred
+souradnice: 49.2067822, 16.6022369
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: pronajem
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Brno
+adresa: Bayerova 16, Brno-Střed
+
+jmeno: Romana Hvížďalová
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Toto bydlení v blízkosti centra města je se svými 110 m² ideální pro rodinu s dětmi. Byt je slunný, prostorný a vybavený – v obývací pokoji naleznete 2 gauče, každá z ložnic pak obsahuje jednu manželskou postel. Kuchyň je vybavená, a to včetně pračky. Svou polohou je byt ideální kombinací klidného bydlení a dosažitelnosti centra města.
+
+specifikace:
+  Typ aukce: Pronájem
+  Plocha: 110 m²
+  Dispozice: 3+1
+  Cena: 16 000 Kč
+  Poplatky: 2 500 Kč
+  Typ vlastnictví: Družstevní
+  Stav objektu: Velmi dobrý
+  Typ budovy: Činžovní
+  Vybavení: Vybavený
+  Podlaží: 4
+  Výtah: ano
+  Terasa: ne
+  Internet: ano / 45 Mbit/s
+  Energetická třída: Třída G
+
+podminky:
+  Termín nastěhován: 1. září
+  Výpovědní lhůta: 2 měsíce
+
+model_aukce: A
+cena_vyvolavaci: 16000
+polatky: 9000
+kauce: 0
+vybrane_terminy:
+  - 19.6.2017 - 08:00
+  - 21.6.2017 - 19:00
+  - 30.6.2017 - 18:00
+datum_ukonceni: 16.7.2017
+
+obrazky:
+  1: Obývák
+  2: Ložnice 1
+  3: Ložnice 2
+  4: Koupelna
+  5: Kuchyň
+
+zajemci:
+  - Jirka K.
+  - Valerie H.
+  - Renata B.
+
+
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:

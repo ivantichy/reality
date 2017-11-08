@@ -1,0 +1,10 @@
+<ul class="menu-side">
+  {% for sekce in data.podminky %}
+    <li class="menu-side-li first">
+      <a class="menu-side-link"
+        href="#sekce-{{ loop.index }}">
+        {{ sekce.nadpis }}<span class="sipka"></span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

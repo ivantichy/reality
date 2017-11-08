@@ -1,0 +1,89 @@
+{% set title = data.title %}
+{% include 'header.twig' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block drobeckova_navigace %}
+  {% set drobky =  [
+      {'nazev' : 'Aukce bydlení', 'url': '/'},
+      {'nazev' : 'Vložit aukci', 'url': '/vlozit-nabidku'}
+    ] %}
+  {% set aktualni_drobek = 'Vložit nabídku' %}
+
+  {% include 'partials/drobky.twig' %}
+{% endblock %}
+
+{% block main %}
+  <div class="vlozit">
+    <div class="container">
+      <div class="vlozit-row row">
+        <div class="vlozit-leva col">
+          <div class="vlozit-leva-box">
+            {% block sidebar %}
+              {# tady si každý formulář doplní svoje hodnoty #}
+            {% endblock %}
+          </div>
+        </div>
+        <div class="vlozit-prava col">
+          {% block kroky %}
+            <ul class="kroky">
+              {% for krok in data.kroky %}
+                {% set krok_class = '' %}
+                {# % if
+                  (page == 'nabidka' and loop.index == krok_aktualni)
+                  or
+                  (page == 'poptavka' and loop.index == krok_aktualni + 1)
+                %#}
+                {% if loop.index == krok_aktualni %}
+                  {% set krok_class = ' aktivni' %}
+                {% endif %}
+
+                {# % if
+                  (page == 'nabidka' and loop.index < krok_aktualni)
+                  or
+                  (page == 'poptavka' and loop.index <= krok_aktualni)
+                %#}
+                {% if loop.index < krok_aktualni %}
+                  {% set krok_class = krok_class ~ ' hotovo' %}
+                {% endif %}
+
+                <li class="kroky-li {% if loop.last %} last{% endif %}">
+                  <button
+                    class="kroky-button {{ krok_class }}"
+                    type="button"
+                    name="button"
+                    {% spaceless %}
+                      {% if page == 'poptavka' %}
+                        {# % if loop.index == 1 %}
+                          data-href="{{ aukce.getLink() }}"
+                        {% else %}
+                          data-href="{{ url_route('poptavka-' ~ aukce.typ_aukce , aukce.id) }}"
+                        {% endif %#}
+                        data-href="{{ url_route('poptavka-' ~ aukce.typ_aukce , aukce.id) }}"
+                      {% else %}
+                        data-href="{{ url_route('nabidka-form', loop.index) }}"
+                      {% endif %}
+                    {% endspaceless %}>
+                    <span class="kroky-cislo">{{ loop.index }}</span>
+                    <span class="kroky-text">{{ krok }}</span>
+                  </button>
+                  {% if not loop.last %}
+                    <i class="icon icon-sipka-prava" aria-hidden="true"></i>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endblock %}
+
+          {% block content %}
+            {# tady si každý formulář doplní svoje hodnoty #}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% include 'footer.twig' %}
