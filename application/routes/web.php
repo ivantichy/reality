@@ -31,9 +31,14 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::post('/kontakty', 'PageController@postKontakt');
+
 Route::get('/prodej/{id}-{slug}', 'AukceController@show')
   ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
 Route::get('/pronajem/{id}-{slug}', 'AukceController@show')
+  ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+Route::get('/prodej/{id}-{slug}/prihoz', 'AukceController@showPrihoz')
   ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 
 Route::any('/prodej/{id}/mam-zajem', 'PoptavkaController@initPoptavka')
