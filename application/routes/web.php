@@ -12,8 +12,8 @@
 */
 
 
-Route::get('/', 'IndexController@showPronajem')->name('index-pronajem');
-Route::get('/chci-koupit', 'IndexController@showProdej')->name('index-prodej');
+// Route::get('/', 'IndexController@showPronajem')->name('index-pronajem');
+Route::get('/', 'IndexController@showProdej')->name('index-prodej');
 Route::get('/ajax', 'IndexController@zpracujAjax')->name('ajax');
 
 //Route::get('/elements/src/{element}', 'ElementController@show');
@@ -31,9 +31,14 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::post('/kontakty', 'PageController@postKontakt');
+
 Route::get('/prodej/{id}-{slug}', 'AukceController@show')
   ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
 Route::get('/pronajem/{id}-{slug}', 'AukceController@show')
+  ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+Route::get('/prodej/{id}-{slug}/prihoz', 'AukceController@showPrihoz')
   ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 
 Route::any('/prodej/{id}/mam-zajem', 'PoptavkaController@initPoptavka')

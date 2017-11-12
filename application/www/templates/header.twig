@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="{{ nastaveni.meta_description }}">
 
-    <link href="/css/dest/styles{{ script_prefix }}.css?upd=1207" rel="stylesheet">
+    <link href="/css/dest/styles{{ script_prefix }}.css?upd=1211" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.gstatic.com/s/varelaround/v8/APH4jr0uSos5wiut5cpjrj0LW-43aMEzIO6XUTLjad8.woff2" rel="preload" as="font">
 
     <script src="/js/dest/webcomponents-loader{{ script_prefix }}.js" defer></script>
 
-    <script src="/js/dest/main{{ script_prefix }}.js?upd=1207" defer></script>
+    <script src="/js/dest/main{{ script_prefix }}.js?upd=1211" defer></script>
 
     {# todo: myslím že secondary.js není nutné načítat na HP #}
     <script src="/js/dest/secondary{{ script_prefix }}.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -66,11 +67,11 @@
           <div class="col header-right">
             <nav>
               <ul id="menu" class="menu">
-                <li class="menu-li">
+                <!--<li class="menu-li">
                   <a class="menu-link {% if page == 'index-pronajem' %}active{% endif %}" href="/">
                     Chci pronájem
                   </a>
-                </li>
+                </li>-->
                 <li class="menu-li">
                   <a class="menu-link {% if page == 'index-prodej' %}active{% endif %}" href="/chci-koupit">
                     Chci koupit

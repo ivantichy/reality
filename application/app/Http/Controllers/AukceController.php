@@ -88,6 +88,44 @@ class AukceController extends Controller
           ->with('dalsi_aukce', $dalsi_aukce);
     }
 
+    public function showPrihoz($id) {
+      // TODO: neduplikovat kod z show, neprogramovat cesky
+      $data = Yaml::parse(file_get_contents(public_path('data/aukce-detail.yml')));
+
+      $aukce = Aukce::findOrFail($id);
+
+      $aukce->zjisti_dny_do_konce();
+      $aukce->zajemci_array = json_decode($aukce->zajemci);
+      $aukce->vybrane_terminy_array = json_decode($aukce->vybrane_terminy);
+      $aukce->specifikace_array = json_decode($aukce->specifikace, true);
+      $aukce->specifikace_celkem = count($aukce->specifikace_array);
+      $aukce->podminky_array = json_decode($aukce->podminky, true);
+      $aukce->souradnice_array = explode(',', $aukce->souradnice);
+
+      $aukce->datum_ukonceni .= ' 23:59';
+
+      // načte aukce ze stejného města
+      $dalsi_aukce = Aukce::where('stav', 'probihajici')
+        ->where('active', 1)
+        ->whereNotIn('id', [$aukce->id])
+        ->where('mesto', $aukce->mesto)
+        ->where('typ_aukce', $aukce->typ_aukce)
+        ->orderBy('created_at', 'desc')
+        ->paginate(3);
+
+      foreach ($dalsi_aukce as $dalsi) {
+        $dalsi->aukce_konci();
+      }
+
+      return view('aukce-detail-prihoz')
+        ->withAukce($aukce)
+        ->withObrazky(json_decode($aukce->obrazky, true))
+        ->withData($data)
+        ->with('page', 'detail-aukce')
+        ->with('dalsi_aukce', $dalsi_aukce)
+        ;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
