@@ -1,0 +1,373 @@
+{% embed "header.twig" %}
+  {% set title = aukce.nadpis %}
+  {% block head_opengraph %}
+    <meta property="og:url" content="{{ current_url }}" />
+    <meta property="og:type" content="product.item" />
+    <meta property="og:title" content="Aukce bydlení - {{ aukce.nadpis }}" />
+    <meta property="og:description" content="{{ aukce.popis|slice(0, 200) ~ '...' }}" />
+    <meta property="og:image" content="{{ asset('images/aukce/' ~ aukce.id ~ '/1-velky.jpg') }}" />
+    <meta property="og:locality" content="{{ aukce.mesto }}" />
+  {% endblock %}
+{% endembed %}
+
+{% set drobky =  [
+    {'nazev' : 'Úvod', 'url': '/'},
+    {'nazev' :
+      'Aukce ' ~ ( aukce.typ_aukce == 'prodej' ? 'prodeje' : 'pronájmu' ),
+      'url': url_route('index-' ~ aukce.typ_aukce)
+    },
+  ] %}
+{% set aktualni_drobek = aukce.nadpis %}
+
+{% include 'partials/drobky.twig' %}
+
+{% block aukce %}
+  <article class="aukce">
+    <div class="container">
+      <h1 class="detail-nazev mobil">{{ aukce.nadpis }}</h1>
+      <div class="detail-row row">
+        <div class="detail-leva col">
+          <div id="detail-vizual">
+            <section id="carousel" class="carousel" aria-labelledby="carousel-nadpis">
+              <h3 id="carousel-nadpis" class="sr-only">Obrázky nemovitosti</h3>
+              <div class="carousel-frame">
+                <ul class="slides js_slides">
+                  {% for key, obrazek in obrazky %}
+                    <li class="slide">
+                      <img
+                        class="slide-img"
+                        src="/images/aukce/{{ aukce.id }}/{{ loop.index }}-velky.jpg"
+                        alt="{{ obrazek }}">
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="carousel-sipky">
+                <button class="carousel-sipka carousel-prev" type="button">
+                  <span class="sr-only">Předchozí</span><i class=" icon icon-sipka-tenka-leva" aria-hidden="true"></i>
+                </button>
+                <button class="carousel-sipka carousel-next" type="button">
+                  <span class="sr-only">další</span><i class=" icon icon-sipka-tenka-prava" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button id="ikona-mapa"
+                class="ikona-prepinaci"
+                title="Zobrazit mapu">
+                <i class="icon icon-znacka-2" aria-hidden="true"></i>
+                <span class="ikona-prepinaci-text">mapa</span>
+              </button>
+            </section>
+
+            <div id="mapa" class="skryt" aria-hidden="true">
+              <div id="google-mapa">
+
+              </div>
+              <button id="ikona-fotky"
+                class="ikona-prepinaci"
+                title="Zobrazit fotky">
+                <i class="icon icon-fotak" aria-hidden="true"></i>
+                <span class="ikona-prepinaci-text">fotky</span>
+              </button>
+            </div>
+          </div>
+          <div class="detail-obrazky">
+            <ul class="detail-obrazky-row row">
+              {% for key, obrazek in obrazky %}
+                <li class="detail-obrazky-col col">
+                  <a class="detail-obrazky-link"
+                    href="/images/aukce/{{ aukce.id }}/{{ loop.index }}-velky.jpg"
+                    data-index="{{ loop.index0 }}">
+                    <img
+                      class="detail-obrazky-img"
+                      src="/images/aukce/{{ aukce.id }}/{{ loop.index }}-maly.jpg"
+                      alt="{{ obrazek }}">
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div id="detail-info-leva">
+            {# todo: tento blok je tu dvakrát #}
+            {% include 'partials/detail-info.twig' %}
+          </div>
+
+        </div>
+        <div class="detail-prava col">
+          <h1 class="detail-nazev desktop">{{ aukce.nadpis }}</h1>
+          <p class="detail-adresa">{{ aukce.adresa }}</p>
+
+          {% block aukce_zprava %}{% endblock %}
+
+          {% block aukce_cena %}
+            <div class="detail-box-cena">
+              <p class="detail-cena-nadpis">Aktuální cena nemovitosti</p>
+              <p>
+                <span class="detail-cena">!!! {{ aukce.cena_vyvolavaci|cena }} dopočítat</span>
+              </p>
+            </div>
+          {% endblock %}
+
+          {% if aukce.stav != 'ukoncena' %}
+            <p class="aukce-prihoz">
+              <span class="prihoz-minus"></span>
+              <input
+                type="text"
+                class="form-text-input prihoz-input"
+                data-cena-raw="{{ aukce.cena_vyvolavaci }}"
+                data-cena-puvodni="{{ aukce.cena_vyvolavaci }}"
+                data-cena-template="{{ "0"|cena }}"
+                value="{{ aukce.cena_vyvolavaci|cena }}"
+                />
+              <span class="prihoz-plus"></span>
+              {%
+                include 'partials/tooltip.twig'
+                with {
+                  text: "Jak funguje přihazování"
+                } only
+              %}
+              <script type="text/javascript">
+              function pridejMezery(nStr) {
+                nStr += '';
+                x = nStr.split('.');
+                x1 = x[0];
+                x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while (rgx.test(x1)) {
+                	x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+                }
+                return x1 + x2;
+              }
+                // POZNÁMKA: hodně smíchu (lol), tohle mě baví :D
+                function zmen_cenu(zmena) {
+                  var cena_ted = parseInt($(".prihoz-input").data("cena-raw"), 10);
+                  var nova_cena = cena_ted + zmena;
+                  if (nova_cena > parseInt($(".prihoz-input").data("cena-puvodni"), 10)) {
+                    $(".prihoz-input").data("cena-raw", nova_cena);
+                    var cena_citelne = $(".prihoz-input").data("cena-template").replace("0", pridejMezery(nova_cena));
+                    $(".prihoz-input").val(cena_citelne)
+                  } else {
+                    // UDĚLAT: lepší chybová hláška
+                    alert("Přihodit pod cenu minimálního příhozu nelze.")
+                  }
+                }
+                var minimanlni_prihoz = 10000;
+                zmen_cenu(minimanlni_prihoz);
+
+                $(".prihoz-plus").click(function(e) {
+                  e.preventDefault();
+                  zmen_cenu(minimanlni_prihoz);
+                });
+
+                $(".prihoz-minus").click(function(e) {
+                  e.preventDefault();
+                  zmen_cenu(minimanlni_prihoz * -1);
+                });
+              </script>
+            </p>
+            <p>
+              <button class="detail-btn button prihod-button" type="button" name="button">
+                Přihodit
+              </button>
+              <script type="text/javascript">
+                $(".prihod-button").click(function(e) {
+                  e.preventDefault();
+                  alert("Odešli příhoz: " + $(".prihoz-input").val())
+                })
+              </script>
+            </p>
+          {% endif %}
+
+          {% block aukce_konec %}
+            <div class="detail-konec">
+              <i class="icon icon-hodiny" aria-hidden="true"></i>
+              <p class="detail-konec-nadpis">
+                {{ aukce.dny_do_konce }}
+              </p>
+              <p>
+                Aukce končí {{ aukce.datum_ukonceni|date("j.n.Y G:i") }}
+              </p>
+            </div>
+          {% endblock %}
+
+          {% if aukce.stav != 'ukoncena' %}
+            <div class="detail-terminy detail-box">
+              <p class="detail-box-nadpis">Termíny prohlídek</p>
+              {% for termin in aukce.vybrane_terminy_array %}
+                <p class="detail-termin">
+                  <span class="datum">{{ termin.den }}</span>
+                  <span class="cas">{{ termin.hodina }}</span>
+                </p>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% block aukce_zajemci %}
+            <div class="detail-zajemci detail-box">
+              <p class="detail-box-nadpis">
+                <i class="icon icon-lide" aria-hidden="true"></i>Přehled účastníků aukce
+              </p>
+              <p class="pocet">
+                {% if aukce.zajemci_pocet >= 5 %}
+                  {{ aukce.zajemci_pocet }} účastníků aukce
+                {% else %}
+                  {{ aukce.zajemci_pocet }} účastníci aukce
+                  {# přidat jednotné číslo #}
+                {% endif %}
+
+              </p>
+              <p class="top">mezi TOP3 účastníky jsou</p>
+              <p class="zajemci">
+                {% for zajemce in aukce.zajemci_array %}
+                  <span class="ucastnik">{{ zajemce }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          {% endblock %}
+
+          <p class="detail-jak-funguje clearfix">
+            {%
+              include 'partials/tooltip.twig'
+              with {
+                text: data.jak_funguje.tooltip
+              } only
+            %}
+            <a class="detail-jak-funguje-link" href="/caste-dotazy-zajemcu#{{ aukce.typ_aukce }}">
+              {{ data.jak_funguje.text }}
+            </a>
+          </p>
+
+          <div class="detail-hodnoceni detail-box">
+            <p class="detail-box-nadpis h3">
+              {{ data.hodnoceni_odbornika.text }}
+            </p>
+            <p class="detail-hodnoceni-button-wrap">
+              <a class="detail-hodnoceni-button button" href="/kontakty">{{ data.hodnoceni_odbornika.tlacitko }}</a>
+            </p>
+             {% include './svg/dest/kravatak.svg' %}
+          </div>
+
+          <div class="detail-sdilet">
+            <p class="nadpis">Sdílet aukci</p>
+            <p>
+              <a class="sdilej"
+                href="https://www.facebook.com/sharer/sharer.php?u={{ aukce.getLink()|url_encode }}"
+                target="_blank">
+                <i class="icon icon-facebook" aria-hidden="true"></i>
+                Facebook
+              </a>
+              <a class="sdilej"
+                href="https://twitter.com/home?status={{ aukce.nadpis|url_encode }} {{ aukce.getLink()|url_encode }}"
+                target="_blank">
+                <i class="icon icon-twitter" aria-hidden="true"></i>
+                Twitter
+              </a>
+              <a class="sdilej" href="mailto:?subject=Nabídka aukce&body=Aukce zde: {{ aukce.getLink() }}">
+                <i class="icon icon-obalka" aria-hidden="true"></i>
+                E-mail
+              </a>
+            </p>
+          </div>
+
+          <div id="detail-info-prava">
+            {% include 'partials/detail-info.twig' %}
+          </div>
+        </div>
+      </div>
+
+      <section class="detail-dalsi">
+        <h2 class="detail-dalsi-nadpis h1">Další aukce pronájmů v {{ data.sklonovani[aukce.mesto] }}</h2>
+        <div class="nabidky-row row">
+          {% for aukce in dalsi_aukce %}
+            {% include 'partials/nabidka.twig' %}
+          {% else %}
+            <p class="zprava">Momentálně zde nejsou žádné aukce pro tuto lokalitu.</p>
+          {% endfor %}
+        </div>
+        <p class="zpet">
+          <a class="button"
+            href="{{  url_route('index-' ~ aukce.typ_aukce ) }}#nabidky">
+            Zpět na výpis aukcí
+          </a>
+        </p>
+      </section>
+
+    </div>
+  </article>
+{% endblock %}
+
+{% block content_bottom %}
+  <script>
+    var map;
+    function initMap() {
+      var center = {
+        lat: {{ aukce.souradnice_array.0 }},
+        lng: {{ aukce.souradnice_array.1 }}
+      };
+      var map = new google.maps.Map(document.getElementById('google-mapa'), {
+        center: center,
+        zoom: 13,
+        scrollwheel: false,
+      });
+      var marker = new google.maps.Marker({
+        position: center,
+        map: map
+      });
+
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4R0rGF6vKJO0EsBmsYphdQGA8QiYOrgc&callback=initMap" async defer></script>
+
+
+  <template id="kontaktujte-nas">
+    <section
+      tabindex="1"
+      role="dialog"
+      aria-label="Kontaktní formulář"
+      aria-hidden="false">
+      <div class="kontaktujte-nas">
+        <div class="zprava zprava-uspech" role="alert" style="display: none;"></div>
+        <form id="form-modal" class="form-modal" action="/kontakty" method="post">
+
+          <h2>S hodnocením se vám ozveme:</h2>
+
+          {% include 'partials/zpravy.twig' %}
+
+          <label class="form-input">
+            <span class="form-label">Jméno:<sup aria-hidden="true">*</sup></span>
+            <input class="form-text-input"
+              type="text" name="jmeno" value=""
+              placeholder="Vaše jméno" required="" data-error="Kolonka 'Vaše jméno' je povinná"
+              autocomplete="name">
+          </label>
+          <label class="form-input">
+            <span class="form-label">E-mail:<sup aria-hidden="true">*</sup></span>
+            <input class="form-text-input"
+              type="email"
+              name="email" value=""
+              placeholder="@" required="" data-error="Email je povinný"
+              autocomplete="email">
+          </label>
+          <label class="form-input">
+            <span class="form-label">Telefon:</span>
+            <input class="form-text-input"
+              type="text" name="telefon"
+              value=""
+              placeholder=""
+              autocomplete="tel">
+          </label>
+
+          <footer class="form-footer">
+            <button id="button-odbornik" class="button" type="submit" name="submitVzkaz">Odeslat</button>
+            <input type="hidden" name="modal" value="1">
+            <input type="hidden" name="typ_formulare" value="aukce">
+            {{ csrf_field() }}
+            {# honeypot_generate() #}
+          </footer>
+
+        </form>
+      </div>
+    </section>
+  </template>
+{% endblock %}
+
+{% include 'footer.twig' %}

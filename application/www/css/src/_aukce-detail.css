@@ -358,3 +358,43 @@ $detail-break2-min: 811px;
   text-align: center;
   padding: 45px 0;
 }
+
+.aukce-prihoz {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.prihoz-input {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.prihoz-plus,
+.prihoz-minus {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0px 16px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  border-radius: 2px;
+}
+
+.prihoz-minus {
+  border-right: 0;
+
+  &:after {
+    content: "-"
+  }
+}
+
+.prihoz-plus {
+  border-left: 0;
+
+  &:after {
+    content: "+"
+  }
+}
