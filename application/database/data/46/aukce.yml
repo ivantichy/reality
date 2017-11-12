@@ -1,0 +1,62 @@
+nadpis: Test nabídka Beroun 2+1, 90 m²
+slug: beroun-90m-001
+souradnice: 50.003314, 14.405482
+
+# do nasledujiciho radku doplňte pouze "probihajici" nebo "ukoncena"
+stav: probihajici
+# doplňte pouze "prodej" nebo "pronajem"
+typ_aukce: prodej
+# doplňte pouze "byt" / "dum" / "chata"
+typ_nemovitosti: byt
+mesto: Beroun
+adresa: Květinková 13, Beroun
+
+jmeno: Ing. Ivan Tichž
+email: muj@domena.cz
+telefon: +420 358 215 213
+
+popis: Ivan was here. Tento vybavený byt najdete v 5. podlaží 15podlažního bytového domu v Modřanech. Slunných 90 m² je členěno na obývací pokoj, ložnici s manželskou postelí, plně vybavenou kuchyň, koupelnu s vanou a prostorný balkón. Lokalita poskytuje klid, snadné spojení do centra, parky a sportoviště s možností rozmanitých sportovních aktivit. V ceně není zahrnuto parkovací stání a sklepní kóje. V případě zájmu je možné se domluvit na pronájmu i těchto prostor.
+
+specifikace:
+  Typ aukce: Prodej
+  Plocha: 90 m²
+  Dispozice: 2+1
+  Cena: 1 800 000 Kč
+  Poplatky: 2 700 Kč
+  Typ vlastnictví: Osobní
+  Stav objektu: velmi dobrý / novostaba
+  Typ budovy: Cihla
+  Vybavení: Novostavba
+  Podlaží: -28
+  Výtah: ano
+  Terasa: ne
+  Internet: jasně
+  Energetická třída: Třída A
+
+podminky:
+  Termín nastěhován: 1.2.2018
+  Výpovědní lhůta: 
+
+model_aukce: A
+cena_vyvolavaci: 1200000
+polatky: 2700
+kauce: 0
+vybrane_terminy:
+  - 22.11.2017 - 17:00
+  - 24.11.2017 - 18:00
+  - 26.11.2017 - 8:00
+datum_ukonceni: 23.12.2017
+
+obrazky:
+  1: Obývací pokoj + Kuchyň
+  2: Obývací pokoj
+  
+zajemci:
+  
+# při importu toto nepotřebujeme
+dotaz_jsem:
+dotaz_dulezite:
+dotaz_zaujalo_mne:
+dotaz_chci:
+landing_page:
+zobrazit: 1
