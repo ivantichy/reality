@@ -14,6 +14,7 @@
 
 // Route::get('/', 'IndexController@showPronajem')->name('index-pronajem');
 Route::get('/', 'IndexController@showProdej')->name('index-prodej');
+Route::get('/chci-koupit', 'IndexController@showProdej')->name('index-prodej');
 Route::get('/ajax', 'IndexController@zpracujAjax')->name('ajax');
 
 //Route::get('/elements/src/{element}', 'ElementController@show');
