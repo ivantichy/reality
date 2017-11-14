@@ -26,12 +26,10 @@ Route::put('auctions/{aukce}', 'AukceApiController@update');
 Route::delete('auctions/{aukce}', 'AukceApiController@delete');
 
 Route::put('auctions-visibility/{aukce}', 'AukceApiController@updateVisibility');
-
 Route::put('auctions-updatePrice/{aukce}', 'AukceApiController@updateActualPrice');
-
 Route::put('auctions-updatePriceAndClose/{aukce}', 'AukceApiController@updateActualPriceAndClose');
-
 Route::put('auctions-timeWarp/{aukce}', 'AukceApiController@timeWarp');
+Route::put('auctions-updateTOP3/{aukce}', 'AukceApiController@updateTOP3');
 
 
 

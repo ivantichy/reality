@@ -70,4 +70,13 @@ class AukceApiController extends Controller
         $aukce->save();
         return response()->json(null, 204);
     }
+
+    public function updateTOP3(Request $request, Aukce $aukce)
+    {
+        //zajemci zajemci_pocet
+        $aukce->zajemci = $request->zajemci;
+        $aukce->zajemci_pocet = $request->zajemci_pocet;
+        $aukce->save();
+        return response()->json(null, 204);
+    }
 }
