@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Aukce;
+use DateTime;
+use DateInterval;
+
+class AukceApiController extends Controller
+{
+    public function index()
+    {
+        return Aukce::all();
+    }
+
+    public function show(Aukce $aukce)
+    {
+        return $aukce;
+    }
+
+    public function store(Request $request)
+    {
+        $aukce = Aukce::create($request->all());
+        return response()->json($aukce, 201);
+    }
+
+    public function update(Request $request, Aukce $aukce)
+    {
+        $aukce->update($request->all());
+        $aukce->nadpis = $request->nadpis;
+        $aukce->save(); 
+        return response()->json($aukce, 200);
+    }
+
+    public function delete(Aukce $aukce)
+    {
+        $aukce->delete();
+        return response()->json(null, 204);
+    }
+
+    public function updateVisibility(Request $request, Aukce $aukce)
+    {
+        $aukce->active = $request->active;
+        $aukce->save();
+        return response()->json(null, 204);
+    }
+    public function updateActualPrice(Request $request, Aukce $aukce)
+    {
+        $aukce->cena_vyvolavaci = $request->actualPrice;
+        $aukce->save();
+        return response()->json(null, 204);
+    }
+    public function updateActualPriceAndClose(Request $request, Aukce $aukce)
+    {
+        $aukce->cena_vyvolavaci = $request->actualPrice;
+        $aukce->datum_ukonceni = new DateTime();
+        $aukce->stav = 'ukoncena';
+        $aukce->save();
+        return response()->json(null, 204);
+    }
+
+    // update auction endtime
+    public function timeWarp(Request $request, Aukce $aukce)
+    {
+        $time = new DateTime($aukce->datum_ukonceni);
+        $time->add(new DateInterval($request->timeWarp));
+        $aukce->datum_ukonceni = $time->format('Y-m-d');
+	$aukce->stav = 'probihajici';
+        $aukce->save();
+        return response()->json(null, 204);
+    }
+}

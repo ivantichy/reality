@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Aukce;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,23 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('auctions', 'AukceApiController@index');
+Route::get('auctions/{aukce}', 'AukceApiController@show');
+Route::post('auctions', 'AukceApiController@store');
+Route::put('auctions/{aukce}', 'AukceApiController@update');
+Route::delete('auctions/{aukce}', 'AukceApiController@delete');
+
+Route::put('auctions-visibility/{aukce}', 'AukceApiController@updateVisibility');
+
+Route::put('auctions-updatePrice/{aukce}', 'AukceApiController@updateActualPrice');
+
+Route::put('auctions-updatePriceAndClose/{aukce}', 'AukceApiController@updateActualPriceAndClose');
+
+Route::put('auctions-timeWarp/{aukce}', 'AukceApiController@timeWarp');
+
+
+
+
+

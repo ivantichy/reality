@@ -65,7 +65,8 @@ class AukceController extends Controller
         $aukce->podminky_array = json_decode($aukce->podminky, true);
         $aukce->souradnice_array = explode(',', $aukce->souradnice);
 
-        $aukce->datum_ukonceni .= ' 23:59';
+        //TODO picovina - zakomentovano
+        //$aukce->datum_ukonceni .= ' 23:59';
 
         // načte aukce ze stejného města
         $dalsi_aukce = Aukce::where('stav', 'probihajici')

@@ -63,6 +63,10 @@
                   role="tab" aria-selected="true" aria-controls="vse">Všechny aukce</a>
               </li>
               <li class="tab-item">
+                <a class="tab-link" href="#beroun"
+                  role="tab" aria-selected="false" aria-controls="beroun">Beroun</a>
+              </li>
+                <li class="tab-item">
                 <a class="tab-link" href="#praha"
                   role="tab" aria-selected="false" aria-controls="praha">Praha</a>
               </li>
@@ -100,6 +104,27 @@
                     data-stav="probihajici"
                     data-typ="{{ typ }}"
                     data-lokalita="vse">Zobrazit další</button>
+                </p>
+              {% endif %}
+            </div>
+            <div class="tab-panel" id="beroun" role="tabpanel" aria-hidden="true">
+              <div class="nabidky-row row">
+                {% for aukce in aukce.beroun %}
+                  {% include 'partials/nabidka.twig' %}
+                {% else %}
+                  <p class="zprava">Momentálně zde nejsou žádné aukce pro tuto lokalitu.</p>
+                {% endfor %}
+              </div>
+              {% if aukce.beroun.hasMorePages() %}
+                <p class="nacti-dalsi-wrap">
+                  <span class="spinner"></span>
+                  <button
+                    class="button nacti-dalsi"
+                    type="button"
+                    data-strana="1"
+                    data-stav="probihajici"
+                    data-typ="{{ typ }}"
+                    data-lokalita="beroun">Zobrazit další</button>
                 </p>
               {% endif %}
             </div>

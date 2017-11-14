@@ -44,7 +44,10 @@
       Aukce ukončena:
     </p>
     <p>
-      {{ aukce.datum_ukonceni|date("j.n.Y G:i") }}
+ {# todo toto jsem upravil, at to neukazuje cas
+        {{ aukce.datum_ukonceni|date("j.n.Y G:i") }}   #}
+        {{ aukce.datum_ukonceni|date("j.n.Y") }}
+
     </p>
   </div>
 {% endblock %}

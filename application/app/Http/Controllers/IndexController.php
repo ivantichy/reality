@@ -71,7 +71,13 @@ class IndexController extends Controller
             ->where('typ_aukce', 'prodej')
             ->orderBy('created_at', 'desc')
             ->paginate(6);
-          $aukce['praha'] = Aukce::where('stav', 'probihajici')
+          $aukce['beroun'] = Aukce::where('stav', 'probihajici')
+            ->where('active', 1)
+            ->where('typ_aukce', 'prodej')
+            ->where('mesto', 'Beroun')
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+           $aukce['praha'] = Aukce::where('stav', 'probihajici')
             ->where('active', 1)
             ->where('typ_aukce', 'prodej')
             ->where('mesto', 'Praha')
