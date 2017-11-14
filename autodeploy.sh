@@ -13,7 +13,7 @@ do
     docker-compose down
     git pull origin master -q
     docker-compose build
-    docker compose up &
+    docker-compose up &
   fi
 
 sleep 20
