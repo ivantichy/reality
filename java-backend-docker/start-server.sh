@@ -5,4 +5,5 @@ if [ "$1" = "debug" ]; then
 fi
 
 mvn clean package
-java ${OPTIONS} -jar target/realau-server-0.0.1-SNAPSHOT.war
+
+exec java ${OPTIONS} -jar target/realau-server-0.0.1-SNAPSHOT.war
